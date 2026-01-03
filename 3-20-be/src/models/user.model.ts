@@ -7,71 +7,8 @@ let user_model = {
     primaryKey: true,
     autoIncrement: true,
   },
-  delivered_by: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: "users",
-      key: "id",
-    },
-    allowNull: true,
-  },
-  user_id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: "resource-types",
-      key: "id",
-    },
-    allowNull: true,
-  },
-  stringField: {
+  name: {
     type: DataTypes.STRING,
-    allowNull: true,
-  },
-  integerField: {
-    type: DataTypes.INTEGER,
-    allowNull: true,
-  },
-  floatField: {
-    type: DataTypes.FLOAT,
-    allowNull: true,
-  },
-  doubleField: {
-    type: DataTypes.DOUBLE,
-    allowNull: true,
-  },
-  booleanField: {
-    type: DataTypes.BOOLEAN,
-    allowNull: true,
-  },
-  dateField: {
-    type: DataTypes.DATE,
-    allowNull: true,
-  },
-  // Other Data Types
-  textField: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-  },
-  blobField: {
-    type: DataTypes.BLOB,
-    allowNull: true,
-  },
-  jsonField: {
-    type: DataTypes.JSON,
-    allowNull: true,
-  },
-  // Enum Data Type
-  enumField: {
-    type: DataTypes.ENUM("Option1", "Option2", "Option3"),
-    allowNull: true,
-  },
-  // Array Data Types (PostgreSQL Only)
-  stringArrayField: {
-    type: DataTypes.ARRAY(DataTypes.STRING),
-    allowNull: true,
-  },
-  integerArrayField: {
-    type: DataTypes.ARRAY(DataTypes.INTEGER),
     allowNull: true,
   },
 };

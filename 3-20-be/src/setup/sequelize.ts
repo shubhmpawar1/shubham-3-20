@@ -2,30 +2,30 @@ import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
 dotenv.config()
 
-let DB_STRING: any = "postgresql://db_3_20_way_db_user:j6XO2DHODTxfs93nOdbeYduB9fcEm9iJ@dpg-d5cdun6uk2gs73ftp87g-a.virginia-postgres.render.com/db_3_20_way_db";
-//process.env.DB_STRING
+let DB_STRING: any = process.env.DB_STRING;
 
 export const sequelize = new Sequelize(
   DB_STRING,
   {
     dialect: "postgres",
     protocol: "postgres",
-    // logging: false,
-    logging: console.log,
-    // dialectOptions: {
-    //   // ssl: {
-    //   //   // require: "true",
-    //   // },
-    // },
+    logging: false,
+    // logging: console.log,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      },
+    },
     hooks: {
       afterConnect: async (connection: any) => {
         // console.log('Database connected');
       },
     },
     pool: {
-      max: 50, // Increase max connections
-      min: 1,
-      acquire: 20000, // Increase timeout (60 seconds)
+      max: 5, // Reduce max connections for cloud database
+      min: 0,
+      acquire: 30000, // Increase timeout (30 seconds)
       idle: 10000
     },
     retry: {
@@ -37,7 +37,7 @@ export const sequelize = new Sequelize(
 async function testConnection() {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ alter: true, force: false });
+    // await sequelize.sync({ alter: true, force: false });
     console.log('Connection has been established successfully.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);

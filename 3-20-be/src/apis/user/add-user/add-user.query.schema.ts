@@ -3,7 +3,7 @@ import { z } from "zod";
 
 extendZodWithOpenApi(z)
 
-export let user_query_schema = {
+export let add_user_query_schema = {
     page: z.string().optional().openapi({ example: 'Page Number' }),
     page_size: z.string().optional().openapi({ example: 'Page Size' }),
     sort_by: z.string().optional().openapi({ example: 'Sort By' }),
