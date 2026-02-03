@@ -1,5 +1,6 @@
 export interface add_user_function_params {
     name: string
+    email?: string
 }
 
 export interface add_user_function_return {

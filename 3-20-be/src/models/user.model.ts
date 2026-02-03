@@ -11,6 +11,10 @@ let user_model = {
     type: DataTypes.STRING,
     allowNull: true,
   },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
 };
 
 let model_options: ModelOptions = <any>{

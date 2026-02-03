@@ -5,8 +5,8 @@ import { User } from "@src/models/user.model"
 
 let add_user_function = async (data: add_user_function_params, transaction: Transaction): Promise<add_user_function_return | Error_Interface> => {
     try {
-        // transaction = '' as any
-        let result = User.create({ name: data.name }, { transaction })
+        transaction = '' as any
+        let result = await User.create({ name: data.name, email: data.email }, { transaction })
         return { code: 200, data: result, message: 'Add User Successful' }
     } catch (error: any) {
         console.log('Error in Add User Function : ', error);

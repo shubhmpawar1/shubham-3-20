@@ -4,5 +4,6 @@ import { z } from "zod";
 extendZodWithOpenApi(z)
 
 export let add_user_body_schema = {
-    name: z.string().optional().openapi({ example: 'Akash' })
+    name: z.string().optional().openapi({ example: 'Akash' }),
+    email: z.string().optional().openapi({ example: 'user@example.com' })
 };
