@@ -91,4 +91,4 @@ export const check_unique_record = async ({ model, model_name = "Record", unique
     }
 };
 
-const is_valid_value = (val: any) => val !== undefined && val !== null && (typeof val === "string" || typeof val === "number");
+const is_valid_value = (val: any) => val !== undefined && val !== null && (typeof val === "string" || typeof val === "number") && val !== "";
