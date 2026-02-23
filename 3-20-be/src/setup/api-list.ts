@@ -9,6 +9,7 @@ import { get_onboarding_questions_details } from "@src/apis/onboarding/get-onboa
 import { register_details } from "@src/apis/auth/register/register.details";
 import { login_details } from "@src/apis/auth/login/login.details";
 import { social_auth_details } from "@src/apis/auth/social-auth/social-auth.details";
+import { save_onboarding_answers_details } from "@src/apis/onboarding/save-onboarding-answers/save-onboarding-answers.details";
 
 export let api_list: any[] = [
     //Auth
@@ -29,5 +30,6 @@ export let api_list: any[] = [
 
     //Onboarding
     get_onboarding_questions_details,
+    save_onboarding_answers_details,
 
 ]
