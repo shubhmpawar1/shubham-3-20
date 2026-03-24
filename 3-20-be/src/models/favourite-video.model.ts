@@ -34,7 +34,7 @@ let model_options: ModelOptions = <any>{
   ],
 };
 
-export const FavouriteVideo = sequelize.define("FavouriteVideo", favourite_video_model, model_options);
+export const FavouriteVideo = sequelize.define("favourite_video", favourite_video_model, model_options);
 
 // Association
 FavouriteVideo.belongsTo(Video, { foreignKey: 'video_id', as: 'video' });
