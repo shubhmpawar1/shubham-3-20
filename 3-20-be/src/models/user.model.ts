@@ -43,6 +43,7 @@ let user_model = {
 };
 
 let model_options: ModelOptions = <any>{
+
   indexes: [
     // {
     //     unique: true,
@@ -53,4 +54,4 @@ let model_options: ModelOptions = <any>{
   // timestamps: true,
 };
 
-export const User = sequelize.define("User", user_model, model_options);
+export const User = sequelize.define("users", user_model, model_options);

@@ -11,7 +11,7 @@ let user_onboarding_answer_model = {
   user_id: {
     type: DataTypes.INTEGER,
     references: {
-      model: "Users",
+      model: "users",
       key: "id",
     },
     allowNull: false,

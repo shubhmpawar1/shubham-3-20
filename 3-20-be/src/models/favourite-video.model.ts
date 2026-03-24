@@ -23,8 +23,8 @@ let favourite_video_model = {
 };
 
 let model_options: ModelOptions = <any>{
-  tableName: 'favourite_videos',
-  timestamps: true,
+  // tableName: 'favourite_videos',
+  // timestamps: true,
   indexes: [
     // {
     //     unique: true,

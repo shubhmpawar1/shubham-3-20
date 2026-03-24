@@ -16,7 +16,7 @@ let add_user_function = async (data: add_user_function_params, transaction: Tran
 
         const whereCondition = socialConditions.length > 0
             ? { [Op.or]: socialConditions }
-            : { name: data.name }; 
+            : { name: data.name };
 
         const existingUser = await User.findOne({
             where: whereCondition,

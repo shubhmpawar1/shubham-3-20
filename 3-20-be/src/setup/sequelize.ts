@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
+import { User } from "@src/models/user.model";
 dotenv.config()
 
 let DB_STRING: any = process.env.DB_STRING;
@@ -12,10 +13,12 @@ export const sequelize = new Sequelize(
     logging: false,
     // logging: console.log,
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false
-      },
+      ssl:
+        false
+      // {
+      //   require: true,
+      //   rejectUnauthorized: false
+      // },
     },
     hooks: {
       afterConnect: async (connection: any) => {
