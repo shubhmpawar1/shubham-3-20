@@ -1,20 +1,21 @@
 # Use the official Bun image
-FROM oven/bun:latest
+FROM node:latest
 
-# Create app directory
+# Create and switch to the /app directory
 WORKDIR /
 
-# Copy manifests first
+# Copy package manifests first (to leverage Docker layer caching)
 COPY package.json bun.lockb ./
 
 # Install dependencies
+RUN npm i -g install bun
 RUN bun install
 
-# Copy your app code
+# Copy over the rest of your code
 COPY . .
 
-# Expose app port
+# Expose the port your Bun app listens on
 EXPOSE 3000
 
-# Start your app
+# Use "bun start" so it runs the "start" script from package.json
 CMD ["bun", "start"]
