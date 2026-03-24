@@ -4,7 +4,8 @@ export let login_tests: login_tests_interface[] = [
   {
     name: 'Best Case',
     input: {
-      name: 'John Doe'
+      email: 'john.doe@example.com',
+      password: 'password123'
     },
     check_output: (input, output) => { },
   }

@@ -4,7 +4,11 @@ export let save_onboarding_answers_tests: save_onboarding_answers_tests_interfac
   {
     name: 'Best Case',
     input: {
-      name: 'John Doe'
+      user_id: 1,
+      answers: {
+        "1": [1, 2],
+        "2": [3]
+      }
     },
     check_output: (input, output) => { },
   }

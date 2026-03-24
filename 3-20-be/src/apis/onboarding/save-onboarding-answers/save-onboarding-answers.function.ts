@@ -4,12 +4,12 @@ import { Transaction } from "sequelize"
 import { UserOnboardingAnswer } from "@src/models/user-onboarding-answer.model"
 import { User } from "@src/models/user.model"
 import { Session } from "@src/models/session.model"
+import { Video } from "@src/models/video.model"
 import { OnboardingQuestion } from "@src/models/onboarding-question.model"
 import { OnboardingAnswer } from "@src/models/onboarding-answer.model"
 import { GoogleGenerativeAI } from "@google/generative-ai"
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
-
 
 let save_onboarding_answers_function = async (data: save_onboarding_answers_function_params, transaction: Transaction): Promise<save_onboarding_answers_function_return | Error_Interface> => {
     try {
@@ -65,7 +65,7 @@ let save_onboarding_answers_function = async (data: save_onboarding_answers_func
         const prompt = `
 You are a session recommendation engine for elderly users doing physiotherapy and movement sessions.
 
-Based on the user's onboarding answers below, recommend the MOST relevant video sessions from the available list.
+Based on the user's onboarding answers below, recommend the MOST relevant single video session from the available list.
 
 User's Onboarding Answers:
 ${userAnswersText}
@@ -74,10 +74,9 @@ Available Sessions:
 ${sessionsText}
 
 Rules:
-- Recommend MAXIMUM 4 sessions only
-- Order them from most relevant to least relevant
+- Recommend ONLY 1 session
 - Consider user's pain areas, health conditions, energy levels and preferences
-- Return ONLY a JSON array of session IDs. Example: [3, 1, 5, 2]
+- Return ONLY a JSON array with single session ID. Example: [3]
 - Do not include any explanation, just the JSON array.
 `;
 
@@ -89,24 +88,36 @@ Rules:
         const cleanText = aiText.replace(/```json|```/g, '').trim();
         const recommendedIds: number[] = JSON.parse(cleanText);
 
-        // 9. Recommended sessions fetch karo
-        const recommendedSessions = await Session.findAll({
-            where: { id: recommendedIds },
+        // 9. Recommended session fetch karo
+        const recommended = await Session.findOne({
+            where: { id: recommendedIds[0] },
             transaction
         });
 
-        // Order maintain karo jo AI ne diya
-        const orderedSessions = recommendedIds.map(id =>
-            (recommendedSessions as any[]).find(s => s.id === id)
+        if (!recommended) return { code: 400, message: 'No session found' };
+
+        // 10. video_ids se videos fetch karo
+        const videos = await Video.findAll({
+            where: { id: (recommended as any).video_ids },
+            transaction
+        });
+
+        // 11. video_ids order maintain karo
+        const orderedVideos = ((recommended as any).video_ids as number[]).map((id: number) =>
+            (videos as any[]).find(v => v.id === id)
         ).filter(Boolean);
 
         return {
             code: 201,
             message: 'Onboarding answers saved successfully',
             data: {
-                suggested_sessions: orderedSessions
+                suggested_session: {
+                    ...(recommended as any).toJSON(),
+                    videos: orderedVideos
+                }
             }
         };
+
     } catch (error: any) {
         console.log('Save Onboarding Answers Error: ', error);
         return { code: 400, message: error.message || 'Error in Save Onboarding Answers Function' }

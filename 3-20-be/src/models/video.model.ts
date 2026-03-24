@@ -1,7 +1,7 @@
 import { DataTypes, ModelOptions } from "sequelize";
 import { sequelize } from "@src/setup/sequelize";
 
-let session_model = {
+let video_model = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -19,27 +19,25 @@ let session_model = {
     type: DataTypes.ARRAY(DataTypes.STRING),
     allowNull: true,
   },
+  video_url: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   thumbnail_url: {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  total_duration: {
+  duration: {
     type: DataTypes.INTEGER,
     allowNull: true,
-    comment: 'Total duration in minutes'
-  },
-  video_ids: {
-    type: DataTypes.ARRAY(DataTypes.INTEGER),
-    allowNull: true,
-    defaultValue: [],
-    comment: 'Array of video ids'
+    comment: 'Duration in minutes'
   },
 };
 
 let model_options: ModelOptions = <any>{
-  tableName: 'sessions',
+  tableName: 'videos',
   timestamps: true,
   indexes: [],
 };
 
-export const Session = sequelize.define("Session", session_model, model_options);
+export const Video = sequelize.define("Video", video_model, model_options);
