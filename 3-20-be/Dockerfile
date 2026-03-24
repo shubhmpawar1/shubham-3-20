@@ -2,7 +2,7 @@
 FROM oven/bun:latest
 
 # Create app directory
-WORKDIR /app
+WORKDIR /
 
 # Copy manifests first
 COPY package.json bun.lockb ./
