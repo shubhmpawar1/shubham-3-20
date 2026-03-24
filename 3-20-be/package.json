@@ -37,7 +37,9 @@
     "moment-timezone": "^0.5.47",
     "pg": "^8.13.3",
     "sequelize": "^6.37.5",
-    "zod": "^4.0.0"
+    "zod": "^4.0.0",
+    "bcrypt": "^6.0.0",
+    "@types/bcrypt": "^6.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241022.0",
