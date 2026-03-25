@@ -5,7 +5,7 @@ let quick_fact_model = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true, 
+    autoIncrement: true,
   },
   fact: {
     type: DataTypes.TEXT,
@@ -15,19 +15,23 @@ let quick_fact_model = {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  created_at: {
+  createdAt: {
     type: DataTypes.DATE,
-    allowNull: true,
+    allowNull: false,
+    defaultValue: DataTypes.NOW,
   },
-  updated_at: {
+  updatedAt: {
     type: DataTypes.DATE,
-    allowNull: true,
+    allowNull: false,
+    defaultValue: DataTypes.NOW,
   },
 };
 
 let model_options: ModelOptions = <any>{
   indexes: [],
-  timestamps: false,
+  timestamps: true,
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
 };
 
 export const QuickFact = sequelize.define("quick_facts", quick_fact_model, model_options);

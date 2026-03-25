@@ -10,7 +10,7 @@ let get_quick_facts_function = async (data: get_quick_facts_function_params, tra
 
         let quick_facts = await QuickFact.findAndCountAll({
             where: filter, order,
-            attributes: ['id', 'fact', 'source', 'created_at', 'updated_at'],
+            attributes: ['id', 'fact', 'source', 'createdAt', 'updatedAt'],
             ...pagination, transaction, raw: true, nest: true
         })
 
