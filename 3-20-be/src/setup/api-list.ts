@@ -17,6 +17,7 @@ import { get_favourite_videos_details } from "@src/apis/favourite/get-favourite-
 import { save_video_note_details } from "@src/apis/notes/save-video-note/save-video-note.details";
 import { edit_video_note_details } from "@src/apis/notes/edit-video-note/edit-video-note.details";
 import { delete_video_note_details } from "@src/apis/notes/delete-video-note/delete-video-note.details";
+import { get_quick_facts_details } from "@src/apis/fact/get-quick-facts/get-quick-facts.details";
 
 export let api_list: any[] = [
     //Auth
@@ -52,4 +53,6 @@ export let api_list: any[] = [
     edit_video_note_details,
     delete_video_note_details,
 
+    //Quick Facts
+    get_quick_facts_details,
 ]
