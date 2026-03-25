@@ -3,6 +3,4 @@ import { z } from "zod";
 
 extendZodWithOpenApi(z)
 
-export let get_home_details_body_schema = {
-    name: z.string().optional().openapi({ example: 'Akash' })
-};
+export let get_home_details_body_schema = {};

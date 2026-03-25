@@ -27,7 +27,7 @@ let get_home_details_function = async (data: get_home_details_function_params, t
             date_from = new Date(now)
             date_from.setDate(now.getDate() - 29)
             date_from.setHours(0, 0, 0, 0)
-            group_format = 'W'   // week number
+            group_format = 'IYYY-IW'   // ISO year + week number (avoids year-end collisions)
             day_label = 'Week'
         } else {
             // Current week (Mon–Sun)
