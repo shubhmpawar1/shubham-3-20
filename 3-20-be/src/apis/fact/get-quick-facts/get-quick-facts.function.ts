@@ -8,7 +8,7 @@ let get_quick_facts_function = async (data: get_quick_facts_function_params, tra
         let quick_facts = await QuickFact.findAndCountAll({
             order: literal('RANDOM()'),
             attributes: ['id', 'fact', 'source', 'createdAt', 'updatedAt'],
-            limit: 1,
+            limit: 10,
             transaction, raw: true, nest: true
         })
 
