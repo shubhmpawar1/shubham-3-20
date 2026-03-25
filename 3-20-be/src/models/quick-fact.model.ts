@@ -5,7 +5,7 @@ let quick_fact_model = {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true,
+    autoIncrement: true, 
   },
   fact: {
     type: DataTypes.TEXT,
