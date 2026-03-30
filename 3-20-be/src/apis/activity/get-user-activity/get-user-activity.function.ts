@@ -55,15 +55,14 @@ let get_user_activity_function = async (
         // 1. TODAY'S VIDEOS
         const today_raw: any[] = await sequelize.query(`
             SELECT
-                COUNT(*) OVER()                 AS total_count,
+                COUNT(*) OVER()     AS total_count,
                 v.id, v.title, v.description,
                 v.thumbnail_url, v.duration,
-                v.tags, v.category, v.difficulty_level,
-                v.body_parts, v.is_essential,
+                v.tags,
                 uvh.session_id,
-                s.title                         AS session_title,
+                s.title             AS session_title,
                 uvh.status,
-                uvh."createdAt"                 AS watched_at
+                uvh."createdAt"     AS watched_at
             FROM user_video_history uvh
             JOIN videos v ON v.id = uvh.video_id
             LEFT JOIN sessions s ON s.id = uvh.session_id
@@ -103,14 +102,13 @@ let get_user_activity_function = async (
         // 3. LAST WEEK — Day-wise grouped
         const last_week_raw: any[] = await sequelize.query(`
             SELECT
-                COUNT(*) OVER()                                             AS total_count,
-                DATE(uvh."createdAt")                                       AS activity_date,
-                TRIM(TO_CHAR(uvh."createdAt", 'Day'))                       AS day_name,
-                SUM(v.duration) OVER(PARTITION BY DATE(uvh."createdAt"))    AS day_minutes,
+                COUNT(*) OVER()                                          AS total_count,
+                DATE(uvh."createdAt")                                    AS activity_date,
+                TRIM(TO_CHAR(uvh."createdAt", 'Day'))                    AS day_name,
+                SUM(v.duration) OVER(PARTITION BY DATE(uvh."createdAt")) AS day_minutes,
                 v.id, v.title, v.description,
                 v.thumbnail_url, v.duration,
-                v.tags, v.category, v.difficulty_level,
-                v.body_parts, v.is_essential,
+                v.tags,
                 uvh.session_id,
                 s.title     AS session_title,
                 uvh.status,
@@ -146,7 +144,7 @@ let get_user_activity_function = async (
             day_map[key].videos.push(formatVideoHistory(row))
         }
 
-        // 4. DAILY ESSENTIALS (AI + category grouped sessions)
+        // 4. DAILY ESSENTIALS
         const daily_essentials = await getDailyEssentials(user_id, page, limit, transaction)
 
         return {
@@ -203,22 +201,26 @@ async function getDailyEssentials(
         LIMIT 10
     `, { replacements: { user_id }, type: 'SELECT', transaction })
 
-    const preferred_categories = user_prefs.map((r: any) => r.category).filter(Boolean)
+    const preferred_categories: string[] = user_prefs.map((r: any) => r.category).filter(Boolean)
 
-    // Fetch essential sessions, user-preferred categories ranked first
+    // Build CASE expression safely
+    const pref_case = preferred_categories.length > 0
+        ? `CASE WHEN s.category = ANY(ARRAY[:preferred_categories]) THEN 0 ELSE 1 END`
+        : `1`
+
     const essentials_raw: any[] = await sequelize.query(`
         SELECT
             COUNT(*) OVER() AS total_count,
             s.id, s.title, s.description, s.thumbnail_url,
             s.total_duration, s.tags, s.category, s.is_essential, s.video_ids,
-            CASE WHEN s.category = ANY(:preferred_categories) THEN 0 ELSE 1 END AS pref_rank
+            ${pref_case} AS pref_rank
         FROM sessions s
         WHERE s.is_essential = true
         ORDER BY pref_rank ASC, s.category ASC, s.id ASC
         LIMIT :limit OFFSET :offset
     `, {
         replacements: {
-            preferred_categories: preferred_categories.length > 0 ? preferred_categories : ['__none__'],
+            ...(preferred_categories.length > 0 ? { preferred_categories } : {}),
             limit,
             offset
         },
@@ -287,7 +289,7 @@ async function getAIRecommendations(
         ORDER BY cnt DESC LIMIT 5
     `, { replacements: { user_id }, type: 'SELECT', transaction })
 
-    const preferred_categories = prefs.map((r: any) => r.category).filter(Boolean)
+    const preferred_categories: string[] = prefs.map((r: any) => r.category).filter(Boolean)
 
     let recommendations: any[] = []
 
@@ -299,7 +301,7 @@ async function getAIRecommendations(
                 s.total_duration, s.tags, s.category, s.is_essential, s.video_ids,
                 COUNT(*) OVER() AS total_count
             FROM sessions s
-            WHERE s.category = ANY(:preferred_categories)
+            WHERE s.category = ANY(ARRAY[:preferred_categories])
               ${done_ids.length > 0 ? 'AND s.id NOT IN (:done_ids)' : ''}
             ORDER BY RANDOM()
             LIMIT :limit OFFSET :offset
