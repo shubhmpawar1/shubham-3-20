@@ -76,11 +76,13 @@ let get_home_details_function = async (data: get_home_details_function_params, t
             transaction, raw: true
         })
 
-        // ─── Quick Fact (random) ─────────────────────────────────────
-        const quick_fact = await QuickFact.findOne({
+        // ─── Quick Facts (random 10) ─────────────────────────────────────
+        const quick_facts = await QuickFact.findAll({
             order: literal('RANDOM()'),
             attributes: ['id', 'fact', 'source', 'createdAt', 'updatedAt'],
-            transaction, raw: true
+            limit: 10,
+            transaction,
+            raw: true
         })
 
         return {
@@ -97,7 +99,7 @@ let get_home_details_function = async (data: get_home_details_function_params, t
                 },
                 continue_daily_plan: continue_daily_plan || null,
                 daily_essentials: daily_essentials || [],
-                quick_fact: quick_fact || null
+                quick_facts: quick_facts || []
             }
         }
 

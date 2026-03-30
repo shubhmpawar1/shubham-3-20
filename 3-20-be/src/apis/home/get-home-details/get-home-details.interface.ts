@@ -14,7 +14,7 @@ export interface get_home_details_function_return {
         },
         continue_daily_plan: any | null,
         daily_essentials: any[],
-        quick_fact: any | null
+        quick_facts: any[]
     }
 }
 
