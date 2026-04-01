@@ -20,6 +20,7 @@ import { delete_video_note_details } from "@src/apis/notes/delete-video-note/del
 import { get_quick_facts_details } from "@src/apis/fact/get-quick-facts/get-quick-facts.details";
 import { get_home_details_details } from "@src/apis/home/get-home-details/get-home-details.details";
 import { get_user_activity_details } from "@src/apis/activity/get-user-activity/get-user-activity.details";
+import { add_video_history_details } from "@src/apis/history/add-video-history/add-video-history.details";
 
 export let api_list: any[] = [
     //Auth
@@ -63,4 +64,7 @@ export let api_list: any[] = [
 
     //Activity
     get_user_activity_details,
+
+    //History
+    add_video_history_details,
 ]
