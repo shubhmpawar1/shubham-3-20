@@ -1,0 +1,64 @@
+<div class="relative isolate bg-white pt-24 pb-32 sm:pt-32">
+    <div class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
+        aria-hidden="true">
+        <div class="ml-[max(50%,38rem)] aspect-1313/771 w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+
+    <div class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end"
+        aria-hidden="true">
+        <div class="ml-[-22rem] aspect-1313/771 w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:mr-[calc(50%-12rem)] xl:ml-0"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-base/7 font-semibold text-{{color}}-600">{{course_curriculum_List.sub_title}}</h2>
+            <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
+                {{ course_curriculum_List.title }}
+            </p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+                {{ course_curriculum_List.description }}
+            </p>
+        </div>
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Grid Content -->
+            <div class="grid_content grid grid-cols-1 md:grid-cols-2 p-5 gap-y-10 gap-x-10 items-start">
+                <!-- Left Image (STAYS FIXED AT TOP) -->
+                <div class="flex justify-center items-center self-center">
+                    <div class="image">
+                        <img class="rounded-xl" loading="lazy" alt="Full Stack Developer Curriculum"
+                            src="{{ course_curriculum_List.image }}" />
+                    </div>
+                </div>
+
+                <!-- Right Curriculum List -->
+                <div class="flex flex-col gap-4 text-black mt-10" >
+                    <div *ngFor="let course of course_curriculum_List.details; let i = index" (click)="toggle(i)"
+                        class="toggle-div bg-transparent text-gray-900 rounded-xl p-3 ring-1 ring-black/10 transition-all duration-500 hover:translate-x-10 hover:shadow-md cursor-pointer">
+                        <div class="flex justify-between cursor-pointer">
+                            <p class="text-sm md:text-base font-semibold">{{ course.title }}</p>
+                            <p class="text-sm font-semibold flex items-center">     
+                                <i class="bx bx-stopwatch text-xl pr-1 text-{{ color }}-600"></i>
+                                {{ course.duration }}
+                            </p>
+                        </div>
+                        <div class="nested-div bg-transparent rounded-xl py-3" [class.hidden]="!course.is_open">
+                            <ul class="text-xs md:text-sm flex flex-col gap-2">
+                                <li *ngFor="let detail of course.details">
+                                    <div class="flex justify-between w-full items-center">
+                                        <span>{{ detail.topic }}</span>
+                                        <button class="text-gray-400 border-gray-400 rounded-2xl px-2 py-1 hover:bg-transparent hover:text-gray-600 hover:border-gray-600 transition-all duration-300">{{ detail.days }} Days</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
