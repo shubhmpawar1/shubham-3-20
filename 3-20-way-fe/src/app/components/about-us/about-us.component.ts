@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AboutUsService } from '../../services/about-us.service';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { AboutUsService } from '../../services/about-us.service';
 
 @Component({
   selector: 'app-about-us',
