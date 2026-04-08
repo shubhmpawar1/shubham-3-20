@@ -9,18 +9,19 @@ export class LandingPageService {
   landing_page_content = {
 
     hero_section: {
-      title: 'Build with Purpose. Scale with Precision. Deliver with Integrity.',
-      pill_1: 'Integrity',
-      pill_2: 'Clarity & Trust',
-      pill_3: 'Long Term Thinking',
-      quick_look: "Where Talent Meets Technology.",
-      description: 'Scalable web platforms. Real-world training. One team to engineer your products and empower your people.',
+      title: '3 to 20 minutes of simple daily movement creating life-changing results for older adults.',
+      pill_1: 'Simple',
+      pill_2: 'Anytime',
+      pill_3: 'Anywhere',
+      pill_4: 'Start Now',
+      quick_look: "",
+      description: 'From as little as 3 minutes a day, we’re helping thousands of people move better, feel better and live better - for longer.',
       cta_1: {
-        text: "Start Your Project",
+        text: "Start Now",
         link: '#'
       },
       cta_2: {
-        text: 'Explore Training',
+        text: '',
         link: '#'
       },
       image_1: 'https://images.unsplash.com/photo-1634464660153-468d44306ac4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aW5kaWFuJTIwY2xhc3Nyb29tJTIwY29kaW5nfGVufDB8fDB8fHww',

@@ -2,18 +2,15 @@
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5 flex gap-2 items-center">
-        <span class="sr-only">The Contrast</span>
-        <img class="h-10 w-auto rounded-xl" src="assets/logo.jpg"
-          alt="">
-        <p class="text-2xl font-bold text-black-600 cursor-pointer tracking-[0.5px]">The Contrast</p>
+        <span class="sr-only">3-20 Way</span>
+        <img class="h-10 w-auto rounded-xl" src="assets/320Way-CITRIC.png" alt="3-20 Way">
+        <p class="text-2xl font-bold text-black-600 cursor-pointer tracking-[0.5px]">3-20 Way</p>
       </a>
     </div>
     <div class="flex lg:hidden">
-      <button (click)="toggleMainMenu()" type="button"
-        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+      <button (click)="toggleMainMenu()" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
         <span class="sr-only">Open main menu</span>
-        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
-          data-slot="icon">
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </button>
@@ -96,27 +93,18 @@
 
       <!-- training dropdown -->
       <div class="relative">
-        <button (click)="toggleDropdown('training')" type="button"
-          class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]"
-          aria-expanded="false">
+        <button (click)="toggleDropdown('training')" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]" aria-expanded="false">
           {{ trainingmenuitems.title }}
           <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-              clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
           </svg>
         </button>
 
-        <div *ngIf="isTrainingOpen"
-          class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+        <div *ngIf="isTrainingOpen" class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
           <div class="px-4 py-4">
-            <div *ngFor="let item of trainingmenuitems.items"
-         (click)="navigateToCourse(item.link, $event)"
-              class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900">
-              <div
-                class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="size-6">
+            <div *ngFor="let item of trainingmenuitems.items" (click)="navigateToCourse(item.link, $event)" class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900">
+              <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="item.iconPath" />
                 </svg>
               </div>
@@ -130,21 +118,15 @@
             </div>
           </div>
           <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-            <a routerLink="/pages/contact-page"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+            <a routerLink="/pages/contact-page" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
               <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z"
-                  clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd" />
               </svg>
               Talk To Expert
             </a>
-            <a routerLink="/pages/contact-page"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+            <a routerLink="/pages/contact-page" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
               <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z"
-                  clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" />
               </svg>
               Contact Sales
             </a>
@@ -154,26 +136,18 @@
 
       <!-- services dropdown -->
       <div class="relative">
-        <button (click)="toggleDropdown('services')" type="button"
-          class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]">
+        <button (click)="toggleDropdown('services')" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]">
           Services
           <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06Z"
-              clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06Z" clip-rule="evenodd" />
           </svg>
         </button>
 
-        <div *ngIf="isServicesOpen"
-          class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-          <div routerLink="/pages/consultancy-landing-page"
-            class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900">
-            <div
-              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9.75 2.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V3h1.5A2.25 2.25 0 0118 5.25v13.5A2.25 2.25 0 0115.75 21H8.25A2.25 2.25 0 016 18.75V5.25A2.25 2.25 0 018.25 3H9.75V2.25zM9 3v.75h6V3H9z" />
+        <div *ngIf="isServicesOpen" class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+          <div routerLink="/pages/consultancy-landing-page" class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900">
+            <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 2.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V3h1.5A2.25 2.25 0 0118 5.25v13.5A2.25 2.25 0 0115.75 21H8.25A2.25 2.25 0 016 18.75V5.25A2.25 2.25 0 018.25 3H9.75V2.25zM9 3v.75h6V3H9z" />
               </svg>
             </div>
             <div class="flex-auto cursor-pointer">
@@ -185,13 +159,9 @@
           </div>
           <div class="px-4 py-4" *ngFor="let services of servicesData">
             <p class="block font-semibold text-gray-900 mb-2">{{ services.category }}</p>
-            <div *ngFor="let item of services.items"
-                     (click)="navigateToCourse(item.link, $event)"
-              class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 cursor-pointer hover:text-blue-900">
-              <div
-                class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="size-6">
+            <div *ngFor="let item of services.items" (click)="navigateToCourse(item.link, $event)" class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 cursor-pointer hover:text-blue-900">
+              <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="(item.icon)" />
                 </svg>
               </div>
@@ -203,21 +173,15 @@
           </div>
 
           <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-            <a routerLink="/pages/contact-page"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+            <a routerLink="/pages/contact-page" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
               <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z"
-                  clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd" />
               </svg>
               Talk To Expert
             </a>
-            <a routerLink="/pages/contact-page"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+            <a routerLink="/pages/contact-page" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
               <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15..."
-                  clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15..." clip-rule="evenodd" />
               </svg>
               Contact sales
             </a>
@@ -227,9 +191,7 @@
 
       <!-- resourcing dropdown -->
       <div class="relative">
-        <button (click)="toggleDropdown('resourcing')" type="button"
-          class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]"
-          [attr.aria-expanded]="isResourcingOpen">
+        <button (click)="toggleDropdown('resourcing')" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]" [attr.aria-expanded]="isResourcingOpen">
           Resourcing
           <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 
@@ -242,13 +204,9 @@
                rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
           <div class="px-4 py-4 space-y-1">
             <!-- <p class="block font-semibold text-gray-900 mb-2">All Resourcing`S</p> -->
-            <div *ngFor="let item of resourcingItems"
-             (click)="navigateToCourse(item.link, $event)"
-              class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900">
-              <div
-                class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="size-6">
+            <div *ngFor="let item of resourcingItems" (click)="navigateToCourse(item.link, $event)" class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900">
+              <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="item.iconPath" />
                 </svg>
               </div>
@@ -263,8 +221,7 @@
 
           <!-- Bottom CTA buttons -->
           <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-            <a routerLink="/pages/contact-page"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+            <a routerLink="/pages/contact-page" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
               <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5
             2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 
@@ -272,8 +229,7 @@
               </svg>
               Talk To Expert
             </a>
-            <a routerLink="/pages/contact-page"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+            <a routerLink="/pages/contact-page" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
               <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 
             1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555
@@ -290,25 +246,18 @@
 
       <!-- company dropdown -->
       <div class="relative">
-        <button (click)="toggleDropdown('company')" type="button"
-          class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]"
-          [attr.aria-expanded]="isCompanyOpen">
+        <button (click)="toggleDropdown('company')" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer tracking-[0.5px]" [attr.aria-expanded]="isCompanyOpen">
           {{ companyDropdown.button.label }}
-          <svg class="size-5 flex-none text-gray-400" [attr.viewBox]="companyDropdown.button.svgViewBox"
-            fill="currentColor" aria-hidden="true">
+          <svg class="size-5 flex-none text-gray-400" [attr.viewBox]="companyDropdown.button.svgViewBox" fill="currentColor" aria-hidden="true">
             <path [attr.d]="companyDropdown.button.svgPath" fill-rule="evenodd" clip-rule="evenodd"></path>
           </svg>
         </button>
 
-        <div *ngIf="isCompanyOpen"
-          class="dropdown-menu absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+        <div *ngIf="isCompanyOpen" class="dropdown-menu absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
           <div class="px-4 py-4">
-            <div *ngFor="let item of companyDropdown.menuItems" [routerLink]="item.routerLink"
-              class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900 cursor-pointer">
-              <div
-                class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg [attr.xmlns]="item.icon.xmlns" [attr.fill]="item.icon.fill" [attr.viewBox]="item.icon.viewBox"
-                  [attr.stroke-width]="item.icon.strokeWidth" [attr.stroke]="item.icon.stroke" class="size-6">
+            <div *ngFor="let item of companyDropdown.menuItems" [routerLink]="item.routerLink" class="group relative flex gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 hover:text-blue-900 cursor-pointer">
+              <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <svg [attr.xmlns]="item.icon.xmlns" [attr.fill]="item.icon.fill" [attr.viewBox]="item.icon.viewBox" [attr.stroke-width]="item.icon.strokeWidth" [attr.stroke]="item.icon.stroke" class="size-6">
                   <path [attr.d]="item.icon.pathD" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
@@ -320,8 +269,7 @@
           </div>
 
           <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-            <a *ngFor="let link of companyDropdown.bottomLinks" [routerLink]="link.routerLink"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+            <a *ngFor="let link of companyDropdown.bottomLinks" [routerLink]="link.routerLink" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
               <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path [attr.d]="link.iconPath" fill-rule="evenodd" clip-rule="evenodd"></path>
               </svg>
@@ -340,18 +288,15 @@
   <div *ngIf="isMenuOpen" class="lg:hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
-    <div
-      class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
       <div class="flex items-center justify-between">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto rounded-xl" src="assets/logo.jpg"
-            alt="">
+          <img class="h-8 w-auto rounded-xl" src="assets/logo.jpg" alt="">
         </a>
         <button (click)="toggleMainMenu()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
           <span class="sr-only">Close menu</span>
-          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            aria-hidden="true" data-slot="icon">
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
         </button>
@@ -362,21 +307,15 @@
 
             <!-- TRAINING -->
             <div class="-mx-3">
-              <button type="button" (click)="toggleDropdown('training')"
-                class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                aria-controls="disclosure-1" [attr.aria-expanded]="isTrainingOpen">
+              <button type="button" (click)="toggleDropdown('training')" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" [attr.aria-expanded]="isTrainingOpen">
                 {{ trainingmenuitems.title }}
-                <svg [ngClass]="{ 'rotate-180': isTrainingOpen }" class="size-5 flex-none transition-transform"
-                  viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd" />
+                <svg [ngClass]="{ 'rotate-180': isTrainingOpen }" class="size-5 flex-none transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                 </svg>
               </button>
 
               <div *ngIf="isTrainingOpen" class="mt-2 space-y-2" id="disclosure-1">
-                <a *ngFor="let item of trainingmenuitems.items" [routerLink]="item.link"
-                  class="flex items-center gap-x-2 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
+                <a *ngFor="let item of trainingmenuitems.items" [routerLink]="item.link" class="flex items-center gap-x-2 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
                   <svg class="size-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path [attr.d]="item.iconPath" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
@@ -387,23 +326,17 @@
 
             <!-- SERVICES -->
             <div class="-mx-3">
-              <button type="button" (click)="toggleDropdown('services')"
-                class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                aria-controls="disclosure-2" [attr.aria-expanded]="isServicesOpen">
+              <button type="button" (click)="toggleDropdown('services')" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-2" [attr.aria-expanded]="isServicesOpen">
                 Services
-                <svg [ngClass]="{ 'rotate-180': isServicesOpen }" class="size-5 flex-none transition-transform"
-                  viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd" />
+                <svg [ngClass]="{ 'rotate-180': isServicesOpen }" class="size-5 flex-none transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                 </svg>
               </button>
 
               <div *ngIf="isServicesOpen" class="mt-2 space-y-2" id="disclosure-2">
                 <ng-container *ngFor="let category of servicesData">
                   <ng-container *ngFor="let item of category.items">
-                    <a [routerLink]="item.link"
-                      class="flex items-center gap-x-2 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <a [routerLink]="item.link" class="flex items-center gap-x-2 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
                       <svg class="size-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path [attr.d]="item.icon" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
@@ -417,9 +350,7 @@
 
             <!-- resourcing -->
             <div class="-mx-3">
-              <button (click)="toggleDropdown('resourcing')" type="button" type="button"
-                class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                [attr.aria-expanded]="isResourcingOpen">
+              <button (click)="toggleDropdown('resourcing')" type="button" type="button" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" [attr.aria-expanded]="isResourcingOpen">
                 Resourcing
                 <svg class="size-5 flex-none text-gray-900" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 
@@ -429,10 +360,8 @@
               </button>
 
               <div *ngIf="isResourcingOpen" class="mt-2 space-y-2" id="disclosure-1">
-                <a *ngFor="let item of resourcingItems" [routerLink]="item.link"
-                  class="flex items-center gap-x-2 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
-                  <svg class="size-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <a *ngFor="let item of resourcingItems" [routerLink]="item.link" class="flex items-center gap-x-2 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
+                  <svg class="size-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <path [attr.d]="item.iconPath" />
                   </svg>
                   {{ item.title }}
@@ -442,23 +371,17 @@
 
             <!-- COMPANY -->
             <div class="-mx-3">
-              <button type="button" (click)="toggleDropdown('company')"
-                class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                aria-controls="disclosure-3" [attr.aria-expanded]="isCompanyOpen">
+              <button type="button" (click)="toggleDropdown('company')" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-3" [attr.aria-expanded]="isCompanyOpen">
                 {{ companyDropdown.button.label }}
-                <svg [ngClass]="{ 'rotate-180': isCompanyOpen }" class="size-5 flex-none transition-transform"
-                  [attr.viewBox]="companyDropdown.button.svgViewBox" fill="currentColor" aria-hidden="true">
+                <svg [ngClass]="{ 'rotate-180': isCompanyOpen }" class="size-5 flex-none transition-transform" [attr.viewBox]="companyDropdown.button.svgViewBox" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" [attr.d]="companyDropdown.button.svgPath" clip-rule="evenodd" />
                 </svg>
               </button>
 
               <div *ngIf="isCompanyOpen" class="mt-2 space-y-2" id="disclosure-3">
                 <ng-container *ngFor="let item of companyDropdown.menuItems">
-                  <a [routerLink]="item.routerLink"
-                    class=" rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50 flex items-start gap-2">
-                    <svg class="size-5 mt-1 flex-none text-gray-400" [attr.xmlns]="item.icon.xmlns"
-                      [attr.fill]="item.icon.fill" [attr.viewBox]="item.icon.viewBox"
-                      [attr.stroke-width]="item.icon.strokeWidth" [attr.stroke]="item.icon.stroke" aria-hidden="true">
+                  <a [routerLink]="item.routerLink" class=" rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50 flex items-start gap-2">
+                    <svg class="size-5 mt-1 flex-none text-gray-400" [attr.xmlns]="item.icon.xmlns" [attr.fill]="item.icon.fill" [attr.viewBox]="item.icon.viewBox" [attr.stroke-width]="item.icon.strokeWidth" [attr.stroke]="item.icon.stroke" aria-hidden="true">
                       <path [attr.d]="item.icon.pathD" />
                     </svg>
                     <span class="flex flex-col text-left">
@@ -486,8 +409,7 @@
 
         <!-- Login Link -->
         <div class="py-6">
-          <a routerLink="/pages/contact-page"
-            class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 tracking-[1px]">Contact
+          <a routerLink="/pages/contact-page" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 tracking-[1px]">Contact
             Us <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
