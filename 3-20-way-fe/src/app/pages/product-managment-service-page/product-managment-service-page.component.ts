@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+import { AdvancedCurriculumComponent } from '../../components/advanced-curriculum/advanced-curriculum.component';
+import { CompaniesComponent } from '../../components/companies/companies.component';
+import { DownloadBrouchreCtaComponent } from '../../components/download-brouchre-cta/download-brouchre-cta.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { FrequentlyAskedQuestionsComponent } from '../../components/frequently-asked-questions/frequently-asked-questions.component';
+import { HaveMoreQuestionsComponent } from '../../components/have-more-questions/have-more-questions.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
+import { LanguageCtaComponent } from '../../components/language-cta/language-cta.component';
+import { MeetYourMentorsSectionComponent } from '../../components/meet-your-mentors-section/meet-your-mentors-section.component';
+import { TechnicalBenefitsComponent } from '../../components/technical-benefits/technical-benefits.component';
+import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
+import { VideoTestimonialsComponent } from '../../components/video-testimonials/video-testimonials.component';
+import { WhatYouThinkYouNeedVsWhatYouActuallyNeedComponent } from '../../components/what-you-think-you-need-vs-what-you-actually-need/what-you-think-you-need-vs-what-you-actually-need.component';
+import { ProductManagmentSService } from '../../services/product-managment-s.service';
+
+@Component({
+  selector: 'app-product-managment-service-page',
+  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, AdvancedCurriculumComponent, DownloadBrouchreCtaComponent, VideoTestimonialsComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, MeetYourMentorsSectionComponent, WhatYouThinkYouNeedVsWhatYouActuallyNeedComponent, FooterComponent],
+  templateUrl: './product-managment-service-page.component.html',
+})
+export class ProductManagmentServicePageComponent {
+  constructor(public pms: ProductManagmentSService) { }
+}

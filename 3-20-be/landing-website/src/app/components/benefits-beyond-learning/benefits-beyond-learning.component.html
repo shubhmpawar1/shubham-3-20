@@ -1,0 +1,27 @@
+<section class="bg-gray-900 py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-base font-semibold leading-7 text-{{color}}-600">{{benefits_beyond_learning.sub_title}}
+      </h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        {{benefits_beyond_learning.title}}
+      </p>
+      <p class="mt-6 text-lg leading-8 text-gray-300">{{benefits_beyond_learning.description}}</p>
+    </div>
+    <dl
+      class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
+      <div *ngFor="let item of benefits_beyond_learning.details" class="relative pl-9">
+        <dt class="inline font-semibold text-white">
+          <svg class="absolute top-1 left-1 size-5 text-{{color}}-600" viewBox="0 0 20 20" fill="currentColor"
+            aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M16.704 5.292a1 1 0 010 1.416L9.415 14.004a1 1 0 01-1.415 0l-4.704-4.704a1 1 0 011.415-1.416l4 4 6.996-6.996a1 1 0 011.417 0z"
+              clip-rule="evenodd" />
+          </svg>
+          {{ item.title }}
+        </dt>
+        <dd class="inline"> {{ item.description }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
