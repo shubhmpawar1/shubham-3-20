@@ -499,5 +499,38 @@ export class LandingPageService {
       }
     },
 
+    getting_started: {
+      headline: 'Getting started is easy!',
+      steps: [
+        'Sign up for your free 10 day trial.',
+        'Start your new daily movement routine, personalised completely to you',
+        'Feel better, stronger and more confident each day as your routines adapt to your ability.',
+      ],
+      cta: {
+        text: 'Start Now',
+        link: '#',
+      },
+      fees: {
+        headline: 'Fees',
+        body: "Try it for free! We’re keeping it simple for you - start your free, no-risk 10 day trial today, with a daily movement routine completely tailored to you. You will get full access to all features, and we won't ask for any payment details during your trial period. ",
+        fees_stack: "The 3-20 Way is meant to be easy - and that includes the price! We have two simple price tiers, giving you the flexibility to choose a subscription that suits you:",
+        tiers: [
+          {
+            label: 'Pay Monthly',
+            price: '£11.95',
+            annual_note: 'Total cost of £143.40 per year',
+            badge: null,
+          },
+          {
+            label: 'Pay Annual',
+            price: '£8.95',
+            annual_note: '£107.40 per year — save £36.00',
+            badge: 'Best value',
+          },
+        ],
+        no_risk: "No Risk: if at the end of your free trial The 3-20 Way is not for you, you can cancel and will not be charged.",
+      },
+    },
+
   }
 }
