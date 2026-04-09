@@ -399,6 +399,17 @@ export class LandingPageService {
     },
 
 
+    explainer: {
+      title: 'Movement routines tailored to you, anytime, anywhere.',
+      image: 'https://images.unsplash.com/photo-1588702547923-7408a25d6758?w=800&auto=format&fit=crop&q=80',
+      details: [
+        { description: 'Stream instantly on laptop, tablet, phone. Take us with you - no special equipment or clothing needed.' },
+        { description: 'Exercise at home, on holiday, wherever you are!' },
+        { description: 'Simple daily movement playlists uniquely designed for you.' },
+        { description: 'Your flexible friend - adjust your preferences anytime as your confidence or condition changes.' },
+      ]
+    },
+
     benefits_stack: {
       body: 'The 3/20 Way has been created by experienced movement coaches to provide older adults with a simple set of personalised daily movements to improve mobility and strength from the comfort of home. From just 3 minutes of movement each day, Together we can change the story of how we age.',
       title: 'Why The 3/20 Way?',

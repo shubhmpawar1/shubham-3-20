@@ -1,38 +1,31 @@
-<div class="bg-white py-32">
+<div class="bg-white mt-6 py-4">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
+    <div class="mx-auto flex max-w-2xl flex-col gap-16 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center">
+
+      <!-- LEFT: Image -->
       <div class="w-full lg:max-w-lg lg:flex-auto">
-        <h2 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
-          {{advanced_curriculum.title}}</h2>
-        <p class="mt-6 text-xl/8 text-gray-600">{{advanced_curriculum.description_1}} </p>
-        <p class="mt-6 text-xl/8 text-gray-600">{{advanced_curriculum.description_2}} </p>
-        <img src="{{advanced_curriculum.image}}" alt="Image" alt=""
-          class="mt-16 aspect-6/5 w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]">
+        <img [src]="advanced_curriculum.image" alt="" class="w-full rounded-2xl bg-gray-50 object-cover aspect-4/3 shadow-lg">
       </div>
+
+      <!-- RIGHT: Headline + Bullet list -->
       <div class="w-full lg:max-w-xl lg:flex-auto">
-        <h3 class="sr-only">Job openings</h3>
-        @for(item of advanced_curriculum.details; track item){
-        <ul>
-          <li class="py-8">
-            <dl class="relative flex flex-wrap gap-x-3">
-              <dt class="sr-only">Role</dt>
-              <dd class="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
-                <a href="#">
-                  {{item.title}}
-                  <span class="absolute inset-0" aria-hidden="true"></span>
-                </a>
-              </dd>
-              <dt class="sr-only">{{item.description}}</dt>
-              <dd class="mt-2 w-full flex-none text-base/7 text-gray-600">{{ item.description }}</dd>
-            </dl>
+        <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+          {{ advanced_curriculum.title }}
+        </h2>
+        <ul class="mt-10 space-y-4">
+          @for(item of advanced_curriculum.details; track item) {
+          <li class="flex items-start gap-x-4 rounded-2xl bg-gray-50 px-5 py-4 ring-1 ring-gray-100">
+            <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-cyan-600 shadow-sm">
+              <svg class="size-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <span class="text-base/7 text-gray-700">{{ item.description }}</span>
           </li>
+          }
         </ul>
-        }
-        <div class="mt-8 flex border-t border-gray-100 pt-8">
-          <a href="#" class="text-sm/6 font-semibold text-{{color}}-600 hover:text-{{color}}-500">View all openings <span
-              aria-hidden="true">&rarr;</span></a>
-        </div>
       </div>
+
     </div>
   </div>
 </div>
