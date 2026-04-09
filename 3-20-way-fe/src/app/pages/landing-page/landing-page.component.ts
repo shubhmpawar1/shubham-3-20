@@ -11,11 +11,12 @@ import { AboutUsComponent } from '../../components/about-us/about-us.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { LandingPageService } from '../../services/landing-page.service';
 import { HeroSectionComponent } from "../../components/hero-section/hero-section.component";
+import { BenefitsStackComponent } from '../../components/benefits-stack/benefits-stack.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, DownloadBrouchreCtaComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, AboutUsComponent, FooterComponent, HeroSectionComponent],
+  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, DownloadBrouchreCtaComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, AboutUsComponent, FooterComponent, HeroSectionComponent, BenefitsStackComponent],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {

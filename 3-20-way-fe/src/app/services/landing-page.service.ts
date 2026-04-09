@@ -39,7 +39,7 @@ export class LandingPageService {
         designation: "Founder & CEO",
         company: "Private Court India",
         image: "/mahadev-gitte.png",
-        // company_logo : '/private-court-symbol-pure-white-min.png'
+        company_logo : '/private-court-symbol-pure-white-min.png'
       },
       {
         description: "I joined The Contrast unsure of my path. Today, I’m not only working in a product team — I understand what quality code and real responsibility mean.”",
@@ -398,6 +398,44 @@ export class LandingPageService {
       ]
     },
 
+
+    benefits_stack: {
+      body: 'The 3/20 Way has been created by experienced movement coaches to provide older adults with a simple set of personalised daily movements to improve mobility and strength from the comfort of home. From just 3 minutes of movement each day, Together we can change the story of how we age.',
+      title: 'Why The 3/20 Way?',
+      sub_title: 'Benefits',
+      details: [
+        {
+          title: 'Personalised just for you',
+          description: 'The 3/20 Way creates a daily movement routine completely tailored to you, that will improve your mobility and strength.',
+          icon: `<svg class="size-6 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>`
+        },
+        {
+          title: 'Made for real life - not the gym',
+          description: 'No equipment is needed. All sessions can be done from the comfort of home, seated, standing, or even lying in bed!',
+          icon: `<svg class="size-6 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>`
+        },
+        {
+          title: 'Gentle but effective',
+          description: 'The 3/20 Way movement routines are simple and gentle with life-changing results.',
+          icon: `<svg class="size-6 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>`
+        },
+        {
+          title: "You'll feel great!",
+          description: 'Our members enjoy their daily routines and look forward to them each day. You will too!',
+          icon: `<svg class="size-6 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"/></svg>`
+        },
+        {
+          title: 'Confidence & independence',
+          description: 'Build confidence as you improve your mobility and independence.',
+          icon: `<svg class="size-6 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>`
+        },
+        {
+          title: 'Affordable & sustainable',
+          description: 'From less than a cup of coffee per week, you can improve your mobility and strength at a pace that is matched perfectly to you.',
+          icon: `<svg class="size-6 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`
+        }
+      ]
+    },
 
     what_you_think: {
       sub_title: 'Beginner’s Perspective',

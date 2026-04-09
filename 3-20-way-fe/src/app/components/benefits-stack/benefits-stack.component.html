@@ -1,0 +1,23 @@
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Body intro text -->
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-xl/7 font-semibold text-gray-600">{{ benefits_stack.body }}</p>
+    </div>
+
+    <!-- Benefits grid -->
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div *ngFor="let item of benefits_stack.details" class="cursor-pointer relative flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-8 hover:shadow-md transition-shadow duration-300">
+          <!-- Icon circle -->
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white">
+            <span [innerHTML]="sanitize(item.icon)"></span>
+          </div>
+          <dt class="text-base font-semibold text-gray-900">{{ item.title }}</dt>
+          <dd class="text-sm/6 text-gray-600">{{ item.description }}</dd>
+        </div>
+      </dl>
+    </div>
+
+  </div>
+</div>
