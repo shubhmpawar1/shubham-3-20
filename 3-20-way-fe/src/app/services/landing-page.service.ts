@@ -542,5 +542,85 @@ export class LandingPageService {
       ]
     },
 
+    faq_section: {
+      title: 'Frequently Asked Questions',
+      details: [
+        {
+          question: 'What is the 3-20 Way?',
+          answer: "The 3-20 Way is a simple, guided movement programme made up of short, manageable videos, organized into a 'playlist'. These playlists fit easily into everyday life and are designed to help you feel stronger, steadier, and more confident.",
+          expanded: false,
+        },
+        {
+          question: 'How much time does it take?',
+          answer: 'The 3-20 Way breaks movement into 3 minute sessions. You can do as many sessions as you prefer, ranging in duration from 3 to 20 minutes or more, and even spread them across your day - morning, afternoon, evening. These small moments add up to big changes!',
+          expanded: false,
+        },
+        {
+          question: 'What type of movements are in the 3-20 Way?',
+          answer: "The 3-20 Way includes gentle, functional movements that support everyday activities such as getting up and down safely, improving balance, joint mobility and building strength. Movements can be done seated, standing, even lying in bed! There's no need for equipment, just the simple support of a chair or wall, and everything can be adapted to how you feel on the day. For those who are already more active, there are also more challenging movements designed to help maintain strength, confidence and independence for longer.",
+          expanded: false,
+        },
+        {
+          question: 'Who is it for?',
+          answer: 'The 3-20 Way is for:',
+          list: [
+            'Those who are active and independent and want to stay that way.',
+            'Anyone who has started noticing changes in everyday activities such as climbing stairs or getting out of a chair or car.',
+            'Those with limited mobility, health conditions or managing pain or anything that is impacting independence.',
+          ],
+          expanded: false,
+        },
+        {
+          question: 'Is it safe?',
+          answer: 'Yes. All movements are gentle, controlled and designed to improve your mobility, strength and balance. Our simple sign-up questionnaire ensures you will only be presented movements that are appropriate for you.',
+          expanded: false,
+        },
+        {
+          question: 'Will it make my condition worse?',
+          answer: 'No. You will only be presented with movements that are suitable for you and which help make your condition more manageable. If there is any movement that does not feel right you can switch it for something more comfortable, and after completing a session you can give feedback which will adjust future playlists to ensure they remain appropriate for where you are at.',
+          expanded: false,
+        },
+        {
+          question: 'Do I need equipment?',
+          answer: 'No. Everything can be done at home with support from everyday items such as a chair or wall.',
+          expanded: false,
+        },
+        {
+          question: "What if I haven't exercised in a long time?",
+          answer: "That's absolutely fine. The 3-20 Way isn't about traditional exercise - it's about gentle, achievable movement that meets you exactly where you are. The approach is simple but effective, designed to build confidence without pushing or exhausting you, helping you stay independent, active and doing the things you enjoy for longer.",
+          expanded: false,
+        },
+        {
+          question: 'Can I have a free trial?',
+          answer: "Yes! You can try the 3-20 Way free for 10 days. We won't ask for payment details when you sign up, and you won't be charged until the trial ends — and don't worry, we'll remind you before any payment is taken, so you can cancel in advance if you wish. We also offer a 30-day money-back guarantee — although we don't think you'll need it, as most people start to feel the difference within the first couple of weeks.",
+          expanded: false,
+        },
+        {
+          question: 'How is this different from free videos online?',
+          answer: "The 3-20 Way gives you a personalised programme that takes into account any health conditions, personal goals, and how you're feeling right now. You'll get clear guidance on what to do each day, with short sessions that fit into your day. We provide support that will help you progress safely — something free online videos can't offer.",
+          expanded: false,
+        },
+        {
+          question: 'Can I change my programme?',
+          answer: "Yes. One of the unique things about The 3-20 Way is that it adapts to you. You can change your programme at any time, making it easier or more challenging, adjusting for how you are feeling or tailoring it to your goals and needs. As your confidence, strength, and ability change, your 3-20 Way programme changes with you.",
+          expanded: false,
+        },
+        {
+          question: 'Can I cancel at any time?',
+          answer: 'Yes — just go to xxx and complete the cancellation request.',
+          expanded: false,
+        },
+        {
+          question: 'How do I get started?',
+          answer: "Getting started is easy. Simply answer a few quick questions and we'll create a movement plan designed just for you. With regular, gentle movement, many people begin to feel stronger, steadier and more confident within just a few weeks — ready to enjoy everyday life more fully. Join now and start your new life today!",
+          expanded: false,
+        },
+      ],
+      cta: {
+        text: 'Start Now',
+        link: '#',
+      },
+    },
+
   }
 }
