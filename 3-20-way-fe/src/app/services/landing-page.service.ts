@@ -24,11 +24,11 @@ export class LandingPageService {
         text: '',
         link: '#'
       },
-      image_1: 'https://images.unsplash.com/photo-1634464660153-468d44306ac4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aW5kaWFuJTIwY2xhc3Nyb29tJTIwY29kaW5nfGVufDB8fDB8fHww',
-      image_2: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2VifGVufDB8fDB8fHww',
-      image_3: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80',
-      image_4: 'https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80',
-      image_5: 'https://images.unsplash.com/photo-1621856625680-282ec3a17db8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZGluZyUyMGNsYXNzJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D',
+      image_1: 'assets/Holding Page carousel image 1.jpeg',
+      image_2: 'assets/Holding Page carousel image 2.jpeg',
+      image_3: 'assets/Holding Page carousel image 3.jpeg',
+      image_4: 'assets/Holding Page carousel image 7.jpeg',
+      image_5: 'assets/Holding Page carousel image 5.jpeg',
 
     },
 
@@ -401,7 +401,7 @@ export class LandingPageService {
 
     explainer: {
       title: 'Movement routines tailored to you, anytime, anywhere.',
-      image: 'https://images.unsplash.com/photo-1588702547923-7408a25d6758?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/Holding Page carousel image 4.jpeg',
       details: [
         { description: 'Stream instantly on laptop, tablet, phone. Take us with you - no special equipment or clothing needed.' },
         { description: 'Exercise at home, on holiday, wherever you are!' },
