@@ -532,5 +532,15 @@ export class LandingPageService {
       },
     },
 
+    member_testimonials: {
+      title: 'What our members are saying:',
+      details: [
+        { description: 'Testimonial 1.' },
+        { description: 'Testimonial 2.' },
+        { description: 'Testimonial 3.' },
+        { description: 'Testimonial 4.' },
+      ]
+    },
+
   }
 }

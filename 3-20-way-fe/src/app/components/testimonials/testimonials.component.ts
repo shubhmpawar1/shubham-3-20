@@ -1,17 +1,17 @@
-import { Component, Input, input } from '@angular/core';
-import { LandingPageService } from '../../services/landing-page.service';
-import { NgFor, NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [NgFor,NgIf],
+  imports: [NgFor],
   templateUrl: './testimonials.component.html',
 })
 export class TestimonialsComponent {
 
-  @Input() testimonials_1: any = {};
+  @Input() color: string = 'cyan';
+  @Input() member_testimonials: any = {};
 
   constructor() { }
 
-} 
+}

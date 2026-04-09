@@ -1,23 +1,35 @@
-<section class="bg-gray-900 py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div *ngFor="let item of testimonials_1"
-                class="flex flex-col pb-10 sm:pb-16 lg:pr-8 lg:pb-0 xl:pr-20">
-                <img *ngIf="item.company_logo" class="h-12 self-start" [src]="item.company_logo"
-                    alt="">
-                <figure class="mt-10 flex flex-auto flex-col justify-between">
-                    <blockquote class="text-lg/8 text-white">
-                        <p>“{{ item.description }}”</p>
-                    </blockquote>
-                    <figcaption class="mt-10 flex items-center gap-x-6">
-                        <img class="size-14 rounded-full bg-gray-800" [src]="item.image" alt="">
-                        <div class="text-base">
-                            <div class="font-semibold text-white">{{ item.name }},</div>
-                            <div class="mt-1 text-gray-400">{{ item.designation }}, {{ item.company }}</div>
-                        </div>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
+<div class="bg-white mt-8 py-6">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="flex items-center gap-4 mb-12">
+      <div class="h-1 w-12 rounded-full bg-cyan-600"></div>
+      <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+        {{ member_testimonials.title }}
+      </h2>
     </div>
-</section>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 ">
+      <figure *ngFor="let item of member_testimonials.details" class="group relative flex flex-col rounded-2xl bg-white p-8 shadow-md ring-1 ring-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+
+        <!-- Left cyan accent bar -->
+        <div class="absolute top-8 bottom-8 left-0 w-1 rounded-full bg-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+        <!-- Quote icon -->
+        <svg class="mb-6 size-10 text-cyan-600" fill="currentColor" viewBox="0 0 32 32">
+          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+        </svg>
+
+        <blockquote class="flex-1 text-lg/8 text-gray-700">
+          <p>{{ item.description }}</p>
+        </blockquote>
+
+        <!-- Bottom cyan line -->
+        <div class="mt-8 h-px bg-gradient-to-r from-cyan-600 to-transparent"></div>
+
+      </figure>
+    </div>
+
+  </div>
+</div>
