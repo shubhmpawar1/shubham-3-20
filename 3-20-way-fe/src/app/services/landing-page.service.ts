@@ -39,7 +39,7 @@ export class LandingPageService {
         designation: "Founder & CEO",
         company: "Private Court India",
         image: "/mahadev-gitte.png",
-        company_logo : '/private-court-symbol-pure-white-min.png'
+        company_logo: '/private-court-symbol-pure-white-min.png'
       },
       {
         description: "I joined The Contrast unsure of my path. Today, I’m not only working in a product team — I understand what quality code and real responsibility mean.”",
@@ -487,6 +487,16 @@ export class LandingPageService {
         'Mobile-friendly layouts and basic responsiveness',
         'Simple, clean, and accessible UI',
       ],
+    },
+
+    woman_behind: {
+      headline: 'Introducing Karen Case, The 3-20 Way founder',
+      description: 'Karen Case is an experienced movement coach passionate about helping older adults live healthier, more confident and independent lives. With decades of experience, she created The 3-20 Way to make daily movement simple, accessible and genuinely life-changing.',
+      video_url: 'https://www.youtube.com/watch?v=eHwOlnTnMh4',
+      cta: {
+        text: 'Find out more about Karen',
+        link: 'https://docs.google.com/document/d/1zlgMUZETwKnJlq0KaMWjsP5SYuOEwXij2PuwtXMaX6o/edit?tab=t.0'
+      }
     },
 
   }
