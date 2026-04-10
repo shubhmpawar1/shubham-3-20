@@ -1,31 +1,23 @@
-<div class="bg-white mt-6 py-4">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto flex max-w-2xl flex-col gap-16 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center">
-
-      <!-- LEFT: Image -->
-      <div class="w-full lg:max-w-lg lg:flex-auto">
-        <img [src]="advanced_curriculum.image" alt="" class="w-full rounded-2xl bg-gray-50 object-cover object-right-bottom aspect-4/3 shadow-lg">
-      </div>
-
-      <!-- RIGHT: Headline + Bullet list -->
-      <div class="w-full lg:max-w-xl lg:flex-auto">
-        <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-          {{ advanced_curriculum.title }}
-        </h2>
-        <ul class="mt-10 space-y-4">
-          @for(item of advanced_curriculum.details; track item) {
-          <li class="flex items-start gap-x-4 rounded-2xl bg-gray-50 px-5 py-4 ring-1 ring-gray-100">
-            <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-orange-600 shadow-sm">
-              <svg class="size-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+<div class="overflow-hidden bg-white py-24 sm:py-32">
+  <div class="relative isolate">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-2xl flex-col gap-16 bg-white/75 px-6 py-16 shadow-lg ring-1 ring-gray-900/5 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
+        <img [src]="advanced_curriculum.image" alt="" class="h-96 w-full flex-none rounded-2xl object-cover object-right lg:aspect-square lg:h-auto lg:max-w-sm" />
+        <div class="w-full flex-auto">
+          <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-950 sm:text-5xl">{{ advanced_curriculum.title }}</h2>
+          <ul role="list" class="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-gray-950 sm:grid-cols-2">
+            <li *ngFor="let item of advanced_curriculum.details" class="flex gap-x-3">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mt-1 h-5 w-5 flex-none text-{{color}}-500">
+                <path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" fill-rule="evenodd" />
               </svg>
-            </span>
-            <span class="text-base/7 text-gray-700">{{ item.description }}</span>
-          </li>
-          }
-        </ul>
+              {{ item.description }}
+            </li>
+          </ul>
+        </div>
       </div>
-
+    </div>
+    <div aria-hidden="true" class="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl">
+      <div style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)" class="aspect-1318/752 w-329.5 flex-none bg-linear-to-r from-[#9fd6fc] to-[#8680fd] opacity-50"></div>
     </div>
   </div>
 </div>

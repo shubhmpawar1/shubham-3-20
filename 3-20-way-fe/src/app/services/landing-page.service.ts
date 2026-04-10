@@ -140,6 +140,12 @@ export class LandingPageService {
       description_1: `With our personalized task based training, every candidate uniquely advances through his own journey of becoming skilled.`,
       description_2: ` We help you learn to swim directly in the tides and fight with the waves, so that once you get placed, you perform brilliantly and stay confident wherever you go.`,
       image: 'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80',
+      body_points: [
+        'Stream instantly on laptop, tablet, phone. Take us with you - no special equipment or clothing needed.',
+        'Exercise at home, on holiday, wherever you are!',
+        'Simple daily movement playlists uniquely designed for you.',
+        'Your flexible friend - adjust your preferences anytime as your confidence or condition changes.'
+      ],
       details: [
         {
           title: 'Psychological Analysis',

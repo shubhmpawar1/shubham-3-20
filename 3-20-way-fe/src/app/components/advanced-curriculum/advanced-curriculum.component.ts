@@ -1,9 +1,9 @@
-import { Component, Input, input } from '@angular/core';
-import { LandingPageService } from '../../services/landing-page.service';
+import { Component, Input } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-advanced-curriculum',
-  imports: [],
+  imports: [NgFor],
   templateUrl: './advanced-curriculum.component.html',
 })
 export class AdvancedCurriculumComponent {
