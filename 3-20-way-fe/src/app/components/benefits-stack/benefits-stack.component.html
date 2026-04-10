@@ -1,19 +1,24 @@
-<div class="bg-white mt-6 py-4">
+<div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <!-- Body intro text -->
-    <div class="mx-auto max-w-3xl text-center">
-      <p class="text-xl/7 font-semibold text-gray-600">{{ benefits_stack.body }}</p>
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{ benefits_stack.title }}</h2>
+      <p class="mt-6 text-lg/8 text-gray-600">{{ benefits_stack.body }}</p>
     </div>
-    <!-- Benefits grid -->
-    <div class="mx-auto mt-10 max-w-2xl lg:max-w-none">
-      <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div *ngFor="let item of benefits_stack.details" class="cursor-pointer relative flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-8 hover:shadow-md transition-shadow duration-300">
-          <!-- Icon circle -->
-          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-600 text-white">
-            <span [innerHTML]="sanitize(item.icon)"></span>
-          </div>
-          <dt class="text-base font-semibold text-gray-900">{{ item.title }}</dt>
-          <dd class="text-sm/6 text-gray-600">{{ item.description }}</dd>
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <div *ngFor="let item of benefits_stack.details" class="flex flex-col">
+          <dt class="text-base/7 font-semibold text-gray-900">
+            <div class="mb-6 flex size-10 items-center justify-center rounded-lg bg-{{color}}-600">
+              <span class="size-6 text-white" [innerHTML]="sanitize(item.icon)"></span>
+            </div>
+            {{ item.title }}
+          </dt>
+          <dd class="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+            <p class="flex-auto">{{ item.description }}</p>
+            <p *ngIf="item.link" class="mt-6">
+              <a [href]="item.link" class="text-sm/6 font-semibold text-{{color}}-600 hover:text-{{color}}-500">Learn more <span aria-hidden="true">→</span></a>
+            </p>
+          </dd>
         </div>
       </dl>
     </div>

@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-benefits-stack',
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   templateUrl: './benefits-stack.component.html',
 })
 export class BenefitsStackComponent {
