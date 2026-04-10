@@ -531,7 +531,7 @@ export class LandingPageService {
             label: 'Pay Annual',
             price: '£8.95',
             annual_note: '£107.40 per year — save £36.00',
-            badge: 'Best value',
+            badge: null,
           },
         ],
         no_risk: "No Risk: if at the end of your free trial The 3-20 Way is not for you, you can cancel and will not be charged.",
