@@ -60,14 +60,14 @@
         <!-- Pricing cards -->
         <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div *ngFor="let tier of getting_started.fees.tiers; let i = index" [class]="i === 1
-              ? 'relative rounded-2xl bg-orange-600 p-7 shadow-lg shadow-orange-200 flex flex-col'
+              ? 'relative rounded-2xl bg-green-600 p-7 shadow-lg shadow-green-200 flex flex-col'
               : 'relative rounded-2xl bg-gray-50 ring-1 ring-gray-200 p-7 flex flex-col'">
 
-            <span *ngIf="tier.badge" class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-4 py-1 text-xs font-semibold text-orange-700 ring-1 ring-orange-200 shadow">
+            <span *ngIf="tier.badge" class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-4 py-1 text-xs font-semibold text-green-700 ring-1 ring-green-200 shadow">
               {{ tier.badge }}
             </span>
 
-            <p [class]="i === 1 ? 'text-xs font-semibold uppercase tracking-widest text-orange-200' : 'text-xs font-semibold uppercase tracking-widest text-gray-400'">
+            <p [class]="i === 1 ? 'text-xs font-semibold uppercase tracking-widest text-green-200' : 'text-xs font-semibold uppercase tracking-widest text-gray-400'">
               {{ tier.label }}
             </p>
 
@@ -75,10 +75,10 @@
               <span [class]="i === 1 ? 'text-5xl font-bold tracking-tight text-white' : 'text-5xl font-bold tracking-tight text-gray-900'">
                 {{ tier.price }}
               </span>
-              <span [class]="i === 1 ? 'mb-1 text-sm text-orange-100' : 'mb-1 text-sm text-gray-500'">/ mo</span>
+              <span [class]="i === 1 ? 'mb-1 text-sm text-green-100' : 'mb-1 text-sm text-gray-500'">/ mo</span>
             </p>
 
-            <p [class]="i === 1 ? 'mt-2 text-sm text-orange-100' : 'mt-2 text-sm text-gray-500'">
+            <p [class]="i === 1 ? 'mt-2 text-sm text-green-100' : 'mt-2 text-sm text-gray-500'">
               {{ tier.annual_note }}
             </p>
           </div>
