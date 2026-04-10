@@ -9,7 +9,7 @@
       <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <div *ngFor="let item of benefits_stack.details" class="cursor-pointer relative flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-8 hover:shadow-md transition-shadow duration-300">
           <!-- Icon circle -->
-          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-600 text-white">
             <span [innerHTML]="sanitize(item.icon)"></span>
           </div>
           <dt class="text-base font-semibold text-gray-900">{{ item.title }}</dt>
