@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { LandingPageService } from '../../services/landing-page.service';
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-technical-benefits',
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, NgClass],
   templateUrl: './technical-benefits.component.html',
 })
 export class TechnicalBenefitsComponent {
