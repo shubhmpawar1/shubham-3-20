@@ -84,12 +84,12 @@ export class LandingPageService {
       ]
     },
     movements_data: {
-      logo: 'https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg',
-      quote: '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      logo: 'assets/three_twenty_way_logo.png',
+      quote: '“Small daily steps lead to stronger, more confident living—meaningful movements with life-changing results.”',
       author: {
-        name: 'Judith Black',
-        role: 'CEO of Workcation',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+        name: 'Karen Case',
+        role: 'CEO of 3-20 Way',
+        image: 'assets/karen.png'
       }
     }
   }
