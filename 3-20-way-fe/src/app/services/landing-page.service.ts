@@ -664,36 +664,42 @@ export class LandingPageService {
     pricing: {
       title: 'Pricing',
       headline: 'Choose the right plan for you',
-      description: 'Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.',
+      description: [
+        'The 3-20 Way is designed to be easy - and that includes the price! We have two simple price tiers, giving you the',
+        'flexibility to choose a subscription that suits you. <strong class="text-black">No Risk:</strong> we’re keeping it simple for you - if at the end of your',
+        '10 day free trial The 3-20 Way is not for you, you can cancel and will not be charged.'
+      ],
       tiers: [
         {
-          name: 'Hobby',
-          price: '£11.95',
-          period: '/month',
-          description: 'The perfect plan if you\'re just getting started with our product.',
-          features: [
-            '25 products',
-            'Up to 10,000 subscribers',
-            'Advanced analytics',
-            '24-hour support response time'
-          ],
-          cta: { text: 'Get started today', link: '#' },
+          name: 'Pay Monthly',
+          price: '£11.99',
+          period: 'per month',
+          description: '(total cost of £143.88 per year)',
+          // features: [
+          //   '25 products',
+          //   'Up to 10,000 subscribers',
+          //   'Advanced analytics',
+          //   '24-hour support response time'
+          // ],
+          cta: { text: 'Start your 10 day free trial', link: '#' },
+          description2: '10 day free trial available to new members only.<br>Cancel any time.',
           featured: false
         },
         {
-          name: 'Enterprise',
-          price: '£9.95',
-          period: '/month',
-          description: 'Dedicated support and infrastructure for your company.',
-          features: [
-            'Unlimited products',
-            'Unlimited subscribers',
-            'Advanced analytics',
-            'Dedicated support representative',
-            'Marketing automations',
-            'Custom integrations'
-          ],
-          cta: { text: 'Get started today', link: '#' },
+          name: 'Annual Plan',
+          price: '£8.99',
+          period: 'per month',
+          description: '(total cost of £107.88 per year)',
+          // features: [
+          //   'Unlimited products',
+          //   'Unlimited subscribers',
+          //   'Advanced analytics',
+          //   'Dedicated support representative',
+          //   'Marketing automations',
+          //   'Custom integrations'
+          // ],
+          cta: { text: 'Start your 10 day free trial', link: '#' },
+          description2: '10 day free trial available to new members only.<br>Cancel any time.',
           featured: true
         }
       ]
