@@ -267,36 +267,30 @@ export class LandingPageService {
     pricing_data: {
       title: 'Pricing',
       headline: 'Choose the right plan for you',
-      description: 'Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.',
+      description: 'The 3–20 Way keeps pricing simple with two flexible plans to suit you. Start with a 10-day free trial—cancel anytime, no charge if it’s not for you.',
       tiers: [
         {
-          name: 'Hobby',
-          price: '$29',
+          name: 'Pay Monthly',
+          price: '£11.99',
           period: '/month',
-          description: 'The perfect plan if you’re just getting started with our product.',
+          description: '(total cost of £143.88 per year)',
           features: [
-            '25 products',
-            'Up to 10,000 subscribers',
-            'Advanced analytics',
-            '24-hour support response time'
+            '10-day free trial (new members only)',
+            'Cancel anytime—no commitment, no hidden fees.',
           ],
-          cta: 'Get started today',
+          cta: 'Start your 10 day free trial',
           featured: false
         },
         {
-          name: 'Enterprise',
-          price: '$99',
+          name: 'Annual Plan',
+          price: '£8.99',
           period: '/month',
-          description: 'Dedicated support and infrastructure for your company.',
+          description: '(total cost of £107.88 per year)',
           features: [
-            'Unlimited products',
-            'Unlimited subscribers',
-            'Advanced analytics',
-            'Dedicated support representative',
-            'Marketing automations',
-            'Custom integrations'
+            '10-day free trial (new members only)',
+            'Cancel anytime—no commitment, no hidden fees.',
           ],
-          cta: 'Get started today',
+          cta: 'Start your 10 day free trial',
           featured: true
         }
       ]
