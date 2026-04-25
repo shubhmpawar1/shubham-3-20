@@ -661,5 +661,42 @@ export class LandingPageService {
       },
     },
 
+    pricing: {
+      title: 'Pricing',
+      headline: 'Choose the right plan for you',
+      description: 'Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.',
+      tiers: [
+        {
+          name: 'Hobby',
+          price: '£11.95',
+          period: '/month',
+          description: 'The perfect plan if you\'re just getting started with our product.',
+          features: [
+            '25 products',
+            'Up to 10,000 subscribers',
+            'Advanced analytics',
+            '24-hour support response time'
+          ],
+          cta: { text: 'Get started today', link: '#' },
+          featured: false
+        },
+        {
+          name: 'Enterprise',
+          price: '£9.95',
+          period: '/month',
+          description: 'Dedicated support and infrastructure for your company.',
+          features: [
+            'Unlimited products',
+            'Unlimited subscribers',
+            'Advanced analytics',
+            'Dedicated support representative',
+            'Marketing automations',
+            'Custom integrations'
+          ],
+          cta: { text: 'Get started today', link: '#' },
+          featured: true
+        }
+      ]
+    },
   }
 }

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-new-pricing',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './new-pricing.component.html',
   styleUrl: './new-pricing.component.css'
 })
 export class NewPricingComponent {
-
+  @Input() pricing_data: any;
 }
