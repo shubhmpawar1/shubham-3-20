@@ -571,6 +571,11 @@ export class LandingPageService {
       ]
     },
 
+    movement_cta: {
+      title: 'With hundreds of easy to follow movement moments, small daily wins add up to big changes.',
+      description: 'The 3-20 Way has been created by experienced movement coaches to provide older adults with a simple set of personalised daily movements to improve mobility and strength from the comfort of home. From just 3 minutes of movement each day, Together we can change the story of how we age.',
+    },
+
     faq_section: {
       title: 'Frequently Asked Questions',
       details: [
