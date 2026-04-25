@@ -21,11 +21,12 @@ import { PricingSectionComponent } from '../../components/pricing-section/pricin
 import { NewPricingComponent } from '../../components/new-pricing/new-pricing.component';
 import { OutcomesComponent } from '../../components/outcomes/outcomes.component';
 import { HeroSectionTailwindComponent } from '../../components/hero-section-tailwind/hero-section-tailwind.component';
+import { DailyWinsComponent } from '../../components/daily-wins/daily-wins.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, DownloadBrouchreCtaComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, AboutUsComponent, FooterComponent, BenefitsStackComponent, AdvancedCurriculumComponent, WomanBehind320wayComponent, GettingStartedComponent, FaqSectionComponent, MovementCtaComponent, PricingSectionComponent, NewPricingComponent, OutcomesComponent, HeroSectionTailwindComponent],
+  imports: [HeroSectionTailwindComponent, DailyWinsComponent],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
