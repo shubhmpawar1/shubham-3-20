@@ -24,15 +24,20 @@ import { HeroSectionTailwindComponent } from '../../components/hero-section-tail
 import { DailyWinsComponent } from '../../components/daily-wins/daily-wins.component';
 import { AvailableComponent } from '../../components/available/available.component';
 import { MovementsComponent } from '../../components/movements/movements.component';
+import { NewFooterComponent } from '../../components/new-footer/new-footer.component';
+import { NewFooterService } from '../../services/new-footer.service';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeroSectionTailwindComponent, DailyWinsComponent, AvailableComponent, MovementsComponent],
+  imports: [HeroSectionTailwindComponent, DailyWinsComponent, AvailableComponent, MovementsComponent, NewFooterComponent],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
 
-  constructor(public ls: LandingPageService) { }
+  constructor(
+    public ls: LandingPageService,
+    public nfs: NewFooterService
+  ) { }
 
 }
