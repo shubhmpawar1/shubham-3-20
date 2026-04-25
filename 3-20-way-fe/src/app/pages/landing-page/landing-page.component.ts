@@ -23,11 +23,12 @@ import { OutcomesComponent } from '../../components/outcomes/outcomes.component'
 import { HeroSectionTailwindComponent } from '../../components/hero-section-tailwind/hero-section-tailwind.component';
 import { DailyWinsComponent } from '../../components/daily-wins/daily-wins.component';
 import { AvailableComponent } from '../../components/available/available.component';
+import { MovementsComponent } from '../../components/movements/movements.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeroSectionTailwindComponent, DailyWinsComponent, AvailableComponent],
+  imports: [HeroSectionTailwindComponent, DailyWinsComponent, AvailableComponent, MovementsComponent],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
