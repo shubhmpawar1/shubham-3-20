@@ -294,6 +294,39 @@ export class LandingPageService {
           featured: true
         }
       ]
+    },
+    feature_data: {
+      title: 'Start Your Free 10-Day Journey',
+      description: 'Try it free for 10 days—no risk, no payment details required.Enjoy full access with daily movement routines tailored just for you.',
+      items: [
+        {
+          title: 'Free Trial',
+          description: 'Sign up for your free 10-day trial and start moving with personalised routines designed just for you.',
+          link: '#',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6 text-white">
+  <circle cx="12" cy="12" r="9" />
+  <text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">1</text>
+</svg>`
+        },
+        {
+          title: 'Personalised Routine',
+          description: 'Start your new daily movement moment routine, personalised completely to you.',
+          link: '#',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6 text-white">
+  <circle cx="12" cy="12" r="9" />
+  <text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">2</text>
+</svg>`
+        },
+        {
+          title: 'Build Confidence',
+          description: 'Feel better, stronger and more confident each day as your routines adapt to your ability.',
+          link: '#',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6 text-white">
+  <circle cx="12" cy="12" r="9" />
+  <text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">3</text>
+</svg>`
+        }
+      ]
     }
   }
 }
