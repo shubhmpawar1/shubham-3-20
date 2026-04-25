@@ -19,11 +19,13 @@ import { FaqSectionComponent } from '../../components/faq-section/faq-section.co
 import { MovementCtaComponent } from '../../components/movement-cta/movement-cta.component';
 import { PricingSectionComponent } from '../../components/pricing-section/pricing-section.component';
 import { NewPricingComponent } from '../../components/new-pricing/new-pricing.component';
+import { OutcomesComponent } from '../../components/outcomes/outcomes.component';
+import { HeroSectionTailwindComponent } from '../../components/hero-section-tailwind/hero-section-tailwind.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, DownloadBrouchreCtaComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, AboutUsComponent, FooterComponent, HeroSectionComponent, BenefitsStackComponent, AdvancedCurriculumComponent, WomanBehind320wayComponent, GettingStartedComponent, FaqSectionComponent, MovementCtaComponent, PricingSectionComponent, NewPricingComponent],
+  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, DownloadBrouchreCtaComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, AboutUsComponent, FooterComponent, BenefitsStackComponent, AdvancedCurriculumComponent, WomanBehind320wayComponent, GettingStartedComponent, FaqSectionComponent, MovementCtaComponent, PricingSectionComponent, NewPricingComponent, OutcomesComponent, HeroSectionTailwindComponent],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {

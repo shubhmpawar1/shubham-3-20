@@ -8,6 +8,35 @@ export class LandingPageService {
 
   landing_page_content = {
 
+    hero_section_tailwind: {
+      logo: 'assets/three_twenty_way_logo.png',
+      navigation: [
+        { name: 'Product', href: '#' },
+        { name: 'Features', href: '#' },
+        { name: 'Marketplace', href: '#' },
+        { name: 'Company', href: '#' },
+      ],
+      announcement: {
+        text: '10 day free trial available to new members only. Cancel any time.',
+        linkText: 'Read more',
+        href: '#'
+      },
+      headline: {
+        line1: '3–20 minutes daily',
+        line2: 'better lives for elders'
+      },
+      description: 'From as little as 3 minutes a day, we’re helping thousands of people move better, feel better and live better - for longer.',
+      primaryCTA: {
+        text: 'Start your 10 day free trial',
+        href: '#'
+      },
+      secondaryCTA: {
+        text: 'Learn more',
+        href: '#'
+      },
+      bgImage: 'assets/hero.jpg'
+    },
+
     hero_section: {
       title: '3 to 20 minutes of simple daily movement creating life-changing results for older adults.',
       pill_1: 'Simple',
