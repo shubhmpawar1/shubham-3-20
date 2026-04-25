@@ -17,11 +17,12 @@ import { WomanBehind320wayComponent } from '../../components/woman-behind-320way
 import { GettingStartedComponent } from '../../components/getting-started/getting-started.component';
 import { FaqSectionComponent } from '../../components/faq-section/faq-section.component';
 import { MovementCtaComponent } from '../../components/movement-cta/movement-cta.component';
+import { PricingSectionComponent } from '../../components/pricing-section/pricing-section.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, DownloadBrouchreCtaComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, AboutUsComponent, FooterComponent, HeroSectionComponent, BenefitsStackComponent, AdvancedCurriculumComponent, WomanBehind320wayComponent, GettingStartedComponent, FaqSectionComponent, MovementCtaComponent],
+  imports: [HeaderComponent, HeroSectionComponent, TestimonialsComponent, LanguageCtaComponent, CompaniesComponent, DownloadBrouchreCtaComponent, FrequentlyAskedQuestionsComponent, TechnicalBenefitsComponent, HaveMoreQuestionsComponent, AboutUsComponent, FooterComponent, HeroSectionComponent, BenefitsStackComponent, AdvancedCurriculumComponent, WomanBehind320wayComponent, GettingStartedComponent, FaqSectionComponent, MovementCtaComponent, PricingSectionComponent],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
