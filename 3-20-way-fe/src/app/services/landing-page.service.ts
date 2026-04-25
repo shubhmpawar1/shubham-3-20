@@ -91,6 +91,95 @@ export class LandingPageService {
         role: 'CEO of 3-20 Way',
         image: 'assets/karen.png'
       }
+    },
+    faq_data: {
+      title: 'Frequently asked questions',
+      items: [
+        {
+          id: 'faq-0',
+          question: "What is the 3-20 Way?",
+          answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+          open: false
+        },
+        {
+          id: 'faq-1',
+          question: "How is this different from free videos online?",
+          answer: "You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus.",
+          open: false
+        },
+        {
+          id: 'faq-2',
+          question: "What type of movements are in the 3-20 Way?",
+          answer: "Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.",
+          open: false
+        },
+        {
+          id: 'faq-3',
+          question: "How much time does it take?",
+          answer: "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+          open: false
+        },
+        {
+          id: 'faq-4',
+          question: "Who is it for?",
+          answer: "Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.",
+          open: false
+        },
+        {
+          id: 'faq-5',
+          question: "Is it safe?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-6',
+          question: "Will it make my condition worse?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-7',
+          question: "Do I need equipment?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-8',
+          question: "How much does it cost?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-9',
+          question: "Can I have a free trial?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-10',
+          question: "Can I change my programme?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-11',
+          question: "Can I cancel at any time?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-12',
+          question: "Can I pay for a gift membership for my loved one?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+        {
+          id: 'faq-13',
+          question: "How do I get started?",
+          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          open: false
+        },
+      ]
     }
   }
 }

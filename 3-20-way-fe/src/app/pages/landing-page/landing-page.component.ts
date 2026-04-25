@@ -26,11 +26,12 @@ import { AvailableComponent } from '../../components/available/available.compone
 import { MovementsComponent } from '../../components/movements/movements.component';
 import { NewFooterComponent } from '../../components/new-footer/new-footer.component';
 import { NewFooterService } from '../../services/new-footer.service';
+import { NewFaqComponent } from '../../components/new-faq/new-faq.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeroSectionTailwindComponent, DailyWinsComponent, AvailableComponent, MovementsComponent, NewFooterComponent],
+  imports: [HeroSectionTailwindComponent, DailyWinsComponent, AvailableComponent, MovementsComponent, NewFooterComponent, NewFaqComponent],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
