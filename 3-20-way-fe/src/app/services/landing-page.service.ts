@@ -449,5 +449,22 @@ export class LandingPageService {
       ],
       image: 'assets/what-we-give.png'
     },
+    how_it_works_data: {
+      tagline: 'Your personalised movement plan',
+      title: 'A Daily Exercise Plan Built Around You',
+      description_col1: [
+        'The 3-20 Way app is your personalised gateway to a daily movement plan made up of short, easy-to-follow 3-minute videos led by Karen Case and her team (no fake AI—guaranteed).',
+        'A quick onboarding questionnaire (just 2–3 minutes) helps the app understand your health, mobility, and goals so it can build a tailored movement plan just for you.'
+      ],
+      description_col2: [
+        'Based on your profile, your daily plan can range from 3 minutes to 20 minutes or more, and you can complete it in one session or spread it throughout your day.',
+        'As your health or mobility changes, your plan automatically adapts to stay aligned with your needs, ensuring you always have the right movement support.'
+      ],
+      cta: {
+        text: 'Start your journey',
+        href: '#'
+      },
+      image: 'https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png'
+    }
   }
 }

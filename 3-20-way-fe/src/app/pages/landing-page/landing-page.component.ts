@@ -12,6 +12,8 @@ import { NewPricingComponent } from '../../components/new-pricing/new-pricing.co
 import { FeatureComponent } from '../../components/feature/feature.component';
 import { OutcomesComponent } from '../../components/outcomes/outcomes.component';
 import { WhatWeGiveComponent } from '../../components/what-we-give/what-we-give.component';
+import { HowItWorksComponent } from '../../components/how-it-works/how-it-works.component';
+
 
 
 
@@ -29,7 +31,8 @@ import { WhatWeGiveComponent } from '../../components/what-we-give/what-we-give.
     NewPricingComponent,
     FeatureComponent,
     OutcomesComponent,
-    WhatWeGiveComponent
+    WhatWeGiveComponent,
+    HowItWorksComponent
   ],
   templateUrl: './landing-page.component.html',
 })
