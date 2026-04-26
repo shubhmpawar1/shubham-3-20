@@ -10,6 +10,8 @@ import { NewFaqComponent } from '../../components/new-faq/new-faq.component';
 import { NewTestimonialsComponent } from '../../components/new-testimonials/new-testimonials.component';
 import { NewPricingComponent } from '../../components/new-pricing/new-pricing.component';
 import { FeatureComponent } from '../../components/feature/feature.component';
+import { OutcomesComponent } from '../../components/outcomes/outcomes.component';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -23,7 +25,8 @@ import { FeatureComponent } from '../../components/feature/feature.component';
     NewFaqComponent, 
     NewTestimonialsComponent, 
     NewPricingComponent,
-    FeatureComponent
+    FeatureComponent,
+    OutcomesComponent
   ],
   templateUrl: './landing-page.component.html',
 })
