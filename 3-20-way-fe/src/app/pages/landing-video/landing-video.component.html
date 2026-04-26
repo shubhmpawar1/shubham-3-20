@@ -1,0 +1,22 @@
+<div class="relative h-screen w-full overflow-hidden bg-black flex flex-col items-center justify-end pb-20">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover opacity-70">
+        <source src="assets/320way_founder.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay Content -->
+    <div class="relative z-10 flex flex-col items-center gap-8">
+        <!-- Logo -->
+        <!-- <img src="assets/three_twenty_way_logo.png" alt="3-20 Way Logo" class="h-24 md:h-32 object-contain brightness-0 invert" /> -->
+
+        <!-- Skip Button -->
+        <button (click)="skipVideo()"
+            class="px-8 py-3 bg-[#f58220] hover:bg-[#e67610] text-white text-xl font-bold rounded-full border-2 border-white/20 shadow-2xl transform transition-all active:scale-95">
+            Click to skip video
+        </button>
+    </div>
+
+    <!-- Vignette / Darkening -->
+    <div class="absolute inset-0 pointer-events-none bg-radial-[circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%]">
+    </div>
+</div>
