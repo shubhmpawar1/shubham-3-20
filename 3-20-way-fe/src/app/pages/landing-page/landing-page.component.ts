@@ -11,6 +11,8 @@ import { NewTestimonialsComponent } from '../../components/new-testimonials/new-
 import { NewPricingComponent } from '../../components/new-pricing/new-pricing.component';
 import { FeatureComponent } from '../../components/feature/feature.component';
 import { OutcomesComponent } from '../../components/outcomes/outcomes.component';
+import { WhatWeGiveComponent } from '../../components/what-we-give/what-we-give.component';
+
 
 
 @Component({
@@ -26,7 +28,8 @@ import { OutcomesComponent } from '../../components/outcomes/outcomes.component'
     NewTestimonialsComponent, 
     NewPricingComponent,
     FeatureComponent,
-    OutcomesComponent
+    OutcomesComponent,
+    WhatWeGiveComponent
   ],
   templateUrl: './landing-page.component.html',
 })
