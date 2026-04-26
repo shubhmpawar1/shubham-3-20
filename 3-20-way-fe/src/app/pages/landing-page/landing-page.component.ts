@@ -13,6 +13,8 @@ import { FeatureComponent } from '../../components/feature/feature.component';
 import { OutcomesComponent } from '../../components/outcomes/outcomes.component';
 import { WhatWeGiveComponent } from '../../components/what-we-give/what-we-give.component';
 import { HowItWorksComponent } from '../../components/how-it-works/how-it-works.component';
+import { NewCtaComponent } from '../../components/new-cta/new-cta.component';
+
 
 
 
@@ -32,7 +34,8 @@ import { HowItWorksComponent } from '../../components/how-it-works/how-it-works.
     FeatureComponent,
     OutcomesComponent,
     WhatWeGiveComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    NewCtaComponent
   ],
   templateUrl: './landing-page.component.html',
 })

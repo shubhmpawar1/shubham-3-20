@@ -465,6 +465,18 @@ export class LandingPageService {
         href: '#'
       },
       video: 'https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png'
+    },
+    new_cta_data: {
+      title: 'The 3-20 Way for You and Your Loved Ones',
+      description: 'The 3-20 Way is a simple, personalised movement plan that helps you and your loved ones build strength, mobility, and independence through short, safe daily routines from the comfort of home.',
+      primaryCTA: {
+        text: 'Start your 10-day free trial',
+        href: '#'
+      },
+      secondaryCTA: {
+        text: 'Learn more about the 3–20 Way',
+        href: '#'
+      }
     }
   }
 }
