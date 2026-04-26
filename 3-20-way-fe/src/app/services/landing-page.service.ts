@@ -464,7 +464,7 @@ export class LandingPageService {
         text: 'Start your journey',
         href: '#'
       },
-      image: 'https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png'
+      video: 'https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png'
     }
   }
 }
