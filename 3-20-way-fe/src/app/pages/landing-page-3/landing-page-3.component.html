@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The 3-20 Way – Move Better. Live Better.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,500;0,700;1,300&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --orange: #f58220;
+            --orange-dark: #e67610;
+            --dark: #414141;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --light: #f5f4f0;
+            --blue-accent: #00aeef;
+            --gray-text: #5a5a5a;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--white);
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            overflow: hidden;
+        }
+
+        .hero__bg {
+            position: absolute;
+            inset: 0;
+            background: url('/assets/hero.jpg') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        /* Diagonal split overlay */
+        .hero__bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.82) 0%, rgba(26, 26, 26, 0.82) 55%, rgba(245, 130, 32, 0.15) 100%);
+        }
+
+        /* Diagonal orange stripe accent */
+        .hero__stripe {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--orange);
+            clip-path: polygon(80% 0, 100% 0, 100% 100%, 0% 100%);
+            opacity: 0.12;
+            z-index: 1;
+        }
+
+        .hero__nav {
+            position: relative;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 40px;
+        }
+
+        .hero__logo {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .hero__nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-login {
+            background: var(--white);
+            color: var(--black);
+            border: none;
+            border-radius: 999px;
+            padding: 10px 28px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-login:hover {
+            background: #e8e8e8;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 40px 64px;
+        }
+
+        .hero__inner {
+            max-width: 720px;
+        }
+
+        /* Vertical rule accent */
+        .hero__inner::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 60px;
+            background: var(--orange);
+            margin-bottom: 24px;
+            border-radius: 2px;
+        }
+
+        .hero__eyebrow {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 16px;
+        }
+
+        .hero__h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(52px, 7vw, 100px);
+            line-height: 0.95;
+            color: var(--white);
+            margin-bottom: 24px;
+            letter-spacing: 0.01em;
+        }
+
+        .hero__h1 em {
+            font-style: normal;
+            color: var(--orange);
+        }
+
+        .hero__sub {
+            font-size: 17px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.65;
+            max-width: 520px;
+            margin-bottom: 40px;
+        }
+
+        .hero__cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            padding: 18px 40px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.97);
+        }
+
+        .hero__fine {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        /* Tag pills */
+        .hero__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+
+        .tag {
+            border: 1.5px solid rgba(255, 255, 255, 0.45);
+            color: var(--white);
+            border-radius: 999px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        /* Scroll indicator */
+        .hero__scroll {
+            position: absolute;
+            bottom: 32px;
+            right: 48px;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .hero__scroll-line {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, var(--orange), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scaleY(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scaleY(1.1);
+            }
+        }
+
+        /* ─── TICKER BAND ─── */
+        .ticker {
+            background: var(--orange);
+            overflow: hidden;
+            padding: 14px 0;
+            white-space: nowrap;
+        }
+
+        .ticker__track {
+            display: inline-flex;
+            animation: ticker 22s linear infinite;
+        }
+
+        .ticker__item {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            padding: 0 32px;
+        }
+
+        .ticker__dot {
+            color: rgba(255, 255, 255, 0.5);
+            padding: 0 4px;
+        }
+
+        @keyframes ticker {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ─── ABOUT / MOVEMENT SECTION ─── */
+        .about {
+            background: var(--white);
+            padding: 100px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1280px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about__label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .about__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(42px, 5vw, 72px);
+            line-height: 1.0;
+            color: var(--black);
+            margin-bottom: 28px;
+            letter-spacing: 0.02em;
+        }
+
+        .about__body {
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--gray-text);
+            line-height: 1.75;
+        }
+
+        .about__visual {
+            position: relative;
+        }
+
+        .about__icon-wrap {
+            width: 180px;
+            height: 180px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+        }
+
+        .about__icon-wrap img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+
+        .stat-card {
+            background: var(--dark);
+            color: var(--white);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .stat-card:nth-child(2) {
+            background: var(--orange);
+        }
+
+        .stat-card:nth-child(3) {
+            background: var(--orange);
+        }
+
+        .stat-card:nth-child(4) {
+            background: var(--dark);
+        }
+
+        .stat-card:first-child {
+            border-radius: 16px 0 0 0;
+        }
+
+        .stat-card:nth-child(2) {
+            border-radius: 0 16px 0 0;
+        }
+
+        .stat-card:nth-child(3) {
+            border-radius: 0 0 0 16px;
+        }
+
+        .stat-card:last-child {
+            border-radius: 0 0 16px 0;
+        }
+
+        .stat-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 56px;
+            line-height: 1;
+            letter-spacing: 0.02em;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0.75;
+            line-height: 1.4;
+        }
+
+        /* ─── DEVICES SECTION ─── */
+        .devices {
+            background: var(--dark);
+            padding: 100px 40px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .devices__label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .devices__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(38px, 5vw, 68px);
+            line-height: 1.0;
+            letter-spacing: 0.02em;
+            max-width: 900px;
+            margin: 0 auto 64px;
+        }
+
+        .devices__mockups {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 0;
+            max-width: 1000px;
+            margin: 0 auto 64px;
+        }
+
+        .devices__mockups img {
+            object-fit: contain;
+            filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.5));
+        }
+
+        .dev-phone {
+            height: 340px;
+            z-index: 1;
+            opacity: 0.85;
+        }
+
+        .dev-laptop {
+            height: 420px;
+            z-index: 2;
+            margin: 0 -40px;
+        }
+
+        .dev-tablet {
+            height: 300px;
+            z-index: 1;
+            opacity: 0.85;
+        }
+
+        .devices__benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            max-width: 960px;
+            margin: 0 auto 56px;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 24px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .benefit-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--orange);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ─── ORANGE BANNER ─── */
+        .banner {
+            background: var(--orange);
+            padding: 80px 40px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .banner__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(44px, 6vw, 88px);
+            line-height: 1.0;
+            letter-spacing: 0.02em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ─── FEATURES SECTION ─── */
+        .features {
+            background: var(--white);
+            padding: 100px 40px;
+        }
+
+        .features__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .features__top {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .features__col {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .features__col--right {
+            text-align: left;
+        }
+
+        .features__col--left {
+            text-align: right;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .feature-item--left {
+            align-items: flex-end;
+        }
+
+        .feature-item--right {
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange);
+            flex-shrink: 0;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .feature-h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 0.04em;
+            color: var(--black);
+            line-height: 1.1;
+        }
+
+        .feature-p {
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--gray-text);
+            line-height: 1.65;
+            max-width: 280px;
+        }
+
+        .feature-item--left .feature-p {
+            text-align: right;
+        }
+
+        .features__phone {
+            width: 240px;
+            flex-shrink: 0;
+        }
+
+        .features__phone img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.18));
+        }
+
+        /* How it works */
+        .how {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            text-align: center;
+        }
+
+        .how__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(38px, 4vw, 60px);
+            letter-spacing: 0.02em;
+            color: var(--black);
+            margin-bottom: 32px;
+        }
+
+        .how__body {
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--gray-text);
+            line-height: 1.75;
+        }
+
+        .how__body p+p {
+            margin-top: 20px;
+        }
+
+        /* Video placeholder */
+        .video-wrap {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #ed4e91 0%, #c62a70 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+        }
+
+        .video-wrap h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(24px, 3vw, 44px);
+            color: var(--white);
+            letter-spacing: 0.15em;
+            text-align: center;
+            padding: 24px;
+        }
+
+        /* Two-col CTAs */
+        .cta-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            max-width: 960px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .cta-col {
+            background: var(--light);
+            padding: 56px 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cta-col:last-child {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .cta-col__h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 40px;
+            letter-spacing: 0.02em;
+            line-height: 1.05;
+        }
+
+        .cta-col__p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        .cta-col:first-child .cta-col__p {
+            color: var(--gray-text);
+        }
+
+        .cta-col:last-child .cta-col__p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ─── OUTCOMES ─── */
+        .outcomes {
+            background: var(--dark);
+            padding: 100px 40px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .outcomes__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(40px, 5vw, 72px);
+            letter-spacing: 0.02em;
+            margin-bottom: 72px;
+        }
+
+        .outcomes__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto 72px;
+        }
+
+        .outcome-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .outcome-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(245, 130, 32, 0.5);
+            box-shadow: 0 0 0 6px rgba(245, 130, 32, 0.12);
+        }
+
+        .outcome-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .outcome-h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 38px;
+            letter-spacing: 0.04em;
+            color: var(--orange);
+        }
+
+        .outcome-p {
+            font-size: 16px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            max-width: 260px;
+        }
+
+        /* ─── KAREN SECTION ─── */
+        .karen {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .karen__video {
+            position: relative;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .karen__video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .karen__video-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(65, 65, 65, 0.7) 0%, transparent 60%);
+        }
+
+        .karen__content {
+            background: var(--white);
+            padding: 72px 56px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .karen__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(36px, 3.5vw, 56px);
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+            color: var(--black);
+            margin-bottom: 32px;
+        }
+
+        .karen__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+
+        .karen__col h3 {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+
+        .karen__col p {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--gray-text);
+            line-height: 1.65;
+        }
+
+        .karen__btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn-pill {
+            background: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 999px;
+            padding: 11px 22px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-pill:hover {
+            background: var(--orange-dark);
+        }
+
+        .btn-pill:active {
+            transform: scale(0.97);
+        }
+
+        /* ─── GETTING STARTED BANNER ─── */
+        .start-banner {
+            background: var(--orange);
+            padding: 64px 40px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .start-banner h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(38px, 5vw, 72px);
+            letter-spacing: 0.02em;
+            line-height: 1.0;
+        }
+
+        /* ─── PRICING SECTION ─── */
+        .pricing {
+            background: var(--light);
+            padding: 100px 40px;
+        }
+
+        .pricing__inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pricing__intro {
+            max-width: 720px;
+            margin: 0 auto 64px;
+            text-align: center;
+        }
+
+        .pricing__intro p {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--gray-text);
+            line-height: 1.75;
+        }
+
+        .pricing__intro strong {
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            max-width: 800px;
+            margin: 0 auto 72px;
+            text-align: center;
+        }
+
+        .step {
+            padding: 0 24px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .step:last-child {
+            border-right: none;
+        }
+
+        .step-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 72px;
+            line-height: 1;
+            color: var(--orange);
+        }
+
+        .step-label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--black);
+            line-height: 1.45;
+        }
+
+        .pricing__cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            flex: 1;
+            background: var(--dark);
+            color: var(--white);
+            padding: 52px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+            border-radius: 16px 0 0 16px;
+        }
+
+        .price-card--featured {
+            background: var(--orange);
+            border-radius: 0 16px 16px 0;
+            padding: 64px 40px;
+            position: relative;
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--blue-accent);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .price-tier {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+
+        .price-amount {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 80px;
+            line-height: 1;
+            letter-spacing: 0.02em;
+        }
+
+        .price-per {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+
+        .price-annual {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-bottom: 24px;
+        }
+
+        .btn-card {
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.2s;
+            margin-bottom: 10px;
+        }
+
+        .price-card .btn-card {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        .price-card .btn-card:hover {
+            background: var(--orange-dark);
+        }
+
+        .price-card--featured .btn-card {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .price-card--featured .btn-card:hover {
+            background: var(--black);
+        }
+
+        .price-fine {
+            font-size: 10px;
+            opacity: 0.5;
+            line-height: 1.5;
+        }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials {
+            background: var(--dark);
+            padding: 100px 40px;
+            color: var(--white);
+        }
+
+        .testimonials__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(40px, 5vw, 72px);
+            letter-spacing: 0.02em;
+            text-align: center;
+            margin-bottom: 72px;
+        }
+
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            max-width: 1200px;
+            margin: 0 auto 72px;
+        }
+
+        .testi-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .testi-stars {
+            display: flex;
+            gap: 3px;
+        }
+
+        .star {
+            color: var(--orange);
+            font-size: 16px;
+        }
+
+        .testi-quote {
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        .testi-name {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--orange);
+        }
+
+        /* ─── FAQ ─── */
+        .faq {
+            background: var(--white);
+            padding: 100px 40px;
+        }
+
+        .faq__inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq__h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(40px, 5vw, 64px);
+            letter-spacing: 0.02em;
+            color: var(--black);
+            margin-bottom: 48px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--black);
+            cursor: pointer;
+            list-style: none;
+            gap: 16px;
+            transition: color 0.2s;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary:hover {
+            color: var(--orange);
+        }
+
+        .faq-arrow {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--orange);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.25s;
+        }
+
+        .faq-item[open] .faq-arrow {
+            transform: rotate(90deg);
+        }
+
+        .faq-answer {
+            padding: 0 0 24px 0;
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--gray-text);
+            line-height: 1.75;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--black);
+            padding: 72px 40px 40px;
+            color: var(--white);
+        }
+
+        .footer__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer__top {
+            display: grid;
+            grid-template-columns: 280px 1fr auto;
+            gap: 64px;
+            margin-bottom: 56px;
+            padding-bottom: 56px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer__logo {
+            height: 44px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        .footer__links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer__links li a,
+        .footer__links li span {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer__links li a::before,
+        .footer__links li span::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--orange);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .footer__links li a:hover,
+        .footer__links li span:hover {
+            color: var(--white);
+        }
+
+        .footer__socials {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .social-btn:hover {
+            background: var(--orange);
+        }
+
+        .social-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .footer__newsletter {
+            margin-bottom: 32px;
+        }
+
+        .footer__newsletter button {
+            background: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 999px;
+            padding: 10px 24px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .footer__newsletter button:hover {
+            background: var(--orange-dark);
+        }
+
+        .footer__info {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 2;
+        }
+
+        .footer__info strong {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+        }
+
+        .footer__apps {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: flex-start;
+            padding-top: 4px;
+        }
+
+        .footer__apps p {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.05em;
+        }
+
+        .app-btn {
+            height: 44px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .app-btn:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .app-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--white);
+            flex-shrink: 0;
+        }
+
+        .app-btn img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .app-btn-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-btn-sub {
+            font-size: 9px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .app-btn-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Shared button overrides */
+        .btn-dark {
+            background: var(--dark);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            padding: 16px 36px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-dark:hover {
+            background: var(--black);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .cta-centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 48px;
+        }
+
+        .fine-print {
+            font-size: 11px;
+            opacity: 0.5;
+            letter-spacing: 0.04em;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            .hero__nav {
+                padding: 20px 24px;
+            }
+
+            .hero__content {
+                padding: 0 24px 48px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                padding: 72px 24px;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .devices {
+                padding: 72px 24px;
+            }
+
+            .dev-phone,
+            .dev-tablet {
+                display: none;
+            }
+
+            .dev-laptop {
+                height: 280px;
+                margin: 0;
+            }
+
+            .devices__benefits {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features__top {
+                grid-template-columns: 1fr;
+            }
+
+            .features__col--left,
+            .features__col--right {
+                text-align: left;
+            }
+
+            .feature-item--left {
+                align-items: flex-start;
+            }
+
+            .feature-item--left .feature-p {
+                text-align: left;
+            }
+
+            .features__phone {
+                display: none;
+            }
+
+            .cta-cols {
+                grid-template-columns: 1fr;
+                border-radius: 16px;
+                overflow: hidden;
+            }
+
+            .karen {
+                grid-template-columns: 1fr;
+            }
+
+            .karen__video {
+                height: 300px;
+            }
+
+            .karen__content {
+                padding: 48px 24px;
+            }
+
+            .karen__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .outcomes__grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                max-width: 400px;
+            }
+
+            .step {
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding-bottom: 32px;
+            }
+
+            .step:last-child {
+                border-bottom: none;
+            }
+
+            .pricing__cards {
+                flex-direction: column;
+                max-width: 380px;
+            }
+
+            .price-card {
+                border-radius: 16px 16px 0 0;
+            }
+
+            .price-card--featured {
+                border-radius: 0 0 16px 16px;
+            }
+
+            .testimonials__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer__top {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .devices__benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
+    <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__stripe"></div>
+
+        <nav class="hero__nav">
+            <img src="assets/three_twenty_way_logo.png" alt="The 3-20 Way" class="hero__logo" />
+            <div class="hero__nav-right">
+                <button class="btn-login">Log in</button>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero__content">
+            <div class="hero__inner">
+                <p class="hero__eyebrow">Movement for real life &nbsp;·&nbsp; No gym required</p>
+                <h1 class="hero__h1">3 to <em>20</em><br />minutes.<br />Life-changing<br />results.</h1>
+                <p class="hero__sub">From as little as 3 minutes a day, we're helping thousands of older adults move
+                    better, feel better — and live better, for longer.</p>
+                <div class="hero__tags">
+                    <span class="tag">Simple</span>
+                    <span class="tag">Anytime</span>
+                    <span class="tag">Anywhere</span>
+                    <span class="tag">Join now</span>
+                </div>
+                <div class="hero__cta-group">
+                    <button class="btn-primary">Start your 10 day free trial</button>
+                    <span class="hero__fine">10 day free trial for new members only · Cancel any time</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__scroll">
+            <div class="hero__scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ TICKER ═══════════════════════════════════════ -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+            <span class="ticker__item">Simple</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Anytime</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Anywhere</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Personalised</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">No Equipment</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Real Results</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">3 to 20 Minutes</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Simple</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Anytime</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Anywhere</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Personalised</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">No Equipment</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">Real Results</span><span class="ticker__dot">·</span>
+            <span class="ticker__item">3 to 20 Minutes</span><span class="ticker__dot">·</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
+    <section style="background: var(--white); padding: 100px 40px;">
+        <div class="about" style="padding: 0;">
+            <div>
+                <p class="about__label">What we do</p>
+                <h2 class="about__h2">Hundreds of movement moments. Small daily wins. Big changes.</h2>
+                <p class="about__body">The 3-20 Way was created by experienced movement coaches to give older adults a
+                    simple set of personalised daily movements to improve mobility and strength — from the comfort of
+                    home. From just 3 minutes of movement each day, together we can change the story of how we age.</p>
+            </div>
+            <div class="about__visual">
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">minutes is all it takes to start</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">20+</span>
+                        <span class="stat-label">minutes when you're ready for more</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">95%</span>
+                        <span class="stat-label">of members wish they'd started sooner</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">real human presenters — no fake AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ DEVICES ═══════════════════════════════════════ -->
+    <section class="devices">
+        <p class="devices__label">Available everywhere</p>
+        <h2 class="devices__h2">Movement routines tailored to you, available anytime, anywhere.</h2>
+
+        <div class="devices__mockups">
+            <img src="assets/iphone.png" alt="iPhone" class="dev-phone" />
+            <img src="assets/laptop.png" alt="Laptop" class="dev-laptop" />
+            <img src="assets/tab.png" alt="Tablet" class="dev-tablet" />
+        </div>
+
+        <div class="devices__benefits">
+            <div class="benefit-item"><span class="benefit-dot"></span>Real human presenters — no fake AI, guaranteed!
+            </div>
+            <div class="benefit-item"><span class="benefit-dot"></span>Stream on your laptop, tablet or phone</div>
+            <div class="benefit-item"><span class="benefit-dot"></span>Exercise at home, on holiday, wherever you are
+            </div>
+            <div class="benefit-item"><span class="benefit-dot"></span>No special equipment or clothing needed</div>
+            <div class="benefit-item"><span class="benefit-dot"></span>Simple daily movement moments designed for you
+            </div>
+            <div class="benefit-item"><span class="benefit-dot"></span>Adjust your preferences as your confidence
+                changes</div>
+        </div>
+
+        <div class="cta-centered">
+            <button class="btn-primary">Start your 10 day free trial</button>
+            <span class="fine-print" style="color: rgba(255,255,255,0.4);">10 day free trial for new members only ·
+                Cancel any time</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ ORANGE BANNER ═══════════════════════════════════════ -->
+    <div class="banner">
+        <h2 class="banner__h2">Meaningful movements with life-changing results.</h2>
+    </div>
+
+    <!-- ═══════════════════════════════════════ FEATURES ═══════════════════════════════════════ -->
+    <section class="features">
+        <div class="features__inner">
+            <div class="features__top">
+
+                <!-- Left features -->
+                <div class="features__col features__col--left">
+                    <div class="feature-item feature-item--left">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20h9M3 20h6M12 4h9M3 4h6M9 12h9M3 12h3" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-h3">Personalised<br />just for you</h3>
+                        <p class="feature-p">The 3-20 Way creates a daily movement routine completely tailored to you —
+                            improving your mobility and strength.</p>
+                    </div>
+                    <div class="feature-item feature-item--left">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-h3">Made for real life,<br />not the gym</h3>
+                        <p class="feature-p">No equipment needed. All sessions can be done from the comfort of home —
+                            seated, standing, or lying in bed.</p>
+                    </div>
+                    <div class="feature-item feature-item--left">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-h3">Gentle but very<br />effective</h3>
+                        <p class="feature-p">Our routines are designed to be simple and gentle, with genuinely
+                            life-changing results over time.</p>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="features__phone">
+                    <img src="assets/what-we-give.png" alt="App on phone" />
+                </div>
+
+                <!-- Right features -->
+                <div class="features__col features__col--right">
+                    <div class="feature-item feature-item--right">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-h3">Movement that makes<br />you feel great</h3>
+                        <p class="feature-p">Our members look forward to their daily routines — they fit seamlessly into
+                            real life, and you will too.</p>
+                    </div>
+                    <div class="feature-item feature-item--right">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-h3">Build confidence and<br />independence</h3>
+                        <p class="feature-p">Wherever you are right now, you will build confidence as you improve your
+                            mobility and independence.</p>
+                    </div>
+                    <div class="feature-item feature-item--right">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                                <line x1="1" y1="10" x2="23" y2="10" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-h3">Affordable and<br />sustainable</h3>
+                        <p class="feature-p">From less than the price of a coffee per week — improving your mobility at
+                            a pace perfectly matched to you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <div class="how">
+                <h2 class="how__h2">How it works</h2>
+                <div class="how__body">
+                    <p>The 3-20 Way app is your gateway to a tailored daily exercise plan — short, easy-to-follow 3
+                        minute videos presented by Karen Case and her team (no fake AI, guaranteed!). Your daily plan
+                        runs from as little as 3 minutes to 20 minutes or more, either all at once or spread throughout
+                        your day.</p>
+                    <p>A short onboarding questionnaire (just 2–3 minutes) trains the app on your specific health and
+                        wellbeing, creating the perfect movement video playlist for you. As your condition or health
+                        changes, so does the app.</p>
+                </div>
+            </div>
+
+            <!-- Video placeholder -->
+            <div class="video-wrap">
+                <h3>30–40 sec Explainer Animation</h3>
+            </div>
+
+            <!-- Two-col CTAs -->
+            <div class="cta-cols">
+                <div class="cta-col">
+                    <h3 class="cta-col__h3">The 3-20 Way<br />for you</h3>
+                    <p class="cta-col__p">Our simple, personalised daily movement plan is safe, effective, encouraging
+                        and adapted to real life — so that everyone can age with strength, dignity and joy.</p>
+                    <button class="btn-primary" style="align-self: flex-start;">Start your 10 day free trial</button>
+                </div>
+                <div class="cta-col">
+                    <h3 class="cta-col__h3">The 3-20 Way<br />for your loved ones</h3>
+                    <p class="cta-col__p">The 3-20 Way is the best way to help parents, older relatives or friends
+                        improve mobility and strength from the comfort of home. Help them change the story of how they
+                        age.</p>
+                    <button class="btn-primary" style="align-self: flex-start; background: var(--orange);">Purchase a
+                        Gift Membership</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ OUTCOMES ═══════════════════════════════════════ -->
+    <section class="outcomes">
+        <span class="section-label">Real results</span>
+        <h2 class="outcomes__h2">Outcomes of The 3-20 Way</h2>
+
+        <div class="outcomes__grid">
+            <div class="outcome-card">
+                <div class="outcome-img"><img src="assets/outcome-1.jpg" alt="After 7 days" /></div>
+                <h3 class="outcome-h3">After 7 days</h3>
+                <p class="outcome-p">Our members feel a sense of achievement, noticing small but positive changes.</p>
+            </div>
+            <div class="outcome-card">
+                <div class="outcome-img"><img src="assets/outcome-2.jpg" alt="After 30 days" /></div>
+                <h3 class="outcome-h3">After 30 days</h3>
+                <p class="outcome-p">Members feel stronger in everyday movement and notice improvements in joint pain.
+                </p>
+            </div>
+            <div class="outcome-card">
+                <div class="outcome-img"><img src="assets/outcome-3.jpg" alt="95% of members" /></div>
+                <h3 class="outcome-h3">95% of members</h3>
+                <p class="outcome-p">Say they wish they'd started The 3-20 Way sooner!</p>
+            </div>
+        </div>
+
+        <div class="cta-centered">
+            <button class="btn-primary" style="font-size: 18px; padding: 20px 52px;">Start your 10 day free
+                trial</button>
+            <span class="fine-print" style="color: rgba(255,255,255,0.35);">10 day free trial for new members only ·
+                Cancel any time</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ KAREN ═══════════════════════════════════════ -->
+    <section class="karen">
+        <div class="karen__video">
+            <video controls playsinline>
+                <source src="assets/video/loop.mp4" type="video/mp4" />
+            </video>
+            <div class="karen__video-overlay"></div>
+        </div>
+        <div class="karen__content">
+            <h2 class="karen__h2">Introducing Karen Case,<br />The 3-20 Way founder</h2>
+            <div class="karen__grid">
+                <div class="karen__col">
+                    <h3>Lived experience</h3>
+                    <p>Karen Case is a specialist in older-adult movement and functional independence, with over 25
+                        years' experience across health, social care and community settings.</p>
+                </div>
+                <div class="karen__col">
+                    <h3>Professional background</h3>
+                    <p>In 2003, Karen co-founded LifeDock Training — the UK's leading provider of specialist physical
+                        activity programmes — training over 2,000 instructors across the UK.</p>
+                </div>
+            </div>
+            <div class="karen__btns">
+                <button class="btn-pill">Find out more about Karen</button>
+                <button class="btn-pill">Book a One to One</button>
+                <button class="btn-pill">Subscribe to newsletter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ GETTING STARTED BANNER ═══════════════════════════════════════ -->
+    <div class="start-banner">
+        <h2>Getting started with The 3-20 Way</h2>
+    </div>
+
+    <!-- ═══════════════════════════════════════ PRICING ═══════════════════════════════════════ -->
+    <section class="pricing">
+        <div class="pricing__inner">
+            <div class="pricing__intro">
+                <p><strong>Try it for free!</strong> Start your no-risk 10 day trial with a daily movement routine
+                    completely tailored to you. Full access to all features — no payment details required during your
+                    trial.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">1</span>
+                    <span class="step-label">Sign up for your free 10 day trial.</span>
+                </div>
+                <div class="step">
+                    <span class="step-num">2</span>
+                    <span class="step-label">Start your personalised daily movement moment routine.</span>
+                </div>
+                <div class="step">
+                    <span class="step-num">3</span>
+                    <span class="step-label">Feel better, stronger and more confident each day.</span>
+                </div>
+            </div>
+
+            <div class="pricing__cards">
+                <div class="price-card">
+                    <p class="price-tier">Pay monthly</p>
+                    <p class="price-amount">£11.99</p>
+                    <p class="price-per">per month</p>
+                    <p class="price-annual">£143.88 total per year</p>
+                    <button class="btn-card">Start your 10 day free trial</button>
+                    <p class="price-fine">New members only · Cancel any time</p>
+                </div>
+                <div class="price-card price-card--featured">
+                    <div class="price-badge">Best Value</div>
+                    <p class="price-tier">Annual plan</p>
+                    <p class="price-amount">£8.99</p>
+                    <p class="price-per">per month</p>
+                    <p class="price-annual">£107.88 total per year</p>
+                    <button class="btn-card">Start your 10 day free trial</button>
+                    <p class="price-fine">New members only · Cancel any time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ TESTIMONIALS ═══════════════════════════════════════ -->
+    <section class="testimonials">
+        <h2 class="testimonials__h2">What our members say</h2>
+
+        <div class="testimonials__grid">
+            <div class="testi-card">
+                <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+                <p class="testi-quote">"The 3-20 Way has completely changed my mornings. I feel more flexible and
+                    energised than I have in years. It's so simple to follow!"</p>
+                <p class="testi-name">John Doe</p>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+                <p class="testi-quote">"I love that I can do these movements from my chair. It's safe, gentle and really
+                    works. Highly recommend to anyone over 60."</p>
+                <p class="testi-name">John Doe</p>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+                <p class="testi-quote">"No equipment needed, just 3 minutes of my time. My balance has improved
+                    significantly and I feel much more confident walking."</p>
+                <p class="testi-name">John Doe</p>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+                <p class="testi-quote">"Finally a fitness app that understands my pace. The presenters are real people
+                    and the routines are tailored to my ability."</p>
+                <p class="testi-name">John Doe</p>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+                <p class="testi-quote">"The progress I've made in 30 days is incredible. My joint pain has decreased and
+                    I'm sleeping much better. Thank you 3-20 Way!"</p>
+                <p class="testi-name">John Doe</p>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+                <p class="testi-quote">"I bought this for my mother and she absolutely loves it. It's given her a new
+                    lease of life and she's so proud of her daily wins."</p>
+                <p class="testi-name">John Doe</p>
+            </div>
+        </div>
+
+        <div class="cta-centered">
+            <button class="btn-primary" style="font-size: 18px; padding: 20px 52px;">Start your 10 day free
+                trial</button>
+            <span class="fine-print" style="color: rgba(255,255,255,0.35);">10 day free trial for new members only ·
+                Cancel any time</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ FAQ ═══════════════════════════════════════ -->
+    <section class="faq">
+        <div class="faq__inner">
+            <h2 class="faq__h2">Frequently asked questions</h2>
+
+            <details class="faq-item" open>
+                <summary>What is the 3-20 Way? <div class="faq-arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                            fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">The 3-20 Way breaks movement into 3 minute sessions. You can do as many sessions
+                    as you prefer, ranging from 3 to 20 minutes or more, and spread them across your day. These small
+                    moments add up to big changes!</p>
+            </details>
+            <details class="faq-item">
+                <summary>How is this different from free videos online? <div class="faq-arrow"><svg width="8"
+                            height="12" viewBox="0 0 8 12" fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">Unlike generic online videos, The 3-20 Way creates a personalised daily plan
+                    tailored specifically to your health, ability and goals — and it adapts as you progress.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What type of movements are included? <div class="faq-arrow"><svg width="8" height="12"
+                            viewBox="0 0 8 12" fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">Gentle mobility, strength and balance exercises designed for older adults.
+                    Sessions can be done seated, standing or lying down — no equipment required.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How much time does it take? <div class="faq-arrow"><svg width="8" height="12"
+                            viewBox="0 0 8 12" fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">As little as 3 minutes per day. Your plan is tailored to you and can be up to 20
+                    minutes or more — all spread throughout your day if you prefer.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Who is it for? <div class="faq-arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                            fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">The 3-20 Way is designed for older adults and anyone with limited mobility who
+                    wants to move more, feel stronger and maintain their independence.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Is it safe? <div class="faq-arrow"><svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">Yes. All routines are designed by specialist movement coaches with older adults
+                    and people with limited mobility in mind — always gentle and always safe.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need equipment? <div class="faq-arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                            fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">No equipment or special clothing is needed. All you need is yourself and a safe
+                    space to move.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How much does it cost? <div class="faq-arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                            fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">£11.99/month or £8.99/month on the annual plan. After your free 10 day trial, you
+                    choose the option that suits you best.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can I cancel at any time? <div class="faq-arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                            fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">Yes, absolutely. Cancel at any time with no hassle and no questions asked.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can I pay for a gift membership? <div class="faq-arrow"><svg width="8" height="12"
+                            viewBox="0 0 8 12" fill="none">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                </summary>
+                <p class="faq-answer">Yes! Gift memberships are available for parents, older relatives or friends. A
+                    wonderful way to help someone you love move better and feel better.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+    <footer>
+        <div class="footer__inner">
+            <div class="footer__top">
+
+                <!-- Col 1: Logo + Links -->
+                <div>
+                    <img src="assets/three_twenty_way_logo.png" alt="The 3-20 Way" class="footer__logo" />
+                    <ul class="footer__links">
+                        <li><span>About Karen Case</span></li>
+                        <li><span>One to One with Karen</span></li>
+                        <li><span>Meet the team</span></li>
+                        <li><span>Privacy Policy</span></li>
+                        <li><span>Cookie Policy</span></li>
+                        <li><span>Data Policy</span></li>
+                        <li><span>Terms & Conditions</span></li>
+                        <li><span>Copyright Notice</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2: Socials + Info -->
+                <div>
+                    <div class="footer__socials">
+                        <a href="#" class="social-btn" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.88z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__newsletter">
+                        <button>Subscribe to our newsletter</button>
+                    </div>
+                    <div class="footer__info">
+                        <strong>The 3-20 Way Ltd</strong><br />
+                        <strong>Registered Office:</strong> 25 Shore Road, Holywood, County Down, Northern Ireland, BT18
+                        9HX, United Kingdom<br />
+                        <strong>Company Number:</strong> NI732261<br />
+                        <strong>Email:</strong> hello&#64;320way.com<br /><br />
+                        All content ©2026 The 3-20 Way Ltd<br />
+                        Site and app design and build by <strong>The Contrast</strong>
+                    </div>
+                </div>
+
+                <!-- Col 3: App Stores -->
+                <div class="footer__apps">
+                    <p>App coming soon for iOS and Android</p>
+                    <div class="app-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79s-2.01.8-3.27.82c-1.31.02-2.31-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13.12 4.23c.69-.85 1.15-2.04 1.02-3.23-1.02.04-2.26.68-2.98 1.54-.64.76-1.19 1.96-1.04 3.12 1.14.09 2.31-.58 3-1.43z" />
+                        </svg>
+                        <div class="app-btn-text">
+                            <span class="app-btn-sub">Pre-order on the</span>
+                            <span class="app-btn-name">App Store</span>
+                        </div>
+                    </div>
+                    <div class="app-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
+                            alt="Google Play" />
+                        <div class="app-btn-text">
+                            <span class="app-btn-sub">Pre-register on</span>
+                            <span class="app-btn-name">Google Play</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <span>©2026 The 3-20 Way Ltd · All rights reserved</span>
+                <span>Designed and built by The Contrast</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
