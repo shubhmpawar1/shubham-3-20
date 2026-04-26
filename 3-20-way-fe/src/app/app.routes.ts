@@ -2,12 +2,16 @@ import { Routes } from '@angular/router';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { AppComponent } from './app.component';
 import { LandingVideoComponent } from './pages/landing-video/landing-video.component';
+import { LandingPage2Component } from './pages/landing-page-2/landing-page-2.component';
+
 
 
 
 export const routes: Routes = [
     { path: '', component: LandingVideoComponent },
     { path: 'landing-page', component: LandingPageComponent },
+    { path: 'landing-page-2', component: LandingPage2Component },
+
     {
         path: 'pages', component: AppComponent, children: [
             { path: '', component: LandingPageComponent, },

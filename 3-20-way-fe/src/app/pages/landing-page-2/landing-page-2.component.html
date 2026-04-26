@@ -1,1 +1,58 @@
-<p>landing-page-2 works!</p>
+<div class="relative h-screen w-full bg-black text-white font-sans flex flex-col">
+    
+    <!-- Hero Background Image -->
+    <img src="assets/hero.jpg" alt="Older adults exercising" class="absolute inset-0 h-full w-full object-cover" />
+    
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/45"></div>
+
+    <!-- Header Navigation -->
+    <header class="relative z-30 flex items-center justify-end px-6 py-3 md:px-12 lg:px-20 gap-6 shrink-0">
+        <button class="bg-white text-black px-7 py-1.5 rounded-full font-bold hover:bg-gray-100 transition-colors text-sm md:text-base shadow-lg">
+            Log in
+        </button>
+        <button class="flex flex-col gap-1 cursor-pointer group p-1">
+            <span class="w-10 h-1 bg-white rounded-full"></span>
+            <span class="w-10 h-1 bg-white rounded-full"></span>
+            <span class="w-10 h-1 bg-white rounded-full"></span>
+        </button>
+    </header>
+
+    <!-- Content Container -->
+    <main class="relative z-20 px-6 md:px-12 lg:px-20 flex-1 flex flex-col justify-center pb-8">
+        <div class="max-w-4xl animate-fade-in">
+            <!-- Logo -->
+            <div class="mb-3 lg:mb-4 flex pt-1">
+                <img src="assets/three_twenty_way_logo.png" alt="3-20 the320way" class="h-12 md:h-16 lg:h-20 w-auto object-contain brightness-0 invert" />
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-4 tracking-tight">
+                3 to 20 minutes of simple daily movement creating life-changing results for older adults.
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="text-base md:text-lg lg:text-xl text-white/90 mb-6 max-w-2xl font-medium">
+                From as little as 3 minutes a day, we're helping thousands of people move better, feel better and live better - for longer.
+            </p>
+
+            <!-- Pill Buttons -->
+            <div class="flex flex-wrap gap-2 mb-6 lg:mb-8">
+                <span class="px-5 py-1.5 border-2 border-white rounded-full bg-transparent font-bold text-sm md:text-base cursor-default">Simple</span>
+                <span class="px-5 py-1.5 border-2 border-white rounded-full bg-transparent font-bold text-sm md:text-base cursor-default">Anytime</span>
+                <span class="px-5 py-1.5 border-2 border-white rounded-full bg-transparent font-bold text-sm md:text-base cursor-default">Anywhere</span>
+                <span class="px-5 py-1.5 border-2 border-white rounded-full bg-transparent font-bold text-sm md:text-base cursor-default">Join now</span>
+            </div>
+
+            <!-- Main CTA -->
+            <div class="flex flex-col gap-2">
+                <button class="w-fit bg-[#f58220] hover:bg-[#e67610] text-white text-lg md:text-xl lg:text-2xl font-bold px-8 py-3.5 rounded-xl shadow-2xl transition-all active:scale-95">
+                    Start your 10 day free trial
+                </button>
+                <p class="text-[10px] md:text-xs text-white/70 font-semibold tracking-wide">
+                    10 day free trial available to new members only. Cancel any time.
+                </p>
+            </div>
+        </div>
+    </main>
+</div>

@@ -16,7 +16,7 @@ export class LandingVideoComponent implements AfterViewInit {
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -36,11 +36,11 @@ export class LandingVideoComponent implements AfterViewInit {
     this.router.navigate(['/landing-page']);
   }
 
-  toggleMute(video: HTMLVideoElement) {
-    this.isMuted = !this.isMuted;
-    video.muted = this.isMuted;
-    if (video.paused) {
-      video.play();
-    }
-  }
+  // toggleMute(video: HTMLVideoElement) {
+  //   this.isMuted = !this.isMuted;
+  //   video.muted = this.isMuted;
+  //   if (video.paused) {
+  //     video.play();
+  //   }
+  // }
 }
