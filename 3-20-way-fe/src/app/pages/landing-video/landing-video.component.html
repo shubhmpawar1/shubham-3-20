@@ -1,6 +1,6 @@
 <div class="relative h-screen w-full overflow-hidden bg-black flex flex-col items-center justify-end pb-6">
     <!-- Video Background -->
-    <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover opacity-70">
+    <video #bgVideo autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover opacity-70">
         <source src="assets/video/loop.mp4" type="video/mp4">
     </video>
 
@@ -10,13 +10,26 @@
         <!-- <img src="assets/three_twenty_way_logo.png" alt="3-20 Way Logo" class="h-24 md:h-32 object-contain brightness-0 invert" /> -->
 
         <!-- Skip Button -->
-        <button (click)="skipVideo()"
-            class="px-8 py-3 bg-[#f58220] hover:bg-[#e67610] text-white text-xl font-bold rounded-full border-2 border-white/20 shadow-2xl transform transition-all active:scale-95">
-            Click to skip video
-        </button>
-    </div>
+        <div class="relative z-10 flex flex-col items-center gap-8">
+            <button (click)="skipVideo()"
+                class="px-8 py-3 bg-[#f58220] hover:bg-[#e67610] text-white text-xl font-bold rounded-full border-2 border-white/20 shadow-2xl transform transition-all active:scale-95">
+                Click to skip video
+            </button>
+        </div>
 
-    <!-- Vignette / Darkening -->
-    <div class="absolute inset-0 pointer-events-none bg-radial-[circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%]">
+        <!-- Mute/Unmute Toggle -->
+        <!-- <button (click)="toggleMute(bgVideo)" class="absolute bottom-6 right-6 z-20 p-3 bg-black/40 hover:bg-black/60 rounded-full text-white backdrop-blur-sm transition-all">
+        <svg *ngIf="!isMuted" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+        </svg>
+        <svg *ngIf="isMuted" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+        </svg>
+    </button> -->
+
+        <!-- Vignette / Darkening -->
+        <div
+            class="absolute inset-0 pointer-events-none bg-radial-[circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%]">
+        </div>
     </div>
-</div>
