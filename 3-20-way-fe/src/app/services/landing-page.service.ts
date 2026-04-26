@@ -375,8 +375,8 @@ export class LandingPageService {
           date: 'Mar 16, 2020',
           datetime: '2020-03-16',
           category: 'Marketing',
-          title: 'Boost your conversion rate',
-          description: 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+          title: 'After 7 days',
+          description: 'Our members feel a sense of achievement, noticing small but positive changes.',
           author: {
             name: 'Michael Foster',
             role: 'Co-Founder / CTO',
@@ -388,8 +388,8 @@ export class LandingPageService {
           date: 'Mar 10, 2020',
           datetime: '2020-03-10',
           category: 'Sales',
-          title: 'How to use search engine optimization to drive sales',
-          description: 'Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.',
+          title: 'After 30 Days',
+          description: 'Our members feel stronger in everyday movement and notice improvements in joint pain.',
           author: {
             name: 'Lindsay Walton',
             role: 'Front-end Developer',
@@ -401,8 +401,8 @@ export class LandingPageService {
           date: 'Feb 12, 2020',
           datetime: '2020-02-12',
           category: 'Business',
-          title: 'Improve your customer experience',
-          description: 'Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.',
+          title: '95% of Members',
+          description: 'Say they wish they’d started The 3-20 Way sooner!',
           author: {
             name: 'Tom Cook',
             role: 'Director of Product',
