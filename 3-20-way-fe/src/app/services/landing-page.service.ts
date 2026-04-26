@@ -447,7 +447,7 @@ export class LandingPageService {
           icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M3 7h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7Z"/><path d="M7 3h6v2H7V3Z"/></svg>`
         }
       ],
-      image: 'https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png'
+      image: 'assets/what-we-give.png'
     },
   }
 }
