@@ -98,49 +98,48 @@ export class LandingPageService {
         {
           id: 'faq-0',
           question: "What is the 3-20 Way?",
-          answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+          answer: "The 3-20 Way is a guided movement programme built around short, manageable movement sessions that fit easily into everyday life. The aim is to help you feel stronger, steadier, and more confident, without pressure or intimidation.",
           open: false
         },
         {
           id: 'faq-1',
           question: "How is this different from free videos online?",
-          answer: "You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus.",
+          answer: "Free videos can be useful, but The 3-20 Way offers: A personalised movement plan Clear guidance on what to do today A calm, supportive approach without pressure Short sessions that fit into real life",
           open: false
         },
         {
           id: 'faq-2',
           question: "What type of movements are in the 3-20 Way?",
-          answer: "Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.",
+          answer: "The 3-20 Way focuses on controlled, supported movement, with plenty of seated and low-impact options designed to build confidence safely.",
           open: false
         },
         {
           id: 'faq-3',
           question: "How much time does it take?",
-          answer: "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+          answer: "The 3-20 Way breaks movement into 3 minute sessions. You can do as many sessions as you prefer, ranging in duration from 3 to 20 minutes or more, and even spread them across your day - morning, afternoon, evening. These small moments add up to big changes! ",
           open: false
         },
         {
           id: 'faq-4',
           question: "Who is it for?",
-          answer: "Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.",
-          open: false
+          answer: "The 3-20 Way is designed for: Adults who want to stay active as they age People who feel less confident moving Those with joint stiffness, balance concerns, or low energy Anyone who finds traditional exercise programmes off- putting No prior fitness experience is needed.",
         },
         {
           id: 'faq-5',
           question: "Is it safe?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes. The programme is designed to be gentle, adaptable, and progressive. When you join, we ask a few simple questions so we can suggest movements that are appropriate for you. You’re always in control and can stop, skip, or change movements at any time.",
           open: false
         },
         {
           id: 'faq-6',
           question: "Will it make my condition worse?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "That’s a common concern.The 3-20 Way focuses on controlled, supported movement, with plenty of seated and low-impact options designed to build confidence safely. If something doesn’t feel right, you simply stop.",
           open: false
         },
         {
           id: 'faq-7',
           question: "Do I need equipment?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "No. All movements are designed to be done at home, using your own bodyweight and everyday support such as a chair or wall.",
           open: false
         },
         {
@@ -152,19 +151,19 @@ export class LandingPageService {
         {
           id: 'faq-9',
           question: "Can I have a free trial?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes, a 10-day free trial is available.",
           open: false
         },
         {
           id: 'faq-10',
           question: "Can I change my programme?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes.You can update your preferences at any time as your confidence, strength, or energy levels change.",
           open: false
         },
         {
           id: 'faq-11',
           question: "Can I cancel at any time?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes. You can cancel at any time. We want you to feel comfortable and confident, not locked into something that doesn’t suit you.",
           open: false
         },
         {
@@ -451,14 +450,14 @@ export class LandingPageService {
     },
     how_it_works_data: {
       tagline: 'Your personalised movement plan',
-      title: 'A Daily Exercise Plan Built Around You',
+      title: 'How It Works',
       description_col1: [
-        'The 3-20 Way app is your personalised gateway to a daily movement plan made up of short, easy-to-follow 3-minute videos led by Karen Case and her team (no fake AI—guaranteed).',
-        'A quick onboarding questionnaire (just 2–3 minutes) helps the app understand your health, mobility, and goals so it can build a tailored movement plan just for you.'
+        'The 3-20 Way app is your gateway to a tailored daily exercise plan comprising short, easy to follow 3 minute videos,presented by Karen Case and her team (no fake AI, guaranteed!). ',
+        'A short and simple onboarding questionnaire (takes no more than two to three minutes) trains The 3-20 Way app on your specific health and wellbeing, allowing it to create the perfect movement moment video ‘playlist’ for you. ',
       ],
       description_col2: [
-        'Based on your profile, your daily plan can range from 3 minutes to 20 minutes or more, and you can complete it in one session or spread it throughout your day.',
-        'As your health or mobility changes, your plan automatically adapts to stay aligned with your needs, ensuring you always have the right movement support.'
+        'Based on what you tell us, your daily plan can be from as little as 3 minutes to 20 minutes or more, which you can either follow along with all at one go, or spread out throughout your day.',
+        'As your condition or health changes, so does the app, allowing us to ensure that your plan is perfectly matched to you at all times.'
       ],
       cta: {
         text: 'Start your journey',
@@ -466,6 +465,7 @@ export class LandingPageService {
       },
       video: 'https://www.youtube.com/embed/QbfGowu4nH4'
     },
+
     new_cta_data: {
       title: 'The 3-20 Way for You and Your Loved Ones',
       description: 'The 3-20 Way is a simple, personalised movement plan that helps you and your loved ones build strength, mobility, and independence through short, safe daily routines from the comfort of home.',
