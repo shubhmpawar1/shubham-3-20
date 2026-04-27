@@ -92,6 +92,20 @@ export class LandingPageService {
         image: 'assets/karen.png'
       }
     },
+    movements_2_data: {
+      headline: {
+        line1: 'Meaningful movements with',
+        line2: 'life-changing results'
+      },
+      primaryCTA: {
+        text: 'Start your 10 day free trial',
+        href: '#'
+      },
+      secondaryCTA: {
+        text: 'Learn more',
+        href: '#'
+      }
+    },
     faq_data: {
       title: 'Frequently asked questions',
       items: [
@@ -116,7 +130,7 @@ export class LandingPageService {
         {
           id: 'faq-3',
           question: "How much time does it take?",
-          answer: "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+          answer: "The 3-20 Way breaks movement into 3 minute sessions. You can do as many sessions as you prefer, ranging in duration from 3 to 20 minutes or more, and even spread them across your day - morning, afternoon, evening. These small moments add up to big changes! ",
           open: false
         },
         {

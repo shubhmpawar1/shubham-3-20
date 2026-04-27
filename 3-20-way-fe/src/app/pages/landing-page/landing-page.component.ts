@@ -4,6 +4,7 @@ import { HeroSectionTailwindComponent } from '../../components/hero-section-tail
 import { DailyWinsComponent } from '../../components/daily-wins/daily-wins.component';
 import { AvailableComponent } from '../../components/available/available.component';
 import { MovementsComponent } from '../../components/movements/movements.component';
+import { Movements2Component } from '../../components/movements-2/movements-2.component';
 import { NewFooterComponent } from '../../components/new-footer/new-footer.component';
 import { NewFooterService } from '../../services/new-footer.service';
 import { NewFaqComponent } from '../../components/new-faq/new-faq.component';
@@ -28,6 +29,7 @@ import { GetStartedComponent } from '../../components/get-started/get-started.co
     DailyWinsComponent,
     AvailableComponent,
     MovementsComponent,
+    Movements2Component,
     NewFooterComponent,
     NewFaqComponent,
     NewTestimonialsComponent,
