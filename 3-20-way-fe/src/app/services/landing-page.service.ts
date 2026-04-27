@@ -301,7 +301,7 @@ export class LandingPageService {
       items: [
         {
           title: 'Free Trial',
-          description: 'Sign up for your free 10-day trial and start moving with personalised routines designed just for you.',
+          description: 'Sign up for your free 10-day trial.',
           link: '#',
           icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6 text-white">
   <circle cx="12" cy="12" r="9" />
