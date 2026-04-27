@@ -12,12 +12,13 @@
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-base/7 font-semibold text-indigo-400">{{ testimonials_data.title }}</h2>
-            <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">{{ testimonials_data.subtitle }}</p>
+            <h2 class="text-base/7 font-semibold text-orange-400">{{ testimonials_data.title }}</h2>
+            <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">{{
+                testimonials_data.subtitle }}</p>
         </div>
         <div
             class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-100 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-            
+
             <!-- Featured Testimonial -->
             <figure class="rounded-2xl bg-gray-800/75 ring-1 ring-white/10 sm:col-span-2 xl:col-start-2 xl:row-end-1">
                 <blockquote class="p-6 text-lg font-semibold tracking-tight text-white sm:p-12 sm:text-xl/8">
@@ -25,21 +26,20 @@
                 </blockquote>
                 <figcaption
                     class="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-white/10 px-6 py-4 sm:flex-nowrap">
-                    <img [src]="testimonials_data.featured.image"
-                        alt="" class="size-10 flex-none rounded-full bg-gray-700" />
+                    <img [src]="testimonials_data.featured.image" alt=""
+                        class="size-10 flex-none rounded-full bg-gray-700" />
                     <div class="flex-auto">
                         <div class="font-semibold text-white">{{ testimonials_data.featured.author }}</div>
                         <div class="text-gray-400">{{ testimonials_data.featured.handle }}</div>
                     </div>
-                    <img [src]="testimonials_data.featured.logo" alt=""
-                        class="h-10 w-auto flex-none" />
+                    <img [src]="testimonials_data.featured.logo" alt="" class="h-10 w-auto flex-none" />
                 </figcaption>
             </figure>
 
             <!-- Group 1 -->
             <div class="space-y-8 xl:contents xl:space-y-0">
-                <div *ngFor="let column of testimonials_data.group1; let i = index" 
-                     [ngClass]="i === 0 ? 'space-y-8 xl:row-span-2' : 'space-y-8 xl:row-start-1'">
+                <div *ngFor="let column of testimonials_data.group1; let i = index"
+                    [ngClass]="i === 0 ? 'space-y-8 xl:row-span-2' : 'space-y-8 xl:row-start-1'">
                     <figure *ngFor="let item of column" class="rounded-2xl bg-gray-800/75 p-6 ring-1 ring-white/10">
                         <blockquote class="text-white">
                             <p>{{ item.quote }}</p>
@@ -57,8 +57,8 @@
 
             <!-- Group 2 -->
             <div class="space-y-8 xl:contents xl:space-y-0">
-                <div *ngFor="let column of testimonials_data.group2; let i = index" 
-                     [ngClass]="i === 1 ? 'space-y-8 xl:row-span-2' : 'space-y-8 xl:row-start-1'">
+                <div *ngFor="let column of testimonials_data.group2; let i = index"
+                    [ngClass]="i === 1 ? 'space-y-8 xl:row-span-2' : 'space-y-8 xl:row-start-1'">
                     <figure *ngFor="let item of column" class="rounded-2xl bg-gray-800/75 p-6 ring-1 ring-white/10">
                         <blockquote class="text-white">
                             <p>{{ item.quote }}</p>
