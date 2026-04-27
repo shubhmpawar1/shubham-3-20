@@ -1,19 +1,17 @@
 <div class="bg-gray-900 py-24 sm:py-32" *ngIf="available_data">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl sm:text-center">
-            <h2 class="text-base/7 font-semibold text-indigo-400">{{ available_data.tagline }}</h2>
-            <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl sm:text-balance">{{ available_data.title }}</p>
+            <h2 class="text-base/7 font-semibold text-orange-400">{{ available_data.tagline }}</h2>
+            <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl sm:text-balance">{{
+                available_data.title }}</p>
             <p class="mt-6 text-lg/8 text-gray-300">{{ available_data.description }}</p>
         </div>
     </div>
     <div class="relative overflow-hidden pt-16">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <img *ngIf="available_data.image" width="2432" height="1442"
-                [src]="available_data.image"
+            <img *ngIf="available_data.image" width="2432" height="1442" [src]="available_data.image"
                 alt="App screenshot" class="rounded-xl shadow-2xl ring-1 ring-white/10" />
-            <video *ngIf="available_data.video" 
-                [src]="available_data.video" 
-                controls 
+            <video *ngIf="available_data.video" [src]="available_data.video" controls
                 class="rounded-xl shadow-2xl ring-1 ring-white/10 w-full aspect-video">
             </video>
         </div>
