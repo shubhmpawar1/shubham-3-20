@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-how-it-works',
@@ -10,4 +11,10 @@ import { CommonModule } from '@angular/common';
 })
 export class HowItWorksComponent {
   @Input() how_it_works_data: any;
+
+  constructor(private sanitizer: DomSanitizer) {}
+
+  getSafeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }

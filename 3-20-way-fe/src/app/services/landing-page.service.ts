@@ -464,7 +464,7 @@ export class LandingPageService {
         text: 'Start your journey',
         href: '#'
       },
-      video: 'https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png'
+      video: 'https://www.youtube.com/embed/QbfGowu4nH4'
     },
     new_cta_data: {
       title: 'The 3-20 Way for You and Your Loved Ones',

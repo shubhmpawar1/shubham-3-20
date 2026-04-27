@@ -31,9 +31,15 @@
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <img *ngIf="how_it_works_data.image" [src]="how_it_works_data.image" alt=""
                 class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" />
-            <video *ngIf="how_it_works_data.video" [src]="how_it_works_data.video" controls
-                class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10 w-full aspect-video">
-            </video>
+            <ng-container *ngIf="how_it_works_data.video">
+                <iframe *ngIf="how_it_works_data.video.includes('youtube')" [src]="getSafeUrl(how_it_works_data.video)"
+                    class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10 w-full aspect-video"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <video *ngIf="!how_it_works_data.video.includes('youtube')" [src]="how_it_works_data.video" controls
+                    class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10 w-full aspect-video">
+                </video>
+            </ng-container>
             <div aria-hidden="true" class="relative">
                 <div class="absolute -inset-x-20 bottom-0 bg-linear-to-t from-white pt-[7%]"></div>
             </div>
