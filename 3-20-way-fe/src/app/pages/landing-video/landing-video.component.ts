@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
   styleUrl: './landing-video.component.css'
 })
 export class LandingVideoComponent implements AfterViewInit {
-  isMuted = true;
   @ViewChild('bgVideo') videoElement!: ElementRef<HTMLVideoElement>;
+  isMuted = true;
 
   constructor(
     private router: Router,
@@ -20,27 +20,24 @@ export class LandingVideoComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      this.playVideo();
+      const video = this.videoElement?.nativeElement;
+      if (video) {
+        video.muted = true;
+        video.volume = 1;
+      }
     }
   }
 
-  playVideo() {
-    if (this.videoElement && isPlatformBrowser(this.platformId)) {
-      this.videoElement.nativeElement.play().catch(error => {
-        console.log('Autoplay was prevented, waiting for user interaction:', error);
-      });
+  toggleMute() {
+    const video = this.videoElement?.nativeElement;
+    if (video) {
+      this.isMuted = !this.isMuted;
+      video.muted = this.isMuted;
+      video.volume = this.isMuted ? 0 : 1;
     }
   }
 
   skipVideo() {
     this.router.navigate(['/landing-page']);
   }
-
-  // toggleMute(video: HTMLVideoElement) {
-  //   this.isMuted = !this.isMuted;
-  //   video.muted = this.isMuted;
-  //   if (video.paused) {
-  //     video.play();
-  //   }
-  // }
 }

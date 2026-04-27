@@ -22,8 +22,8 @@ export class LandingPageService {
         href: '#'
       },
       headline: {
-        line1: '3–20 minutes daily',
-        line2: 'better lives for elders'
+        line1: '3–20 min daily',
+        line2: 'movement transforms older adults lives'
       },
       description: 'From as little as 3 minutes a day, we’re helping thousands of people move better, feel better and live better - for longer.',
       primaryCTA: {
