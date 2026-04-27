@@ -9,7 +9,7 @@ export class LandingPageService {
   landing_page_content = {
 
     hero_section_tailwind: {
-      logo: 'assets/three_twenty_way_logo.png',
+      logo: 'assets/320-WHITE-LOGO.png',
       navigation: [
         { name: 'Product', href: '#' },
         { name: 'Features', href: '#' },

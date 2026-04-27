@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class NewFooterService {
 
   footer_content = {
-    logo: 'assets/three_twenty_way_logo.png',
+    logo: 'assets/320-WHITE-LOGO.png',
     sections: [
       {
         title: 'Solutions',
