@@ -15,21 +15,21 @@
         class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
         <div *ngFor="let tier of pricing_data.tiers" [ngClass]="{
                 'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 flex flex-col': true,
-                'bg-white/60 sm:mx-8 sm:rounded-b-none lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl': !tier.featured,
-                'relative bg-gray-900 shadow-2xl': tier.featured
+                'bg-neutral-700 sm:mx-8 sm:rounded-b-none lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl': !tier.featured,
+                'relative bg-orange-400 shadow-2xl': tier.featured
             }">
-            <h3 [id]="'tier-' + tier.name.toLowerCase()"
-                [ngClass]="tier.featured ? 'text-indigo-400' : 'text-indigo-600'" class="text-base/7 font-semibold">{{
+            <h3 [id]="'tier-' + tier.name.toLowerCase()" [ngClass]="tier.featured ? 'text-white' : 'text-white'"
+                class="text-base/7 font-semibold">{{
                 tier.name }}</h3>
             <p class="mt-4 flex items-baseline gap-x-2">
-                <span [ngClass]="tier.featured ? 'text-white' : 'text-gray-900'"
+                <span [ngClass]="tier.featured ? 'text-white' : 'text-white'"
                     class="text-5xl font-semibold tracking-tight">{{ tier.price }}</span>
-                <span [ngClass]="tier.featured ? 'text-gray-400' : 'text-gray-500'" class="text-base">{{ tier.period
+                <span [ngClass]="tier.featured ? 'text-white' : 'text-white'" class="text-base">{{ tier.period
                     }}</span>
             </p>
-            <p [ngClass]="tier.featured ? 'text-gray-300' : 'text-gray-600'" class="mt-6 text-base/7">{{
+            <p [ngClass]="tier.featured ? 'text-white' : 'text-white'" class="mt-6 text-base/7">{{
                 tier.description }}</p>
-            <ul role="list" [ngClass]="tier.featured ? 'text-gray-300' : 'text-gray-600'"
+            <ul role="list" [ngClass]="tier.featured ? 'text-white' : 'text-white'"
                 class="mt-8 space-y-3 text-sm/6 sm:mt-10">
                 <li *ngFor="let feature of tier.features" class="flex gap-x-3">
                     <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
@@ -43,8 +43,8 @@
             </ul>
             <a href="#" [attr.aria-describedby]="'tier-' + tier.name.toLowerCase()" [ngClass]="{
                     'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold sm:mt-10': true,
-                    'text-indigo-600 inset-ring inset-ring-indigo-200 hover:inset-ring-indigo-300 focus-visible:outline-indigo-600': !tier.featured,
-                    'bg-orange-500 text-white shadow-xs hover:bg-orange-400 focus-visible:outline-orange-500': tier.featured
+                    'bg-orange-400 text-white inset-ring inset-ring-indigo-200 hover:inset-ring-indigo-300 focus-visible:outline-indigo-600': !tier.featured,
+                    'bg-neutral-900 text-white shadow-xs hover:bg-neutral-500 focus-visible:outline-neutral-700': tier.featured
                 }">{{ tier.cta }}</a>
         </div>
     </div>
