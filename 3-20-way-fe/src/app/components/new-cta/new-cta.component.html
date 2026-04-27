@@ -1,7 +1,7 @@
 <div class="bg-neutral-700" *ngIf="new_cta_data">
     <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
         <div
-            class="relative isolate overflow-hidden bg-gray-800 px-6 py-24 text-center after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl">
+            class="relative isolate overflow-hidden bg-orange-400 px-6 py-24 text-center after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl">
             <h2 class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
                 {{ new_cta_data.title }}
             </h2>
@@ -10,7 +10,7 @@
             </p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
                 <a [href]="new_cta_data.primaryCTA.href"
-                    class="rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                    class="rounded-md bg-neutral-700 px-3.5 py-2.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-neutral-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                     {{ new_cta_data.primaryCTA.text }}
                 </a>
                 <a [href]="new_cta_data.secondaryCTA.href" class="text-sm/6 font-semibold text-white">
