@@ -22,8 +22,8 @@ export class LandingPageService {
         href: '#'
       },
       headline: {
-        line1: '3–20 minutes daily for',
-        line2: 'healthier aging.'
+        line1: '3–20 min daily movement',
+        line2: 'transforms older adults lives',
       },
       description: 'From as little as 3 minutes a day, we’re helping thousands of people move better, feel better and live better - for longer.',
       primaryCTA: {
@@ -84,11 +84,11 @@ export class LandingPageService {
       ]
     },
     movements_data: {
-      logo: 'assets/three_twenty_way_logo.png',
-      quote: '“Small daily steps lead to stronger, more confident living—meaningful movements with life-changing results.”',
+      logo: 'assets/320-WHITE-LOGO.png',
+      quote: '“Meaningful movements with life-changing results.”',
       author: {
         name: 'Karen Case',
-        role: 'CEO of 3-20 Way',
+        role: 'Founder of 3-20 Way',
         image: 'assets/karen.png'
       }
     },
@@ -451,7 +451,7 @@ export class LandingPageService {
     },
     how_it_works_data: {
       tagline: 'Your personalised movement plan',
-      title: 'A Daily Exercise Plan Built Around You',
+      title: 'How It Works',
       description_col1: [
         'The 3-20 Way app is your personalised gateway to a daily movement plan made up of short, easy-to-follow 3-minute videos led by Karen Case and her team (no fake AI—guaranteed).',
         'A quick onboarding questionnaire (just 2–3 minutes) helps the app understand your health, mobility, and goals so it can build a tailored movement plan just for you.'
