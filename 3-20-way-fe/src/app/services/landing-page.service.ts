@@ -482,7 +482,19 @@ export class LandingPageService {
       titleLine1: 'Getting started with ',
       titleLine2: 'The 3-20 Way',
       primaryCTA: {
-        text: 'Get started',
+        text: 'Start your 10 day free trial',
+        href: '#'
+      },
+      secondaryCTA: {
+        text: 'Learn more',
+        href: '#'
+      }
+    },
+    get_started_data_2: {
+      titleLine1: 'Meaningful movements with',
+      titleLine2: 'life-changing results.',
+      primaryCTA: {
+        text: 'Start your 10 day free trial',
         href: '#'
       },
       secondaryCTA: {
