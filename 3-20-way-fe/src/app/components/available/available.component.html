@@ -1,4 +1,4 @@
-<div class="bg-gray-900 py-24 sm:py-32" *ngIf="available_data">
+<div class="bg-gray-600 py-24 sm:py-32" *ngIf="available_data">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl sm:text-center">
             <h2 class="text-base/7 font-semibold text-orange-400">{{ available_data.tagline }}</h2>
@@ -13,8 +13,9 @@
                 alt="App screenshot" class="rounded-xl shadow-2xl ring-1 ring-white/10" />
             <ng-container *ngIf="available_data.video">
                 <iframe *ngIf="available_data.video.includes('youtube')" [src]="getSafeUrl(available_data.video)"
-                    class="rounded-xl shadow-2xl ring-1 ring-white/10 w-full aspect-video"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    class="rounded-xl shadow-2xl ring-1 ring-white/10 w-full aspect-video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
                 <video *ngIf="!available_data.video.includes('youtube')" [src]="available_data.video" controls
                     class="rounded-xl shadow-2xl ring-1 ring-white/10 w-full aspect-video">
