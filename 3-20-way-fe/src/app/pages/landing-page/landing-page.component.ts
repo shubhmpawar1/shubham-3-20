@@ -14,6 +14,7 @@ import { OutcomesComponent } from '../../components/outcomes/outcomes.component'
 import { WhatWeGiveComponent } from '../../components/what-we-give/what-we-give.component';
 import { HowItWorksComponent } from '../../components/how-it-works/how-it-works.component';
 import { NewCtaComponent } from '../../components/new-cta/new-cta.component';
+import { GetStartedComponent } from '../../components/get-started/get-started.component';
 
 
 
@@ -23,19 +24,20 @@ import { NewCtaComponent } from '../../components/new-cta/new-cta.component';
   selector: 'app-landing-page',
   standalone: true,
   imports: [
-    HeroSectionTailwindComponent, 
-    DailyWinsComponent, 
-    AvailableComponent, 
-    MovementsComponent, 
-    NewFooterComponent, 
-    NewFaqComponent, 
-    NewTestimonialsComponent, 
+    HeroSectionTailwindComponent,
+    DailyWinsComponent,
+    AvailableComponent,
+    MovementsComponent,
+    NewFooterComponent,
+    NewFaqComponent,
+    NewTestimonialsComponent,
     NewPricingComponent,
     FeatureComponent,
     OutcomesComponent,
     WhatWeGiveComponent,
     HowItWorksComponent,
-    NewCtaComponent
+    NewCtaComponent,
+    GetStartedComponent
   ],
   templateUrl: './landing-page.component.html',
 })

@@ -477,6 +477,18 @@ export class LandingPageService {
         text: 'Learn more about the 3–20 Way',
         href: '#'
       }
+    },
+    get_started_data: {
+      titleLine1: 'Getting started with ',
+      titleLine2: 'The 3-20 Way',
+      primaryCTA: {
+        text: 'Get started',
+        href: '#'
+      },
+      secondaryCTA: {
+        text: 'Learn more',
+        href: '#'
+      }
     }
   }
 }
