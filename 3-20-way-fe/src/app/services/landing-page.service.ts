@@ -49,7 +49,7 @@ export class LandingPageService {
       tagline: 'Move on your terms',
       title: 'Your routine. Anytime, anywhere.',
       description: 'Movement routines tailored to you, available anytime, anywhere—designed to fit your needs and your daily life.',
-      image: 'assets/320way_bannerg.png',
+      image: 'assets/320way_neutral700.png',
       features: [
         {
           title: 'Real human coaches.',
