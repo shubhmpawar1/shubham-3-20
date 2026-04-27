@@ -419,32 +419,32 @@ export class LandingPageService {
         {
           title: 'Personalised for you.',
           description: 'A daily movement routine tailored to your ability to improve mobility and strength.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2a6 6 0 0 0-6 6v1H3a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-1V8a6 6 0 0 0-6-6Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2a6 6 0 0 0-6 6v1H3a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-1V8a6 6 0 0 0-6-6Z"/></svg>`
         },
         {
           title: 'Movement you enjoy.',
           description: 'Simple daily routines you feel good doing and look forward to.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 18s-6-3.5-8-8a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c-2 4.5-8 8-8 8Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 18s-6-3.5-8-8a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c-2 4.5-8 8-8 8Z"/></svg>`
         },
         {
           title: 'Made for real life.',
           description: 'No gym or equipment needed—move comfortably at home, seated or standing.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M3 10h14v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7Z"/><path d="M5 3h10v4H5V3Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M3 10h14v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7Z"/><path d="M5 3h10v4H5V3Z"/></svg>`
         },
         {
           title: 'Confidence & independence.',
           description: 'Build strength and mobility to support everyday movement and independence.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 1 2 5v5c0 5 3.8 9.4 8 9.9 4.2-.5 8-4.9 8-9.9V5l-8-4Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 1 2 5v5c0 5 3.8 9.4 8 9.9 4.2-.5 8-4.9 8-9.9V5l-8-4Z"/></svg>`
         },
         {
           title: 'Gentle but effective.',
           description: 'Simple, low-impact routines designed to deliver real, lasting results.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2Zm1 4v5l4 2"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2Zm1 4v5l4 2"/></svg>`
         },
         {
           title: 'Affordable & sustainable.',
           description: 'Less than a cappuccino per week for consistent, long-term wellbeing.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M3 7h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7Z"/><path d="M7 3h6v2H7V3Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M3 7h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7Z"/><path d="M7 3h6v2H7V3Z"/></svg>`
         }
       ],
       image: 'assets/what-we-give.png'
