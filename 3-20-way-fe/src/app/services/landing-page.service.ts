@@ -453,12 +453,12 @@ export class LandingPageService {
       tagline: 'Your personalised movement plan',
       title: 'How It Works',
       description_col1: [
-        'The 3-20 Way app is your personalised gateway to a daily movement plan made up of short, easy-to-follow 3-minute videos led by Karen Case and her team (no fake AI—guaranteed).',
-        'A quick onboarding questionnaire (just 2–3 minutes) helps the app understand your health, mobility, and goals so it can build a tailored movement plan just for you.'
+        'The 3-20 Way app is your gateway to a tailored daily exercise plan comprising short, easy to follow 3 minute videos,presented by Karen Case and her team (no fake AI, guaranteed!). ',
+        'A short and simple onboarding questionnaire (takes no more than two to three minutes) trains The 3-20 Way app on your specific health and wellbeing, allowing it to create the perfect movement moment video ‘playlist’ for you. ',
       ],
       description_col2: [
-        'Based on your profile, your daily plan can range from 3 minutes to 20 minutes or more, and you can complete it in one session or spread it throughout your day.',
-        'As your health or mobility changes, your plan automatically adapts to stay aligned with your needs, ensuring you always have the right movement support.'
+        'Based on what you tell us, your daily plan can be from as little as 3 minutes to 20 minutes or more, which you can either follow along with all at one go, or spread out throughout your day.',
+        'As your condition or health changes, so does the app, allowing us to ensure that your plan is perfectly matched to you at all times.'
       ],
       cta: {
         text: 'Start your journey',
