@@ -332,7 +332,7 @@ export class LandingPageService {
       tagline: 'Meet the founder',
       title: 'Introducing Karen Case, The 3–20 Way founder',
       description: 'Karen Case, founder of The 3–20 Way—designed to fit your needs and your daily life.',
-      video: 'assets/320way_founder.mp4',
+      video: 'https://www.youtube.com/embed/eHwOlnTnMh4',
       features: [
         {
           title: 'Lived experience.',
