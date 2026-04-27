@@ -14,7 +14,7 @@
                     <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
                         <div *ngFor="let feature of what_we_give_data.features" class="relative pl-9">
                             <dt class="inline font-semibold text-white">
-                                <div class="absolute top-1 left-1" [innerHTML]="getSafeIcon(feature.icon)"></div>
+                                <div class="absolute top-1 left-1 text-orange-400" [innerHTML]="getSafeIcon(feature.icon)"></div>
                                 {{ feature.title }}
                             </dt>
                             <dd class="inline">{{ feature.description }}</dd>

@@ -28,7 +28,7 @@
             class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base/7 text-gray-400 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
             <div *ngFor="let feature of available_data.features" class="relative pl-9">
                 <dt class="inline font-semibold text-white">
-                    <div class="absolute top-1 left-1" [innerHTML]="getSafeIcon(feature.icon)"></div>
+                    <div class="absolute top-1 left-1 text-orange-400" [innerHTML]="getSafeIcon(feature.icon)"></div>
                     {{ feature.title }}
                 </dt>
                 <dd class="inline">{{ feature.description }}</dd>

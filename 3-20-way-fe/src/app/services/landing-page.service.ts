@@ -337,32 +337,32 @@ export class LandingPageService {
         {
           title: 'Lived experience.',
           description: 'Karen Case is a specialist in older-adult movement and functional independence, with over 25 years’ experience across health, social care, and community settings.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Z"/></svg>`
         },
         {
           title: 'Specialist focus.',
           description: 'Her work supports older adults and people with limited mobility to move safely, confidently, and consistently.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2a3 3 0 0 1 3 3v2h-6V5a3 3 0 0 1 3-3Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2a3 3 0 0 1 3 3v2h-6V5a3 3 0 0 1 3-3Z"/></svg>`
         },
         {
           title: 'Independent living.',
           description: 'Focused on maintaining independence and improving quality of life through safe, regular movement.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 3l7 6v8H3V9l7-6Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 3l7 6v8H3V9l7-6Z"/></svg>`
         },
         {
           title: 'Inclusive approach.',
           description: 'Passionate about supporting those who find traditional exercise environments unsafe, unrealistic, or inaccessible.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M3 10a7 7 0 1 1 14 0A7 7 0 0 1 3 10Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M3 10a7 7 0 1 1 14 0A7 7 0 0 1 3 10Z"/></svg>`
         },
         {
           title: 'Founded LifeDock.',
           description: 'In 2003, she co-founded LifeDock Training, now the UK’s leading provider of specialist physical activity programmes.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M4 4h12v12H4z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M4 4h12v12H4z"/></svg>`
         },
         {
           title: 'National impact.',
           description: 'Through LifeDock, she has trained over 2,000 instructors across the UK in specialist and inclusive movement programmes.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2l8 4-8 4-8-4 8-4Zm0 6v10"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2l8 4-8 4-8-4 8-4Zm0 6v10"/></svg>`
         }
       ]
     },
