@@ -74,12 +74,12 @@ export class LandingPageService {
         {
           title: 'Personalised routines.',
           description: 'Simple daily movements designed just for you.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M7.84 1.804A1 1 0 0 1 8.82 1h2.36a1 1 0 0 1 .98.804l.331 1.652a6.993 6.993 0 0 1 1.929 1.115l1.598-.54a1 1 0 0 1 1.186.447l1.18 2.044a1 1 0 0 1-.205 1.251l-1.267 1.113a7.047 7.047 0 0 1 0 2.228l1.267 1.113a1 1 0 0 1 .206 1.25l-1.18 2.045a1 1 0 0 1-1.187.447l-1.598-.54a6.993 6.993 0 0 1-1.929 1.115l-.33 1.652a1 1 0 0 1-.98.804H8.82a1 1 0 0 1-.98-.804l-.331-1.652a6.993 6.993 0 0 1-1.929-1.115l-1.598.54a1 1 0 0 1-1.186-.447l-1.18-2.044a1 1 0 0 1 .205-1.251l1.267-1.114a7.05 7.05 0 0 1 0-2.227L1.821 7.773a1 1 0 0 1-.206-1.25l1.18-2.045a1 1 0 0 1 1.187-.447l1.598.54A6.992 6.992 0 0 1 7.51 3.456l.33-1.652ZM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" fill-rule="evenodd" /></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M7.84 1.804A1 1 0 0 1 8.82 1h2.36a1 1 0 0 1 .98.804l.331 1.652a6.993 6.993 0 0 1 1.929 1.115l1.598-.54a1 1 0 0 1 1.186.447l1.18 2.044a1 1 0 0 1-.205 1.251l-1.267 1.113a7.047 7.047 0 0 1 0 2.228l1.267 1.113a1 1 0 0 1 .206 1.25l-1.18 2.045a1 1 0 0 1-1.187.447l-1.598-.54a6.993 6.993 0 0 1-1.929 1.115l-.33 1.652a1 1 0 0 1-.98.804H8.82a1 1 0 0 1-.98-.804l-.331-1.652a6.993 6.993 0 0 1-1.929-1.115l-1.598.54a1 1 0 0 1-1.186-.447l-1.18-2.044a1 1 0 0 1 .205-1.251l1.267-1.114a7.05 7.05 0 0 1 0-2.227L1.821 7.773a1 1 0 0 1-.206-1.25l1.18-2.045a1 1 0 0 1 1.187-.447l1.598.54A6.992 6.992 0 0 1 7.51 3.456l.33-1.652ZM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" fill-rule="evenodd" /></svg>`
         },
         {
           title: 'Flexible preferences.',
           description: 'Adjust anytime as your confidence and needs evolve.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" /><path d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z" clip-rule="evenodd" fill-rule="evenodd" /></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" /><path d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z" clip-rule="evenodd" fill-rule="evenodd" /></svg>`
         }
       ]
     },
@@ -337,32 +337,32 @@ export class LandingPageService {
         {
           title: 'Lived experience.',
           description: 'Karen Case is a specialist in older-adult movement and functional independence, with over 25 years’ experience across health, social care, and community settings.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Z"/></svg>`
         },
         {
           title: 'Specialist focus.',
           description: 'Her work supports older adults and people with limited mobility to move safely, confidently, and consistently.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2a3 3 0 0 1 3 3v2h-6V5a3 3 0 0 1 3-3Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2a3 3 0 0 1 3 3v2h-6V5a3 3 0 0 1 3-3Z"/></svg>`
         },
         {
           title: 'Independent living.',
           description: 'Focused on maintaining independence and improving quality of life through safe, regular movement.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 3l7 6v8H3V9l7-6Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 3l7 6v8H3V9l7-6Z"/></svg>`
         },
         {
           title: 'Inclusive approach.',
           description: 'Passionate about supporting those who find traditional exercise environments unsafe, unrealistic, or inaccessible.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M3 10a7 7 0 1 1 14 0A7 7 0 0 1 3 10Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M3 10a7 7 0 1 1 14 0A7 7 0 0 1 3 10Z"/></svg>`
         },
         {
           title: 'Founded LifeDock.',
           description: 'In 2003, she co-founded LifeDock Training, now the UK’s leading provider of specialist physical activity programmes.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M4 4h12v12H4z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M4 4h12v12H4z"/></svg>`
         },
         {
           title: 'National impact.',
           description: 'Through LifeDock, she has trained over 2,000 instructors across the UK in specialist and inclusive movement programmes.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2l8 4-8 4-8-4 8-4Zm0 6v10"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2l8 4-8 4-8-4 8-4Zm0 6v10"/></svg>`
         }
       ]
     },
@@ -419,32 +419,32 @@ export class LandingPageService {
         {
           title: 'Personalised for you.',
           description: 'A daily movement routine tailored to your ability to improve mobility and strength.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2a6 6 0 0 0-6 6v1H3a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-1V8a6 6 0 0 0-6-6Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2a6 6 0 0 0-6 6v1H3a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-1V8a6 6 0 0 0-6-6Z"/></svg>`
         },
         {
           title: 'Movement you enjoy.',
           description: 'Simple daily routines you feel good doing and look forward to.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 18s-6-3.5-8-8a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c-2 4.5-8 8-8 8Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 18s-6-3.5-8-8a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c-2 4.5-8 8-8 8Z"/></svg>`
         },
         {
           title: 'Made for real life.',
           description: 'No gym or equipment needed—move comfortably at home, seated or standing.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M3 10h14v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7Z"/><path d="M5 3h10v4H5V3Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M3 10h14v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7Z"/><path d="M5 3h10v4H5V3Z"/></svg>`
         },
         {
           title: 'Confidence & independence.',
           description: 'Build strength and mobility to support everyday movement and independence.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 1 2 5v5c0 5 3.8 9.4 8 9.9 4.2-.5 8-4.9 8-9.9V5l-8-4Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 1 2 5v5c0 5 3.8 9.4 8 9.9 4.2-.5 8-4.9 8-9.9V5l-8-4Z"/></svg>`
         },
         {
           title: 'Gentle but effective.',
           description: 'Simple, low-impact routines designed to deliver real, lasting results.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2Zm1 4v5l4 2"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2Zm1 4v5l4 2"/></svg>`
         },
         {
           title: 'Affordable & sustainable.',
           description: 'Less than a cappuccino per week for consistent, long-term wellbeing.',
-          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400"><path d="M3 7h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7Z"/><path d="M7 3h6v2H7V3Z"/></svg>`
+          icon: `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M3 7h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7Z"/><path d="M7 3h6v2H7V3Z"/></svg>`
         }
       ],
       image: 'assets/what-we-give.png'
