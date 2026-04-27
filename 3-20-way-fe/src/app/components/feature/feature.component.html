@@ -1,21 +1,24 @@
-<div class="bg-gray-900 py-24 sm:py-32" *ngIf="feature_data">
+<div class="bg-gray-600 py-24 sm:py-32" *ngIf="feature_data">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">{{ feature_data.title }}</h2>
+            <h2 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">{{ feature_data.title
+                }}</h2>
             <p class="mt-6 text-lg/8 text-gray-300">{{ feature_data.description }}</p>
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
                 <div *ngFor="let item of feature_data.items" class="flex flex-col">
                     <dt class="text-base/7 font-semibold text-white">
-                        <div class="mb-6 flex size-10 items-center justify-center rounded-lg bg-indigo-500" [innerHTML]="getSafeHtml(item.icon)">
+                        <div class="mb-6 flex size-10 items-center justify-center rounded-lg bg-indigo-500"
+                            [innerHTML]="getSafeHtml(item.icon)">
                         </div>
                         {{ item.title }}
                     </dt>
-                    <dd class="mt-1 flex flex-auto flex-col text-base/7 text-gray-400">
+                    <dd class="mt-1 flex flex-auto flex-col text-base/7 text-gray-300">
                         <p class="flex-auto">{{ item.description }}</p>
                         <p class="mt-6">
-                            <a [href]="item.link" class="text-sm/6 font-semibold text-indigo-400 hover:text-indigo-300">Learn more
+                            <a [href]="item.link"
+                                class="text-sm/6 font-semibold text-indigo-400 hover:text-indigo-300">Learn more
                                 <span aria-hidden="true">→</span></a>
                         </p>
                     </dd>
