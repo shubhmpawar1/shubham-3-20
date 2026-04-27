@@ -288,6 +288,7 @@ export class LandingPageService {
           features: [
             '10-day free trial (new members only)',
             'Cancel anytime—no commitment, no hidden fees.',
+            'Save over £35 a year',
           ],
           cta: 'Start your 10 day free trial',
           featured: true
