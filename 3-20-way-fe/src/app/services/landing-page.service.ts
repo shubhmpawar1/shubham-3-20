@@ -112,19 +112,19 @@ export class LandingPageService {
         {
           id: 'faq-0',
           question: "What is the 3-20 Way?",
-          answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+          answer: "The 3-20 Way is a guided movement programme built around short, manageable movement sessions that fit easily into everyday life. The aim is to help you feel stronger, steadier, and more confident, without pressure or intimidation.",
           open: false
         },
         {
           id: 'faq-1',
           question: "How is this different from free videos online?",
-          answer: "You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus.",
+          answer: "Free videos can be useful, but The 3-20 Way offers: A personalised movement plan Clear guidance on what to do today A calm, supportive approach without pressure Short sessions that fit into real life",
           open: false
         },
         {
           id: 'faq-2',
           question: "What type of movements are in the 3-20 Way?",
-          answer: "Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.",
+          answer: "The 3-20 Way focuses on controlled, supported movement, with plenty of seated and low-impact options designed to build confidence safely.",
           open: false
         },
         {
@@ -136,25 +136,24 @@ export class LandingPageService {
         {
           id: 'faq-4',
           question: "Who is it for?",
-          answer: "Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.",
-          open: false
+          answer: "The 3-20 Way is designed for: Adults who want to stay active as they age People who feel less confident moving Those with joint stiffness, balance concerns, or low energy Anyone who finds traditional exercise programmes off- putting No prior fitness experience is needed.",
         },
         {
           id: 'faq-5',
           question: "Is it safe?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes. The programme is designed to be gentle, adaptable, and progressive. When you join, we ask a few simple questions so we can suggest movements that are appropriate for you. You’re always in control and can stop, skip, or change movements at any time.",
           open: false
         },
         {
           id: 'faq-6',
           question: "Will it make my condition worse?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "That’s a common concern.The 3-20 Way focuses on controlled, supported movement, with plenty of seated and low-impact options designed to build confidence safely. If something doesn’t feel right, you simply stop.",
           open: false
         },
         {
           id: 'faq-7',
           question: "Do I need equipment?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "No. All movements are designed to be done at home, using your own bodyweight and everyday support such as a chair or wall.",
           open: false
         },
         {
@@ -166,19 +165,19 @@ export class LandingPageService {
         {
           id: 'faq-9',
           question: "Can I have a free trial?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes, a 10-day free trial is available.",
           open: false
         },
         {
           id: 'faq-10',
           question: "Can I change my programme?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes.You can update your preferences at any time as your confidence, strength, or energy levels change.",
           open: false
         },
         {
           id: 'faq-11',
           question: "Can I cancel at any time?",
-          answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+          answer: "Yes. You can cancel at any time. We want you to feel comfortable and confident, not locked into something that doesn’t suit you.",
           open: false
         },
         {
