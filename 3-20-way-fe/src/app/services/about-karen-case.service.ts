@@ -59,6 +59,30 @@ export class AboutKarenCaseService {
         { label: 'Members helped', value: '10,000+' },
         { label: 'Free trial days', value: '10' }
       ]
+    },
+
+    professional_background: {
+      tagline: 'Professional Background',
+      headline: 'Over 25 years helping people move better',
+      image: 'assets/About_Karen.jpg',
+      quote: '"Movement is not about performance — it\'s about independence, confidence, and living life on your own terms."',
+      quoteAuthor: 'Karen Case',
+      quoteRole: 'Founder, The 3-20 Way',
+      paragraphs: [
+        'Karen began her career in the fitness and wellbeing industry in 2001, qualifying initially as an Exercise to Music and Gym Instructor. Over the following years, she trained across a broad range of disciplines, including multiple Les Mills programmes, yoga and Tai Chi for Health. This early work exposed her to people of varying ages and abilities and highlighted how excluded many older adults feel by mainstream fitness culture.',
+        'As her career developed, Karen increasingly focused on supporting those for whom traditional exercise environments felt unsafe, unrealistic or inaccessible. This shift marked the beginning of her long-standing specialism in older-adult and limited-mobility movement.',
+        'Karen\'s deep-rooted passion for inclusive movement led her to create The 3-20 Way — a digital programme that brings her expert approach directly into people\'s homes, making daily movement feel achievable for everyone.'
+      ],
+      stats: [
+        { label: 'Years experience', value: '25+' },
+        { label: 'Instructors trained', value: '2,000+' },
+        { label: 'LifeDock founded', value: '2003' },
+        { label: 'Members helped', value: '10,000+' }
+      ],
+      cta: {
+        text: 'Start your 10-day free trial',
+        href: '#'
+      }
     }
 
   };
