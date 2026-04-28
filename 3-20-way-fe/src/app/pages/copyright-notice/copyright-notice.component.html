@@ -1,409 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Copyright Notice — The 3-20 Way</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap"
-        rel="stylesheet" />
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --ink: #1a1a18;
-            --ink-mid: #4a4a46;
-            --ink-light: #8a8a84;
-            --rule: #d4d2c8;
-            --rule-light: #eae8e0;
-            --cream: #f7f5ef;
-            --accent: #1a1a18;
-            --warning-bg: #fdf8f0;
-            --warning-border: #c8a96e;
-        }
-
-        html {
-            font-size: 16px;
-        }
-
-        body {
-            font-family: 'Source Serif 4', Georgia, serif;
-            background: var(--cream);
-            color: var(--ink);
-            min-height: 100vh;
-            padding: 0;
-        }
-
-        /* ── page shell ── */
-        .page-wrap {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 3.5rem 2.5rem 5rem;
-        }
-
-        /* ── masthead ── */
-        .masthead {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 2rem;
-            border-bottom: 1.5px solid var(--ink);
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .logo-block {
-            width: 44px;
-            height: 44px;
-            background: var(--ink);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .logo-block span {
-            color: var(--cream);
-            font-family: 'Playfair Display', serif;
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            color: var(--ink);
-        }
-
-        .doc-meta {
-            text-align: right;
-        }
-
-        .doc-type {
-            font-size: 10px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-            font-weight: 400;
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .doc-year {
-            font-size: 13px;
-            color: var(--ink-mid);
-            font-style: italic;
-        }
-
-        /* ── title block ── */
-        .title-block {
-            margin-bottom: 3rem;
-        }
-
-        .eyebrow {
-            font-size: 10.5px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(30px, 5vw, 44px);
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.01em;
-            margin-bottom: 0.6rem;
-        }
-
-        .copyright-mark {
-            font-size: 15px;
-            color: var(--ink-mid);
-            font-style: italic;
-            font-weight: 300;
-            padding-top: 0.5rem;
-            border-top: 0.5px solid var(--rule);
-            margin-top: 1.25rem;
-            display: inline-block;
-        }
-
-        /* ── body content ── */
-        .intro-para {
-            font-size: 16px;
-            line-height: 1.8;
-            font-weight: 300;
-            color: var(--ink);
-            margin-bottom: 3rem;
-            padding-left: 1.5rem;
-            border-left: 3px solid var(--ink);
-        }
-
-        /* ── sections ── */
-        .section {
-            margin-bottom: 2.75rem;
-        }
-
-        .section-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink-mid);
-            margin-bottom: 0.85rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 0.5px solid var(--rule);
-        }
-
-        .section p {
-            font-size: 15.5px;
-            line-height: 1.8;
-            font-weight: 300;
-            color: var(--ink);
-        }
-
-        /* ── restriction list ── */
-        .restriction-preamble {
-            font-size: 15.5px;
-            line-height: 1.8;
-            font-weight: 300;
-            color: var(--ink);
-            margin-bottom: 1.1rem;
-        }
-
-        .restriction-list {
-            list-style: none;
-            background: #fff;
-            border: 0.5px solid var(--rule);
-            border-radius: 6px;
-            padding: 1.25rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.85rem;
-        }
-
-        .restriction-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 14.5px;
-            line-height: 1.7;
-            font-weight: 300;
-            color: var(--ink);
-        }
-
-        .no-icon {
-            flex-shrink: 0;
-            margin-top: 3px;
-            width: 18px;
-            height: 18px;
-            border: 1px solid var(--rule);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .no-icon svg {
-            width: 8px;
-            height: 8px;
-            stroke: var(--ink-mid);
-            stroke-width: 2;
-            fill: none;
-        }
-
-        /* ── warning callout ── */
-        .warning-callout {
-            background: var(--warning-bg);
-            border: 1px solid var(--warning-border);
-            border-radius: 6px;
-            padding: 1.1rem 1.4rem;
-            font-size: 14.5px;
-            line-height: 1.75;
-            font-weight: 300;
-            color: var(--ink);
-        }
-
-        .warning-callout strong {
-            font-weight: 600;
-            font-style: italic;
-        }
-
-        /* ── footer ── */
-        .page-footer {
-            margin-top: 4rem;
-            padding-top: 1.5rem;
-            border-top: 1.5px solid var(--ink);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .footer-copy {
-            font-size: 12.5px;
-            color: var(--ink-mid);
-            font-style: italic;
-            font-weight: 300;
-        }
-
-        .footer-tag {
-            font-size: 10px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-        }
-
-        /* ── responsive ── */
-        @media (max-width: 600px) {
-            .page-wrap {
-                padding: 2rem 1.25rem 3.5rem;
-            }
-
-            .masthead {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .doc-meta {
-                text-align: left;
-            }
-
-            .page-footer {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="page-wrap">
-
-        <!-- Masthead -->
-        <header class="masthead">
-            <div class="brand">
-                <div class="logo-block"><span>3-20<br>WAY</span></div>
-                <div class="brand-name">The 3-20 Way</div>
+<div class="bg-white min-h-screen flex flex-col">
+    <!-- Simple Header -->
+    <header class="bg-gray-900">
+        <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <div class="flex lg:flex-1">
+                <a routerLink="/" class="-m-1.5 p-1.5">
+                    <span class="sr-only">The 3-20 Way</span>
+                    <img class="h-8 w-auto" src="assets/320-WHITE-LOGO.png" alt="Logo">
+                </a>
             </div>
-            <div class="doc-meta">
-                <span class="doc-type">Legal document</span>
-                <span class="doc-year">Effective 2026</span>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a routerLink="/" class="text-sm/6 font-semibold text-white">Home</a>
+                <a routerLink="/landing-page" class="text-sm/6 font-semibold text-white">Product</a>
+                <a routerLink="/landing-page-2" class="text-sm/6 font-semibold text-white">Features</a>
             </div>
-        </header>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Title -->
-        <div class="title-block">
-            <span class="eyebrow">Website footer</span>
-            <h1>Copyright Notice</h1>
-            <p class="copyright-mark">© The 3-20 Way 2026. All rights reserved.</p>
-        </div>
-
-        <!-- Intro -->
-        <p class="intro-para">
-            All content made available through The 3-20 Way, including (but not limited to) video recordings, live
-            sessions, exercise programmes, written materials, graphics, images, audio, branding, logos, trademarks, and
-            downloadable resources, is the property of The 3-20 Way and is protected by UK and international copyright
-            laws.
-        </p>
-
-        <!-- Licence -->
-        <div class="section">
-            <h2 class="section-heading">Your licence</h2>
-            <p>You are granted a limited, personal, non-exclusive, non-transferable licence to access and use the
-                content for your own private, non-commercial use only.</p>
-        </div>
-
-        <!-- Restrictions -->
-        <div class="section">
-            <h2 class="section-heading">Restrictions</h2>
-            <p class="restriction-preamble">You may not, without prior written permission from The 3-20 Way:</p>
-            <ul class="restriction-list">
-                <li>
-                    <span class="no-icon">
-                        <svg viewBox="0 0 10 10">
-                            <line x1="2" y1="2" x2="8" y2="8" />
-                            <line x1="8" y1="2" x2="2" y2="8" />
-                        </svg>
-                    </span>
-                    Copy, reproduce, record, download, store, distribute, transmit, share, sell, sublicense, or
-                    otherwise exploit any content
-                </li>
-                <li>
-                    <span class="no-icon">
-                        <svg viewBox="0 0 10 10">
-                            <line x1="2" y1="2" x2="8" y2="8" />
-                            <line x1="8" y1="2" x2="2" y2="8" />
-                        </svg>
-                    </span>
-                    Share your login details or allow others to access content using your account
-                </li>
-                <li>
-                    <span class="no-icon">
-                        <svg viewBox="0 0 10 10">
-                            <line x1="2" y1="2" x2="8" y2="8" />
-                            <line x1="8" y1="2" x2="2" y2="8" />
-                        </svg>
-                    </span>
-                    Use any content for commercial purposes, training delivery, or public performance
-                </li>
-                <li>
-                    <span class="no-icon">
-                        <svg viewBox="0 0 10 10">
-                            <line x1="2" y1="2" x2="8" y2="8" />
-                            <line x1="8" y1="2" x2="2" y2="8" />
-                        </svg>
-                    </span>
-                    Modify, adapt, or create derivative works from the content
-                </li>
-            </ul>
-        </div>
-
-        <!-- Enforcement -->
-        <div class="section">
-            <h2 class="section-heading">Enforcement</h2>
-            <div class="warning-callout">
-                Unauthorised use of The 3-20 Way content may result in <strong>immediate suspension or termination of
-                    access</strong>, and may lead to civil or criminal proceedings.
+    <!-- Hero Section -->
+    <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+        <!-- <img src="assets/hero.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center opacity-40"> -->
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <p class="text-base font-semibold leading-7 text-orange-500">Legal Information</p>
+                <h1 class="mt-2 text-5xl font-semibold tracking-tight text-white sm:text-7xl">Copyright Notice</h1>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">Protecting our content and
+                    ensuring a safe, respectful environment for all our members.</p>
             </div>
         </div>
-
-        <!-- Statutory rights -->
-        <div class="section">
-            <h2 class="section-heading">Your statutory rights</h2>
-            <p>Nothing in this notice limits your rights under applicable UK or EU consumer or copyright law.</p>
-        </div>
-
-        <!-- Footer -->
-        <footer class="page-footer">
-            <span class="footer-copy">© The 3-20 Way 2026 — All rights reserved</span>
-            <span class="footer-tag">UK &amp; International Copyright Law</span>
-        </footer>
-
     </div>
-</body>
 
-</html>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="bg-white px-6 py-24 lg:px-8">
+            <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+                <div class="flex items-center gap-x-2 text-sm font-semibold leading-7 text-orange-600">
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>Last Updated: March 2026</span>
+                </div>
+
+                <p class="mt-6 text-xl leading-8">© The 3-20 Way 2026. All rights reserved. Effective 2026.</p>
+
+                <div class="mt-10 max-w-2xl">
+                    <p>All content made available through The 3-20 Way, including (but not limited to) video recordings,
+                        live sessions, exercise programmes, written materials, graphics, images, audio, branding, logos,
+                        trademarks, and downloadable resources, is the property of The 3-20 Way and is protected by UK
+                        and international copyright laws.</p>
+
+                    <div class="mt-16 bg-gray-50 rounded-2xl p-8 ring-1 ring-inset ring-gray-200">
+                        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Your Limited Licence</h2>
+                        <p class="mt-6">You are granted a limited, personal, non-exclusive, non-transferable licence to
+                            access and use the content for your own private, non-commercial use only. This licence does
+                            not grant you ownership of any content accessed through our platform.</p>
+                    </div>
+
+                    <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Restrictions on Use</h2>
+                    <p class="mt-6">To protect our intellectual property and the integrity of our programmes, you may
+                        not, without prior written permission from The 3-20 Way:</p>
+                    <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+                        <li class="flex gap-x-3">
+                            <div class="flex-none pt-1">
+                                <div class="rounded-full bg-orange-100 p-1">
+                                    <svg class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <span><strong class="font-semibold text-gray-900">Reproduction:</strong> Copy, reproduce,
+                                record, download, store, distribute, transmit, share, sell, sublicense, or otherwise
+                                exploit any content.</span>
+                        </li>
+                        <li class="flex gap-x-3">
+                            <div class="flex-none pt-1">
+                                <div class="rounded-full bg-orange-100 p-1">
+                                    <svg class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <span><strong class="font-semibold text-gray-900">Account Sharing:</strong> Share your login
+                                details or allow others to access content using your account. Each subscription is for
+                                personal use only.</span>
+                        </li>
+                        <li class="flex gap-x-3">
+                            <div class="flex-none pt-1">
+                                <div class="rounded-full bg-orange-100 p-1">
+                                    <svg class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <span><strong class="font-semibold text-gray-900">Commercial Use:</strong> Use any content
+                                for commercial purposes, training delivery, or public performance.</span>
+                        </li>
+                    </ul>
+
+                    <div
+                        class="mt-16 relative isolate overflow-hidden bg-orange-600 px-6 py-12 shadow-2xl rounded-3xl sm:px-12">
+                        <h2 class="text-2xl font-bold tracking-tight text-white">Enforcement</h2>
+                        <p class="mt-4 text-lg leading-8 text-orange-100">
+                            Unauthorised use of The 3-20 Way content may result in <strong
+                                class="font-semibold text-white">immediate suspension or termination of access</strong>,
+                            and may lead to civil or criminal proceedings. We take the protection of our intellectual
+                            property seriously.
+                        </p>
+                        <svg viewBox="0 0 1024 1024"
+                            class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+                            aria-hidden="true">
+                            <circle cx="512" cy="512" r="512" fill="url(#8d9575a8-ee69-42b2-8595-39E28C61E90E)"
+                                fill-opacity="0.7" />
+                            <defs>
+                                <radialGradient id="8d9575a8-ee69-42b2-8595-39E28C61E90E">
+                                    <stop stop-color="#fff" />
+                                    <stop offset="1" stop-color="#f97316" />
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Your Statutory Rights</h2>
+                    <p class="mt-6 italic text-gray-600">Nothing in this notice limits your rights under applicable UK
+                        or EU consumer or copyright law. We are committed to transparency and fairness in all our
+                        dealings with members.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <app-new-footer [footer_data]="nfs.footer_content"></app-new-footer>
+</div>
