@@ -1,0 +1,41 @@
+<div class="overflow-hidden bg-white py-24 sm:py-32" *ngIf="overview_data">
+    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div class="max-w-4xl">
+            <p class="text-base/7 font-semibold text-orange-600">{{ overview_data.tagline }}</p>
+            <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                {{ overview_data.headline }}</h1>
+            <p class="mt-6 text-xl/8 text-balance text-gray-700">{{ overview_data.description }}</p>
+        </div>
+        <section class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+            <div class="lg:pr-8">
+                <h2 class="text-2xl font-semibold tracking-tight text-pretty text-gray-900">
+                    {{ overview_data.mission.title }}</h2>
+                <p *ngFor="let para of overview_data.mission.paragraphs"
+                    class="mt-6 text-base/7 text-gray-600">{{ para }}</p>
+            </div>
+            <div class="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
+                <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8">
+                    <div *ngFor="let img of overview_data.images; let i = index"
+                        class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10"
+                        [class.-mt-40]="i === 1 || i === 3">
+                        <img [src]="img.src" [alt]="img.alt" class="block size-full object-cover" />
+                    </div>
+                </div>
+            </div>
+            <div class="max-lg:mt-16 lg:col-span-1">
+                <p class="text-base/7 font-semibold text-gray-500">The numbers</p>
+                <hr class="mt-6 border-t border-gray-200" />
+                <dl class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+                    <div *ngFor="let stat of overview_data.stats; let last = last"
+                        class="flex flex-col gap-y-2 pb-4"
+                        [class.border-b]="!last"
+                        [class.border-dotted]="!last"
+                        [class.border-gray-200]="!last">
+                        <dt class="text-sm/6 text-gray-600">{{ stat.label }}</dt>
+                        <dd class="order-first text-6xl font-semibold tracking-tight text-gray-900">{{ stat.value }}</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </div>
+</div>
