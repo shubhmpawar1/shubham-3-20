@@ -37,7 +37,7 @@ export class NewFooterService {
           { name: 'Privacy Policy', href: '#' },
           { name: 'Cookie Policy', href: '#' },
           { name: 'Data Policy', href: '#' },
-          { name: 'Terms and Conditions', href: '#' },
+          { name: 'Terms and Conditions', href: '/terms-condition' },
           { name: 'Copyright Notice', href: '/copyright-notice' },
         ]
       }
