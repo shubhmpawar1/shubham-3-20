@@ -114,7 +114,7 @@ export class AboutKarenCaseService {
     },
     feature_data: {
       title: 'Lived experience and personal insight',
-      description: 'Try it free for 10 days—no risk, no payment details required.Enjoy full access with daily movement routines tailored just for you.',
+      description: 'Combining lived experience with professional expertise to deliver safe, inclusive and effective movement approaches.',
       items: [
         {
           title: 'Personal Health Journey',
