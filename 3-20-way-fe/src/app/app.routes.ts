@@ -5,6 +5,7 @@ import { LandingVideoComponent } from './pages/landing-video/landing-video.compo
 import { LandingPage2Component } from './pages/landing-page-2/landing-page-2.component';
 import { LandingPage3Component } from './pages/landing-page-3/landing-page-3.component';
 import { LandingPage4Component } from './pages/landing-page-4/landing-page-4.component';
+import { CopyrightNoticeComponent } from './pages/copyright-notice/copyright-notice.component';
 
 
 
@@ -15,6 +16,7 @@ export const routes: Routes = [
     { path: 'landing-page-2', component: LandingPage2Component },
     { path: 'landing-page-3', component: LandingPage3Component },
     { path: 'landing-page-4', component: LandingPage4Component },
+    { path: 'copyright-notice', component: CopyrightNoticeComponent },
 
     {
         path: 'pages', component: AppComponent, children: [
