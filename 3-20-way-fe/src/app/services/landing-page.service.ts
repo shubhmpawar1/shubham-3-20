@@ -329,8 +329,8 @@ export class LandingPageService {
       ]
     },
     available_data2: {
-      tagline: 'Meet the founder',
-      title: 'Introducing Karen Case, The 3–20 Way founder',
+      tagline: 'Meet The Founder',
+      title: 'Introducing Karen Case, The 3–20 Way Founder',
       description: 'Karen Case, founder of The 3–20 Way—designed to fit your needs and your daily life.',
       video: 'https://www.youtube.com/embed/eHwOlnTnMh4',
       features: [
