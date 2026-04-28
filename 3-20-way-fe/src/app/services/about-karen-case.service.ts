@@ -111,7 +111,40 @@ export class AboutKarenCaseService {
           icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />`
         }
       ]
-    }
+    },
+    feature_data: {
+      title: 'Lived experience and personal insight',
+      description: 'Try it free for 10 days—no risk, no payment details required.Enjoy full access with daily movement routines tailored just for you.',
+      items: [
+        {
+          title: 'Personal Health Journey',
+          description: 'In 2012, Karen was diagnosed with breast cancer and experienced first-hand the physical and emotional challenges of recovery. During treatment and rehabilitation, she found that appropriate movement played a critical role in restoring strength, confidence and mental wellbeing.',
+          link: '#',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6 text-white">
+  <circle cx="12" cy="12" r="9" />
+  <text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">1</text>
+</svg>`
+        },
+        {
+          title: 'Recovery Through Movement',
+          description: 'Karen became a founding member of Lagan Dragons, Northern Ireland’s first breast cancer survivors’ dragon boat team, and has previously served as team Captain. Her involvement with the team reinforced her belief that rest alone is not sufficient for recovery, and that gentle, supported movement can be transformative at any stage of life or health.',
+          link: '#',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6 text-white">
+  <circle cx="12" cy="12" r="9" />
+  <text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">2</text>
+</svg>`
+        },
+        {
+          title: 'Empathy & Lived Experience',
+          description: 'This combination of professional expertise and lived experience continues to inform Karen’s empathetic, reassurance-led approach.',
+          link: '#',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6 text-white">
+  <circle cx="12" cy="12" r="9" />
+  <text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">3</text>
+</svg>`
+        }
+      ]
+    },
 
   };
 
