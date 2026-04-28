@@ -48,7 +48,7 @@ export class AboutKarenCaseService {
         ]
       },
       images: [
-        { src: 'assets/karen.png', alt: 'Karen Case' },
+        { src: 'assets/About_Karen.jpg', alt: 'Karen Case' },
         { src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?&auto=format&fit=crop&crop=left&w=560&h=560&q=90', alt: 'Movement session' },
         { src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?&auto=format&fit=crop&crop=left&w=560&h=560&q=90', alt: 'Community class' },
         { src: 'https://images.unsplash.com/photo-1598257006458-087169a1f08d?&auto=format&fit=crop&crop=center&w=560&h=560&q=90', alt: 'Wellness activity' }
