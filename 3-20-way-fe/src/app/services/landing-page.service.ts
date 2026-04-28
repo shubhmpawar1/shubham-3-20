@@ -335,7 +335,7 @@ export class LandingPageService {
       video: 'https://www.youtube.com/embed/eHwOlnTnMh4',
       features: [
         {
-          title: 'Lived experience.',
+          title: 'Lived experience.j',
           description: 'Karen Case is a specialist in older-adult movement and functional independence, with over 25 years’ experience across health, social care, and community settings.',
           icon: `<svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-orange-400"><path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Z"/></svg>`
         },
