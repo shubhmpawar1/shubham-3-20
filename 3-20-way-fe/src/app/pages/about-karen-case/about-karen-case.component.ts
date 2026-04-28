@@ -9,10 +9,12 @@ import { NewFooterComponent } from '../../components/new-footer/new-footer.compo
 import { NewFooterService } from '../../services/new-footer.service';
 import { FeatureComponent } from '../../components/feature/feature.component';
 import { PhilosophyComponent } from '../../components/philosophy/philosophy.component';
+import { The320Component } from '../../components/the-3-20/the-3-20.component';
+
 @Component({
   selector: 'app-about-karen-case',
   standalone: true,
-  imports: [CommonModule, HeroSectionTailwindComponent, OverviewComponent, ProfessionalBackgroundComponent, LifeDockComponent, NewFooterComponent, FeatureComponent, PhilosophyComponent],
+  imports: [CommonModule, HeroSectionTailwindComponent, OverviewComponent, ProfessionalBackgroundComponent, LifeDockComponent, NewFooterComponent, FeatureComponent, PhilosophyComponent, The320Component],
   templateUrl: './about-karen-case.component.html',
   styleUrl: './about-karen-case.component.css'
 })

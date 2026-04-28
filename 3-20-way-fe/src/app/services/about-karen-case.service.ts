@@ -151,6 +151,37 @@ export class AboutKarenCaseService {
       quote: 'Movement is not about performance — it\'s about independence, confidence, and living life on your own terms. From as little as 3 minutes a day, I\'ve seen people transform their quality of life. That\'s what drives everything we do at The 3-20 Way.',
       authorName: 'Karen Case',
       authorRole: 'Founder, The 3-20 Way'
+    },
+
+    the_3_20: {
+      headline: 'The 3-20 Way',
+      description: 'Built on Karen\'s 25+ years of specialist experience, The 3-20 Way delivers safe, effective daily movement in as little as 3 minutes — designed for real people, real lives, and real results.',
+      features: [
+        {
+          title: 'Identifying the Gap',
+          description: 'The 3–20 Way was developed in response to the growing gap Karen observed between ageing bodies and the fitness content typically available to them.'
+        },
+        {
+          title: 'Programme Foundation',
+          description: 'The programme is built around short, achievable daily movement routines lasting between three and twenty minutes,'
+        },
+        {
+          title: 'Real-Life Outcomes',
+          description: 'designed to support real-life functional outcomes such as balance, strength, mobility and confidence.'
+        },
+        {
+          title: 'Embedded Expertise',
+          description: 'The intelligence behind the platform is Karen’s specialist knowledge, embedded to ensure that all movement is safe, adaptable and appropriate for a wide range of abilities.'
+        },
+        {
+          title: 'Positioning the Platform',
+          description: 'Through this insight, Karen has positioned 3–20 Way not as an exercise app,'
+        },
+        {
+          title: 'Supportive Impact',
+          description: 'but as a supportive tool that helps older adults maintain independence and reduce fear around movement.'
+        }
+      ]
     }
 
   };
