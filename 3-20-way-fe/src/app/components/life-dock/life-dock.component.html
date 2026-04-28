@@ -11,10 +11,8 @@
                 <div *ngFor="let feature of life_dock_data.features" class="relative pl-16">
                     <dt class="text-base/7 font-semibold text-gray-900">
                         <div
-                            class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-orange-600">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                aria-hidden="true" class="size-6 text-white" [innerHTML]="feature.icon">
-                            </svg>
+                            class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-orange-600"
+                            [innerHTML]="getSafeIcon(feature.icon)">
                         </div>
                         {{ feature.title }}
                     </dt>
