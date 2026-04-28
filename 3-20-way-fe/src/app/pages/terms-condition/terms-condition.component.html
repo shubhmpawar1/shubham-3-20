@@ -1,380 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="bg-white min-h-screen flex flex-col">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms & Conditions — The 3-20 Way</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap"
-        rel="stylesheet" />
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --ink: #1a1a18;
-            --ink-mid: #4a4a46;
-            --ink-light: #8a8a84;
-            --rule: #d4d2c8;
-            --rule-light: #eae8e0;
-            --cream: #f7f5ef;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Source Serif 4', Georgia, serif;
-            background: var(--cream);
-            color: var(--ink);
-            min-height: 100vh;
-        }
-
-        .page-wrap {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 3.5rem 2.5rem 5rem;
-        }
-
-        /* ── masthead ── */
-        .masthead {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 2rem;
-            border-bottom: 1.5px solid var(--ink);
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .logo-block {
-            width: 44px;
-            height: 44px;
-            background: var(--ink);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .logo-block span {
-            color: var(--cream);
-            font-family: 'Playfair Display', serif;
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-        }
-
-        .doc-meta {
-            text-align: right;
-        }
-
-        .doc-type {
-            font-size: 10px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .doc-updated {
-            font-size: 13px;
-            color: var(--ink-mid);
-            font-style: italic;
-        }
-
-        /* ── title block ── */
-        .title-block {
-            margin-bottom: 2.75rem;
-        }
-
-        .eyebrow {
-            font-size: 10.5px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 5vw, 42px);
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.01em;
-        }
-
-        .intro-note {
-            margin-top: 1.25rem;
-            padding-top: 1rem;
-            border-top: 0.5px solid var(--rule);
-            font-size: 14.5px;
-            line-height: 1.75;
-            font-weight: 300;
-            color: var(--ink-mid);
-            font-style: italic;
-        }
-
-        /* ── clause grid ── */
-        .clauses {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .clause {
-            display: grid;
-            grid-template-columns: 48px 1fr;
-            gap: 0 1.5rem;
-            padding: 1.6rem 0;
-            border-bottom: 0.5px solid var(--rule-light);
-            align-items: start;
-        }
-
-        .clause:last-child {
-            border-bottom: none;
-        }
-
-        .clause-num {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            font-weight: 400;
-            color: var(--rule);
-            line-height: 1;
-            padding-top: 3px;
-            user-select: none;
-        }
-
-        .clause-body {}
-
-        .clause-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            color: var(--ink);
-            margin-bottom: 0.45rem;
-        }
-
-        .clause-text {
-            font-size: 14.5px;
-            line-height: 1.78;
-            font-weight: 300;
-            color: var(--ink);
-        }
-
-        /* highlight clause — health warning */
-        .clause-highlight .clause-text {
-            background: #fff;
-            border: 0.5px solid var(--rule);
-            border-radius: 5px;
-            padding: 0.85rem 1.1rem;
-        }
-
-        /* ── footer ── */
-        .page-footer {
-            margin-top: 3.5rem;
-            padding-top: 1.5rem;
-            border-top: 1.5px solid var(--ink);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .footer-copy {
-            font-size: 12.5px;
-            color: var(--ink-mid);
-            font-style: italic;
-            font-weight: 300;
-        }
-
-        .footer-tag {
-            font-size: 10px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-        }
-
-        @media (max-width: 600px) {
-            .page-wrap {
-                padding: 2rem 1.25rem 3.5rem;
-            }
-
-            .masthead {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .doc-meta {
-                text-align: left;
-            }
-
-            .clause {
-                grid-template-columns: 36px 1fr;
-                gap: 0 1rem;
-            }
-
-            .clause-num {
-                font-size: 18px;
-            }
-
-            .page-footer {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="page-wrap">
-
-        <!-- Masthead -->
-        <header class="masthead">
-            <div class="brand">
-                <div class="logo-block"><span>3-20<br>WAY</span></div>
-                <div class="brand-name">The 3-20 Way</div>
+    <!-- Header -->
+    <header class="bg-gray-900">
+        <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <div class="flex lg:flex-1">
+                <a routerLink="/" class="-m-1.5 p-1.5">
+                    <span class="sr-only">The 3-20 Way</span>
+                    <img class="h-8 w-auto" src="assets/320-WHITE-LOGO.png" alt="Logo">
+                </a>
             </div>
-            <div class="doc-meta">
-                <span class="doc-type">Legal document</span>
-                <span class="doc-updated">Last updated: March 2026</span>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a routerLink="/landing-page" class="text-sm/6 font-semibold text-white">Product</a>
+                <a routerLink="/landing-page-2" class="text-sm/6 font-semibold text-white">Features</a>
+                <a routerLink="/" class="text-sm/6 font-semibold text-white">Marketplace</a>
+                <a routerLink="/" class="text-sm/6 font-semibold text-white">Company</a>
             </div>
-        </header>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Title -->
-        <div class="title-block">
-            <span class="eyebrow">Website footer</span>
-            <h1>Terms &amp; Conditions</h1>
-            <p class="intro-note">These Terms and Conditions govern your use of The 3-20 Way platform and services. This
-                agreement is between you (the Client) and The 3-20 Way. By subscribing or accessing content, you agree
-                to these Terms.</p>
+    <!-- Hero -->
+    <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <p class="text-base font-semibold leading-7 text-orange-500">Legal Information</p>
+                <h1 class="mt-2 text-5xl font-semibold tracking-tight text-white sm:text-7xl">Terms &amp; Conditions</h1>
+                <p class="mt-8 text-lg font-medium text-gray-400 sm:text-xl/8">The agreement governing your use of The
+                    3-20 Way platform and services.</p>
+                <p class="mt-4 text-sm text-gray-500">Last updated: March 2026</p>
+            </div>
         </div>
-
-        <!-- Clauses -->
-        <div class="clauses">
-
-            <div class="clause">
-                <span class="clause-num">01</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Introduction</h2>
-                    <p class="clause-text">This agreement is between you (the Client) and The 3-20 Way. By subscribing
-                        or accessing content, you agree to these Terms.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">02</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Consumer Rights</h2>
-                    <p class="clause-text">Nothing in these Terms affects your statutory rights under UK or EU consumer
-                        protection law.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">03</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Eligibility</h2>
-                    <p class="clause-text">Services are for adults aged 18 and over only.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">04</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Nature of the Service</h2>
-                    <p class="clause-text">The 3-20 Way provides digital movement and wellbeing content and optional
-                        live sessions. Content is educational, not medical.</p>
-                </div>
-            </div>
-
-            <div class="clause clause-highlight">
-                <span class="clause-num">05</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Health &amp; Safety</h2>
-                    <p class="clause-text">You participate voluntarily and at your own risk. Consult a medical
-                        professional if you are unsure whether the content is suitable for you.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">06</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Technology</h2>
-                    <p class="clause-text">We do not guarantee uninterrupted access. Temporary disruption does not
-                        entitle you to a refund.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">07</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Payments &amp; Cancellation</h2>
-                    <p class="clause-text">Subscriptions are paid in advance. You may cancel at any time; access
-                        continues until the end of the billing period. No partial refunds are issued.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">08</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Intellectual Property</h2>
-                    <p class="clause-text">All content is copyright protected and may not be shared or redistributed
-                        without prior written permission from The 3-20 Way.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">09</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Changes</h2>
-                    <p class="clause-text">We may update these Terms with reasonable notice. Continued use of the
-                        platform following any update constitutes acceptance of the revised Terms.</p>
-                </div>
-            </div>
-
-            <div class="clause">
-                <span class="clause-num">10</span>
-                <div class="clause-body">
-                    <h2 class="clause-title">Governing Law and Consumer Rights</h2>
-                    <p class="clause-text">These Terms and Conditions are governed by and construed in accordance with
-                        the laws of the United Kingdom. If you are a consumer resident in the European Union, nothing in
-                        these Terms affects your rights under any mandatory consumer protection laws applicable in your
-                        country of residence.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Footer -->
-        <app-new-footer></app-new-footer>
-
     </div>
-</body>
 
-</html>
+    <main class="flex-grow">
+
+        <!-- Section 1: Introduction -->
+        <section class="bg-white py-20 px-6 lg:px-8 border-b border-gray-100">
+            <div class="mx-auto max-w-3xl">
+                <p class="text-base font-semibold text-orange-600">Overview</p>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">Introduction</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                    This agreement is between you (the Client) and The 3-20 Way. By subscribing or accessing content,
+                    you agree to these Terms and Conditions. These Terms govern your use of The 3-20 Way platform and
+                    all services we provide.
+                </p>
+                <div class="mt-8 rounded-2xl bg-orange-50 ring-1 ring-orange-100 p-6">
+                    <p class="text-sm leading-6 text-orange-800">
+                        <strong class="font-semibold">Consumer Rights:</strong> Nothing in these Terms affects your
+                        statutory rights under UK or EU consumer protection law.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Key Terms -->
+        <section class="bg-gray-900 py-20 px-6 lg:px-8 border-b border-gray-800">
+            <div class="mx-auto max-w-3xl">
+                <p class="text-base font-semibold text-orange-500">Key Conditions</p>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-white">Your Agreement with Us</h2>
+                <dl class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+
+                    <div class="relative flex flex-col gap-4 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-600">
+                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                        </div>
+                        <dt class="text-base font-semibold text-white">Eligibility</dt>
+                        <dd class="text-sm text-gray-400">Services are for adults aged 18 and over only. By accessing our platform, you confirm you meet this requirement.</dd>
+                    </div>
+
+                    <div class="relative flex flex-col gap-4 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-600">
+                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 6 0m-3-3V3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V14.25m-9 0h-2.25a3 3 0 0 0-3 3v4.5m3-4.5v-4.5m0 0V12M3 7.5v3M21 7.5v3m0 3.75V21m-3-7.5h3m-3 0v-3M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                            </svg>
+                        </div>
+                        <dt class="text-base font-semibold text-white">Nature of Service</dt>
+                        <dd class="text-sm text-gray-400">The 3-20 Way provides digital movement and wellbeing content and optional live sessions. Content is educational, not medical.</dd>
+                    </div>
+
+                    <div class="relative flex flex-col gap-4 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-600">
+                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3" />
+                            </svg>
+                        </div>
+                        <dt class="text-base font-semibold text-white">Technology</dt>
+                        <dd class="text-sm text-gray-400">We do not guarantee uninterrupted access. Temporary disruption does not entitle you to a refund.</dd>
+                    </div>
+
+                    <div class="relative flex flex-col gap-4 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-600">
+                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+                            </svg>
+                        </div>
+                        <dt class="text-base font-semibold text-white">Intellectual Property</dt>
+                        <dd class="text-sm text-gray-400">All content is copyright protected and may not be shared or redistributed without prior written permission from The 3-20 Way.</dd>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <!-- Section 3: Health & Safety -->
+        <section class="bg-white py-20 px-6 lg:px-8 border-b border-gray-100">
+            <div class="mx-auto max-w-3xl">
+                <p class="text-base font-semibold text-orange-600">Important</p>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">Health &amp; Safety</h2>
+                <div class="mt-8 rounded-2xl bg-gray-50 ring-1 ring-gray-200 p-8 shadow-sm">
+                    <p class="text-lg leading-8 text-gray-600">
+                        You participate in all movement sessions <strong class="text-gray-900">voluntarily and at your
+                            own risk.</strong> Consult a medical professional if you are unsure whether the content is
+                        suitable for you. The 3-20 Way content is educational, not medical advice.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Payments & Cancellation -->
+        <section class="bg-gray-50 py-20 px-6 lg:px-8 border-b border-gray-100">
+            <div class="mx-auto max-w-3xl">
+                <p class="text-base font-semibold text-orange-600">Billing</p>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">Payments &amp; Cancellation</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                    Subscriptions are paid in advance. You may cancel at any time; access continues until the end of
+                    the billing period. No partial refunds are issued for unused time.
+                </p>
+                <dl class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                    <div class="flex flex-col gap-2 rounded-2xl bg-white ring-1 ring-gray-200 p-6 shadow-sm">
+                        <dt class="text-sm font-semibold text-orange-600">Monthly Plan</dt>
+                        <dd class="text-2xl font-bold text-gray-900">£11.99<span class="text-base font-normal text-gray-500">/mo</span></dd>
+                        <dd class="text-sm text-gray-500">Cancel anytime, no commitment.</dd>
+                    </div>
+                    <div class="flex flex-col gap-2 rounded-2xl bg-orange-600 ring-1 ring-orange-500 p-6 shadow-sm">
+                        <dt class="text-sm font-semibold text-orange-200">Annual Plan</dt>
+                        <dd class="text-2xl font-bold text-white">£8.99<span class="text-base font-normal text-orange-200">/mo</span></dd>
+                        <dd class="text-sm text-orange-100">Save over £35 a year.</dd>
+                    </div>
+                    <div class="flex flex-col gap-2 rounded-2xl bg-white ring-1 ring-gray-200 p-6 shadow-sm">
+                        <dt class="text-sm font-semibold text-orange-600">Free Trial</dt>
+                        <dd class="text-2xl font-bold text-gray-900">10 days</dd>
+                        <dd class="text-sm text-gray-500">New members only. Cancel free.</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Section 5: Changes & Governing Law -->
+        <section class="relative isolate overflow-hidden bg-gray-900 py-20 px-6 lg:px-8 border-b border-gray-800">
+            <svg viewBox="0 0 1024 1024"
+                class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-x-1/2 -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+                aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#tc-gradient)" fill-opacity="0.4" />
+                <defs>
+                    <radialGradient id="tc-gradient">
+                        <stop stop-color="#f97316" />
+                        <stop offset="1" stop-color="#111827" />
+                    </radialGradient>
+                </defs>
+            </svg>
+            <div class="mx-auto max-w-3xl text-center">
+                <p class="text-base font-semibold text-orange-500">Updates &amp; Law</p>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Changes &amp; Governing Law</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-300">
+                    We may update these Terms with reasonable notice. Continued use of the platform following any update
+                    constitutes acceptance of the revised Terms.
+                </p>
+                <p class="mt-4 text-base text-gray-400">
+                    These Terms are governed by and construed in accordance with the <strong class="text-white">laws of
+                        the United Kingdom.</strong> If you are a consumer in the EU, mandatory consumer protection laws
+                    of your country of residence also apply.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 6: Your Rights -->
+        <section class="bg-gray-50 py-20 px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl">
+                <p class="text-base font-semibold text-orange-600">Consumer Protections</p>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">Your Statutory Rights</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600 italic">
+                    Nothing in these Terms limits your statutory rights under applicable UK or EU consumer protection
+                    law. We are committed to transparency and fairness in all our dealings with members.
+                </p>
+                <div class="mt-10 border-t border-gray-200 pt-8">
+                    <p class="text-sm text-gray-500">© The 3-20 Way 2026 — All rights reserved. Governed by UK Law.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <app-new-footer [footer_data]="nfs.footer_content"></app-new-footer>
+
+</div>
