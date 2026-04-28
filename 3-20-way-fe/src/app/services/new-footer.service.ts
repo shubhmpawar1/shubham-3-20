@@ -47,11 +47,11 @@ export class NewFooterService {
       description: 'The latest news, articles, and resources, sent to your inbox weekly.'
     },
     social: [
-      { name: 'Facebook', href: '#', icon: 'facebook' },
-      { name: 'Instagram', href: '#', icon: 'instagram' },
-      { name: 'X', href: '#', icon: 'x' },
-      { name: 'GitHub', href: '#', icon: 'github' },
-      { name: 'YouTube', href: '#', icon: 'youtube' },
+      { name: 'Facebook', href: 'https://www.facebook.com/the320way', icon: 'facebook' },
+      { name: 'Instagram', href: 'https://www.instagram.com/the320way/', icon: 'instagram' },
+      { name: 'X', href: '#', icon: 'tiktok' },
+      // { name: 'GitHub', href: '#', icon: 'github' },
+      { name: 'YouTube', href: 'https://www.youtube.com/@The320Way', icon: 'youtube' },
     ],
     copyright: '© 2026 The 3-20 Way Ltd. All rights reserved.'
   };
