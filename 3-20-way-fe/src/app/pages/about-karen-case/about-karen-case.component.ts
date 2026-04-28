@@ -8,10 +8,11 @@ import { AboutKarenCaseService } from '../../services/about-karen-case.service';
 import { NewFooterComponent } from '../../components/new-footer/new-footer.component';
 import { NewFooterService } from '../../services/new-footer.service';
 import { FeatureComponent } from '../../components/feature/feature.component';
+import { PhilosophyComponent } from '../../components/philosophy/philosophy.component';
 @Component({
   selector: 'app-about-karen-case',
   standalone: true,
-  imports: [CommonModule, HeroSectionTailwindComponent, OverviewComponent, ProfessionalBackgroundComponent, LifeDockComponent, NewFooterComponent, FeatureComponent],
+  imports: [CommonModule, HeroSectionTailwindComponent, OverviewComponent, ProfessionalBackgroundComponent, LifeDockComponent, NewFooterComponent, FeatureComponent, PhilosophyComponent],
   templateUrl: './about-karen-case.component.html',
   styleUrl: './about-karen-case.component.css'
 })

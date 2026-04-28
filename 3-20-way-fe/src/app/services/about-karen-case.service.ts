@@ -146,6 +146,13 @@ export class AboutKarenCaseService {
       ]
     },
 
+    philosophy: {
+      image: 'assets/About_Karen.jpg',
+      quote: 'Movement is not about performance — it\'s about independence, confidence, and living life on your own terms. From as little as 3 minutes a day, I\'ve seen people transform their quality of life. That\'s what drives everything we do at The 3-20 Way.',
+      authorName: 'Karen Case',
+      authorRole: 'Founder, The 3-20 Way'
+    }
+
   };
 
   constructor() { }
