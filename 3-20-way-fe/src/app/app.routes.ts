@@ -7,6 +7,7 @@ import { LandingPage3Component } from './pages/landing-page-3/landing-page-3.com
 import { LandingPage4Component } from './pages/landing-page-4/landing-page-4.component';
 import { CopyrightNoticeComponent } from './pages/copyright-notice/copyright-notice.component';
 import { TermsConditionComponent } from './pages/terms-condition/terms-condition.component';
+import { AboutKarenCaseComponent } from './pages/about-karen-case/about-karen-case.component';
 
 
 
@@ -19,6 +20,7 @@ export const routes: Routes = [
     { path: 'landing-page-4', component: LandingPage4Component },
     { path: 'copyright-notice', component: CopyrightNoticeComponent },
     { path: 'terms-condition', component: TermsConditionComponent },
+    { path: 'about-karen-case', component: AboutKarenCaseComponent },
 
     {
         path: 'pages', component: AppComponent, children: [

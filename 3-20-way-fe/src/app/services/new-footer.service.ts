@@ -11,7 +11,7 @@ export class NewFooterService {
       {
         title: 'Solutions',
         links: [
-          { name: 'About Karen Case', href: '#' },
+          { name: 'About Karen Case', href: '/about-karen-case' },
           { name: 'One to One with Karen', href: '#' },
           { name: 'Meet the team', href: '#' },
         ]
